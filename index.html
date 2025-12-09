@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BENTAMAR SPA - Soluciones Técnicas Submarinas y Marítimas</title>
+    
+    <!-- Google Fonts: Roboto -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS (via CDN) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Tailwind Configuration -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        bentamar: {
+                            blue: '#002B5C',   // Primary
+                            yellow: '#FFC107', // Secondary
+                            gray: '#F4F6F6',   // Background
+                            text: '#333333'    // Text
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Roboto', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* Custom overrides if needed */
+        body {
+            font-family: 'Roboto', sans-serif;
+            color: #333333;
+        }
+        .hero-overlay {
+            background: linear-gradient(rgba(0, 43, 92, 0.7), rgba(0, 43, 92, 0.4));
+        }
+    </style>
+</head>
+<body class="bg-bentamar-gray flex flex-col min-h-screen">
+
+    <!-- Navbar -->
+    <nav class="bg-bentamar-blue text-white shadow-lg sticky top-0 z-50">
+        <div class="container mx-auto px-6 py-4 flex flex-col md:flex-row justify-between items-center">
+            <!-- Logo -->
+            <a href="#" class="text-2xl font-black tracking-wider uppercase hover:text-bentamar-yellow transition-colors duration-300">
+                BENTAMAR
+            </a>
+            
+            <!-- Links -->
+            <ul class="flex space-x-6 mt-4 md:mt-0 font-medium">
+                <li><a href="#inicio" class="hover:text-bentamar-yellow transition-colors duration-300">Inicio</a></li>
+                <li><a href="#servicios" class="hover:text-bentamar-yellow transition-colors duration-300">Servicios</a></li>
+                <li><a href="#nosotros" class="hover:text-bentamar-yellow transition-colors duration-300">Nosotros</a></li>
+                <li><a href="#contacto" class="bg-bentamar-yellow text-bentamar-blue px-4 py-2 rounded font-bold hover:bg-white transition-colors duration-300">Contacto</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header id="inicio" class="relative bg-gray-900 h-[80vh] flex items-center justify-center text-center overflow-hidden">
+        <!-- Background Image -->
+        <div class="absolute inset-0 z-0">
+            <img src="https://images.unsplash.com/photo-1582967788606-a171f1080ca8?q=80&w=2070&auto=format&fit=crop" 
+                 alt="Marítimo Industrial" 
+                 class="w-full h-full object-cover opacity-60">
+        </div>
+        <!-- Gradient Overlay -->
+        <div class="absolute inset-0 hero-overlay z-0"></div>
+
+        <!-- Content -->
+        <div class="relative z-10 container mx-auto px-6">
+            <h1 class="text-4xl md:text-6xl font-bold text-white mb-6 uppercase tracking-tight shadow-sm">
+                Soluciones Técnicas <br/>
+                <span class="text-bentamar-yellow">Submarinas y Marítimas</span>
+            </h1>
+            <p class="text-xl md:text-2xl text-gray-200 mb-10 max-w-3xl mx-auto font-light">
+                Cumplimiento normativo y seguridad operativa para la industria acuícola.
+            </p>
+            <a href="#contacto" class="inline-block bg-bentamar-yellow text-bentamar-blue font-bold text-lg px-8 py-4 rounded hover:bg-white hover:scale-105 transform transition duration-300 shadow-xl">
+                Cotizar Servicio
+            </a>
+        </div>
+    </header>
+
+    <!-- Services Section -->
+    <section id="servicios" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl md:text-4xl font-bold text-bentamar-blue text-center mb-16 uppercase relative inline-block w-full">
+                Nuestros Servicios
+                <span class="block h-1 w-24 bg-bentamar-yellow mx-auto mt-4"></span>
+            </h2>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+                <!-- Service 1 -->
+                <div class="bg-bentamar-gray rounded-xl p-8 shadow-lg hover:shadow-2xl transition duration-300 group border-b-4 border-bentamar-blue hover:border-bentamar-yellow">
+                    <div class="h-14 w-14 bg-bentamar-blue text-white rounded-full flex items-center justify-center text-2xl mb-6 group-hover:bg-bentamar-yellow group-hover:text-bentamar-blue transition-colors">
+                        ⚓
+                    </div>
+                    <h3 class="text-xl font-bold text-bentamar-blue mb-4">Buceo Profesional</h3>
+                    <p class="text-gray-600 leading-relaxed">
+                        Inspecciones submarinas, mantención de estructuras, limpieza de cascos y redes con los más altos estándares de seguridad.
+                    </p>
+                </div>
+
+                <!-- Service 2 -->
+                <div class="bg-bentamar-gray rounded-xl p-8 shadow-lg hover:shadow-2xl transition duration-300 group border-b-4 border-bentamar-blue hover:border-bentamar-yellow">
+                    <div class="h-14 w-14 bg-bentamar-blue text-white rounded-full flex items-center justify-center text-2xl mb-6 group-hover:bg-bentamar-yellow group-hover:text-bentamar-blue transition-colors">
+                        🚢
+                    </div>
+                    <h3 class="text-xl font-bold text-bentamar-blue mb-4">Arriendo de Embarcaciones</h3>
+                    <p class="text-gray-600 leading-relaxed">
+                        Logística marítima completa, transporte de personal y carga con flota certificada y tripulación experta.
+                    </p>
+                </div>
+
+                <!-- Service 3 -->
+                <div class="bg-bentamar-gray rounded-xl p-8 shadow-lg hover:shadow-2xl transition duration-300 group border-b-4 border-bentamar-blue hover:border-bentamar-yellow">
+                    <div class="h-14 w-14 bg-bentamar-blue text-white rounded-full flex items-center justify-center text-2xl mb-6 group-hover:bg-bentamar-yellow group-hover:text-bentamar-blue transition-colors">
+                        🤖
+                    </div>
+                    <h3 class="text-xl font-bold text-bentamar-blue mb-4">ROV e Inspección Técnica</h3>
+                    <p class="text-gray-600 leading-relaxed">
+                        Tecnología de punta para inspecciones profundas, informes técnicos detallados y monitoreo ambiental.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="nosotros" class="py-20 bg-bentamar-blue text-white relative overflow-hidden">
+        <!-- Decoration -->
+        <div class="absolute top-0 right-0 p-20 opacity-5 text-bentamar-yellow text-[15rem] leading-none select-none font-black pointer-events-none">
+            B
+        </div>
+
+        <div class="container mx-auto px-6 flex flex-col md:flex-row items-center relative z-10">
+            <div class="md:w-1/2 mb-10 md:mb-0">
+                <h2 class="text-3xl md:text-4xl font-bold mb-6">Confianza y Rigurosidad Técnica</h2>
+                <div class="h-1 w-20 bg-bentamar-yellow mb-8"></div>
+                <p class="text-lg text-gray-300 leading-relaxed mb-6">
+                    En <strong>BENTAMAR SPA</strong>, la seguridad no es una opción, es nuestra base operativa. Contamos con un equipo multidisciplinario experto en operaciones subacuáticas y logísticas.
+                </p>
+                <p class="text-lg text-gray-300 leading-relaxed">
+                    Nuestro compromiso es entregar soluciones eficientes que garanticen la continuidad operativa de sus proyectos acuícolas, cumpliendo estrictamente con la normativa vigente.
+                </p>
+            </div>
+            <div class="md:w-1/2 pl-0 md:pl-20">
+                <div class="grid grid-cols-2 gap-6 text-center">
+                    <div class="p-6 border border-bentamar-yellow rounded-lg bg-white/5 backdrop-blur-sm">
+                        <span class="block text-4xl font-bold text-bentamar-yellow mb-2">+10</span>
+                        <span class="text-sm uppercase tracking-wide">Años de Experiencia</span>
+                    </div>
+                    <div class="p-6 border border-bentamar-yellow rounded-lg bg-white/5 backdrop-blur-sm">
+                        <span class="block text-4xl font-bold text-bentamar-yellow mb-2">100%</span>
+                        <span class="text-sm uppercase tracking-wide">Certificados</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contacto" class="py-20 bg-bentamar-gray">
+        <div class="container mx-auto px-6 max-w-4xl">
+            <div class="bg-white rounded-2xl shadow-2xl overflow-hidden flex flex-col md:flex-row">
+                
+                <!-- Contact Info Side -->
+                <div class="bg-gray-800 p-10 md:w-2/5 text-white flex flex-col justify-between">
+                    <div>
+                        <h3 class="text-2xl font-bold mb-6 text-bentamar-yellow">Hablemos</h3>
+                        <p class="text-gray-300 mb-8 text-sm">
+                            Complete el formulario y nuestro equipo técnico se pondrá en contacto a la brevedad.
+                        </p>
+                        
+                        <div class="space-y-4">
+                            <div class="flex items-start">
+                                <span class="text-bentamar-yellow mt-1 mr-3">📍</span>
+                                <div>
+                                    <h4 class="font-bold text-sm">Ubicación</h4>
+                                    <p class="text-xs text-gray-400">Puerto Montt, Región de Los Lagos</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <span class="text-bentamar-yellow mt-1 mr-3">📧</span>
+                                <div>
+                                    <h4 class="font-bold text-sm">Email</h4>
+                                    <p class="text-xs text-gray-400">contacto@bentamar.cl</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <span class="text-bentamar-yellow mt-1 mr-3">📞</span>
+                                <div>
+                                    <h4 class="font-bold text-sm">Teléfono</h4>
+                                    <p class="text-xs text-gray-400">+56 9 1234 5678</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mt-10">
+                        <div class="text-xs text-gray-500">© 2024 Bentamar SPA</div>
+                    </div>
+                </div>
+
+                <!-- Form Side -->
+                <div class="p-10 md:w-3/5">
+                    <h3 class="text-2xl font-bold text-bentamar-blue mb-6">Cotizar Servicio</h3>
+                    
+                    <div id="alert-box" class="hidden mb-4 p-4 rounded bg-green-100 border border-green-400 text-green-700 text-sm">
+                        ¡Mensaje enviado con éxito! Nos pondremos en contacto pronto.
+                    </div>
+
+                    <form id="contactForm" onsubmit="enviarCotizacion(event)" class="space-y-5">
+                       
+                        <div>
+                            <label class="block text-sm font-bold text-gray-700 mb-1">Nombre Completo</label>
+                            <input type="text" id="nombre" required 
+                                   class="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-bentamar-blue focus:border-transparent transition">
+                        </div>
+
+                        <div>
+                            <label class="block text-sm font-bold text-gray-700 mb-1">Empresa</label>
+                            <input type="text" id="empresa" required 
+                                   class="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-bentamar-blue focus:border-transparent transition">
+                        </div>
+
+                        <div class="grid grid-cols-2 gap-4">
+                            <div>
+                                <label class="block text-sm font-bold text-gray-700 mb-1">Email</label>
+                                <input type="email" id="email" required 
+                                       class="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-bentamar-blue focus:border-transparent transition">
+                            </div>
+                            <div>
+                                <label class="block text-sm font-bold text-gray-700 mb-1">Teléfono</label>
+                                <input type="tel" id="telefono" required 
+                                       class="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-bentamar-blue focus:border-transparent transition">
+                            </div>
+                        </div>
+
+                        <div>
+                            <label class="block text-sm font-bold text-gray-700 mb-1">Mensaje / Requerimiento</label>
+                            <textarea id="mensaje" rows="4" required 
+                                      class="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-bentamar-blue focus:border-transparent transition"></textarea>
+                        </div>
+
+                        <button type="submit" 
+                                class="w-full bg-bentamar-blue text-white font-bold py-3 px-6 rounded hover:bg-opacity-90 transition duration-300 shadow-lg flex justify-center items-center">
+                            Enviar Cotización 
+                            <span class="ml-2 text-bentamar-yellow">➤</span>
+                        </button>
+
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-bentamar-blue text-white pt-16 pb-8 border-t border-gray-800">
+        <div class="container mx-auto px-6 text-center md:text-left">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-10">
+                <div class="col-span-1 md:col-span-2">
+                    <h5 class="text-2xl font-black mb-4">BENTAMAR</h5>
+                    <p class="text-gray-400 text-sm leading-relaxed max-w-sm mx-auto md:mx-0">
+                        Expertos en soluciones subacuáticas y marítimas para la industria en el sur de Chile. Seguridad, calidad y confianza.
+                    </p>
+                </div>
+                <div>
+                    <h5 class="font-bold text-bentamar-yellow mb-4 uppercase text-sm tracking-wider">Enlaces</h5>
+                    <ul class="space-y-2 text-sm text-gray-300">
+                        <li><a href="#inicio" class="hover:text-white transition">Inicio</a></li>
+                        <li><a href="#servicios" class="hover:text-white transition">Servicios</a></li>
+                        <li><a href="#nosotros" class="hover:text-white transition">Nosotros</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h5 class="font-bold text-bentamar-yellow mb-4 uppercase text-sm tracking-wider">Legal</h5>
+                    <ul class="space-y-2 text-sm text-gray-300">
+                        <li><a href="#" class="hover:text-white transition">Términos y Condiciones</a></li>
+                        <li><a href="#" class="hover:text-white transition">Política de Privacidad</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 pt-8 flex flex-col md:flex-row justify-between items-center text-xs text-gray-500">
+                <p>&copy; 2024 Bentamar SPA. Todos los derechos reservados.</p>
+                <div class="mt-4 md:mt-0">
+                    <!-- Social icons placeholders -->
+                    <span class="mx-2">LinkedIn</span>
+                    <span class="mx-2">Instagram</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script>
+        function enviarCotizacion(e) {
+            e.preventDefault();
+
+            // 1. Capturar datos
+            const formData = {
+                nombre: document.getElementById('nombre').value,
+                empresa: document.getElementById('empresa').value,
+                email: document.getElementById('email').value,
+                telefono: document.getElementById('telefono').value,
+                mensaje: document.getElementById('mensaje').value,
+                fecha: new Date().toISOString()
+            };
+
+            console.log('Datos de cotización capturados:', formData);
+
+            // TODO: Integrar con n8n u otro webhook
+            // fetch('https://tu-webhook-n8n.com/webhook/cotizacion', {
+            //     method: 'POST',
+            //     headers: { 'Content-Type': 'application/json' },
+            //     body: JSON.stringify(formData)
+            // })
+            // .then(response => ...)
+            // .catch(error => ...);
+
+            // 2. Feedback visual
+            const alertBox = document.getElementById('alert-box');
+            const form = document.getElementById('contactForm');
+            const btn = form.querySelector('button[type="submit"]');
+
+            // Simular carga
+            const originalBtnText = btn.innerHTML;
+            btn.innerHTML = 'Enviando...';
+            btn.disabled = true;
+
+            setTimeout(() => {
+                // Simular éxito
+                alertBox.classList.remove('hidden');
+                form.reset();
+                btn.innerHTML = originalBtnText;
+                btn.disabled = false;
+
+                // Ocultar alerta después de 5 segundos
+                setTimeout(() => {
+                    alertBox.classList.add('hidden');
+                }, 5000);
+            }, 1000);
+        }
+    </script>
+</body>
+</html>

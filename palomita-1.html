@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Palomita I - Ficha Técnica | BENTAMAR SPA</title>
+
+    <!-- Google Fonts: Roboto -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+
+    <!-- Tailwind CSS (via CDN) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Tailwind Configuration -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        bentamar: {
+                            blue: '#002B5C',   // Primary
+                            yellow: '#FFC107', // Secondary
+                            gray: '#F4F6F6',   // Background
+                            text: '#333333'    // Text
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Roboto', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+
+<body class="bg-bentamar-gray flex flex-col min-h-screen">
+
+    <!-- Navbar -->
+    <nav class="bg-bentamar-blue text-white shadow-lg sticky top-0 z-50">
+        <div class="container mx-auto px-6 py-4 flex flex-col md:flex-row justify-between items-center">
+            <!-- Logo -->
+            <a href="index.html"
+                class="text-2xl font-black tracking-wider uppercase hover:text-bentamar-yellow transition-colors duration-300">
+                BENTAMAR
+            </a>
+
+            <!-- Links -->
+            <ul class="flex space-x-6 mt-4 md:mt-0 font-medium">
+                <li><a href="index.html#inicio"
+                        class="hover:text-bentamar-yellow transition-colors duration-300">Inicio</a></li>
+                <li><a href="index.html#servicios"
+                        class="hover:text-bentamar-yellow transition-colors duration-300">Servicios</a></li>
+                <li><a href="index.html#nosotros"
+                        class="hover:text-bentamar-yellow transition-colors duration-300">Nosotros</a></li>
+                <li><a href="index.html#contacto"
+                        class="bg-bentamar-yellow text-bentamar-blue px-4 py-2 rounded font-bold hover:bg-white transition-colors duration-300">Contacto</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Content -->
+    <div class="flex-grow container mx-auto px-6 py-10 md:py-20">
+        <div class="bg-white rounded-xl shadow-2xl overflow-hidden max-w-4xl mx-auto border-t-8 border-bentamar-blue">
+            <div class="p-8 md:p-12">
+                <div class="flex flex-col md:flex-row justify-between items-start md:items-center mb-10">
+                    <div>
+                        <h1 class="text-4xl font-black text-bentamar-blue mb-2">PALOMITA I</h1>
+                        <p class="text-gray-500 font-medium uppercase tracking-wide">Ficha Técnica de Embarcación</p>
+                    </div>
+                    <div
+                        class="mt-4 md:mt-0 bg-bentamar-yellow text-bentamar-blue font-bold py-2 px-4 rounded text-sm uppercase tracking-wider">
+                        Disponible
+                    </div>
+                </div>
+
+                <div class="overflow-x-auto">
+                    <table class="w-full text-left border-collapse">
+                        <tbody>
+                            <tr class="border-b border-gray-200 hover:bg-gray-50 transition">
+                                <td class="py-4 px-4 font-bold text-bentamar-blue w-1/3">Tipo de Embarcación</td>
+                                <td class="py-4 px-4 text-gray-700">B/M con cabina</td>
+                            </tr>
+                            <tr class="border-b border-gray-200 hover:bg-gray-50 transition">
+                                <td class="py-4 px-4 font-bold text-bentamar-blue">Material del Casco</td>
+                                <td class="py-4 px-4 text-gray-700">Fibra de vidrio</td>
+                            </tr>
+                            <tr class="border-b border-gray-200 hover:bg-gray-50 transition">
+                                <td class="py-4 px-4 font-bold text-bentamar-blue">Dimensiones</td>
+                                <td class="py-4 px-4 text-gray-700">
+                                    <span class="block"><span class="font-semibold">Eslora:</span> 6,8 m</span>
+                                    <span class="block"><span class="font-semibold">Manga:</span> 2,0 m</span>
+                                    <span class="block"><span class="font-semibold">Puntal:</span> 0,80 m</span>
+                                </td>
+                            </tr>
+                            <tr class="border-b border-gray-200 hover:bg-gray-50 transition">
+                                <td class="py-4 px-4 font-bold text-bentamar-blue">Capacidad de Pasajeros</td>
+                                <td class="py-4 px-4 text-gray-700">7 personas</td>
+                            </tr>
+                            <tr class="border-b border-gray-200 hover:bg-gray-50 transition">
+                                <td class="py-4 px-4 font-bold text-bentamar-blue">Motorización</td>
+                                <td class="py-4 px-4 text-gray-700">Suzuki 90 HP (Fuera de borda, Gasolina)</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="mt-12 text-center">
+                    <a href="index.html#contacto"
+                        class="inline-block bg-bentamar-blue text-white font-bold text-lg px-8 py-4 rounded hover:bg-bentamar-yellow hover:text-bentamar-blue transform transition duration-300 shadow-xl">
+                        Cotizar Arriendo
+                    </a>
+                    <a href="index.html#flota"
+                        class="block mt-4 text-gray-500 hover:text-bentamar-blue underline text-sm">
+                        &larr; Volver a la Flota
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-bentamar-blue text-white pt-16 pb-8 border-t border-gray-800 mt-auto">
+        <div class="container mx-auto px-6 text-center md:text-left">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-10">
+                <div class="col-span-1 md:col-span-2">
+                    <h5 class="text-2xl font-black mb-4">BENTAMAR</h5>
+                    <p class="text-gray-400 text-sm leading-relaxed max-w-sm mx-auto md:mx-0">
+                        Expertos en soluciones subacuáticas y marítimas para la industria en el sur de Chile. Seguridad,
+                        calidad y confianza.
+                    </p>
+                </div>
+                <div>
+                    <h5 class="font-bold text-bentamar-yellow mb-4 uppercase text-sm tracking-wider">Enlaces</h5>
+                    <ul class="space-y-2 text-sm text-gray-300">
+                        <li><a href="index.html#inicio" class="hover:text-white transition">Inicio</a></li>
+                        <li><a href="index.html#servicios" class="hover:text-white transition">Servicios</a></li>
+                        <li><a href="index.html#nosotros" class="hover:text-white transition">Nosotros</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h5 class="font-bold text-bentamar-yellow mb-4 uppercase text-sm tracking-wider">Legal</h5>
+                    <ul class="space-y-2 text-sm text-gray-300">
+                        <li><a href="#" class="hover:text-white transition">Términos y Condiciones</a></li>
+                        <li><a href="#" class="hover:text-white transition">Política de Privacidad</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div
+                class="border-t border-gray-700 pt-8 flex flex-col md:flex-row justify-between items-center text-xs text-gray-500">
+                <p>&copy; 2024 Bentamar SPA. Todos los derechos reservados.</p>
+                <div class="mt-4 md:mt-0">
+                    <span class="mx-2">LinkedIn</span>
+                    <span class="mx-2">Instagram</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>

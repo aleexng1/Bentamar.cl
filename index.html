@@ -85,6 +85,11 @@
                         <span
                             class="absolute -bottom-1 left-0 w-0 h-0.5 bg-bentamar-yellow transition-all duration-300 group-hover:w-full"></span>
                     </a></li>
+                <li><a href="#turismo" class="hover:text-bentamar-yellow transition-colors relative group">
+                        Turismo
+                        <span
+                            class="absolute -bottom-1 left-0 w-0 h-0.5 bg-bentamar-yellow transition-all duration-300 group-hover:w-full"></span>
+                    </a></li>
                 <li><a href="#contacto"
                         class="hidden md:inline-block bg-bentamar-yellow text-bentamar-blue px-6 py-2 rounded-sm font-bold text-sm uppercase tracking-wide hover:bg-white transition-colors duration-300 shadow-lg">
                         Cotizar
@@ -102,7 +107,6 @@
     <header id="inicio" class="relative h-screen flex items-center justify-center text-center px-4 overflow-hidden">
         <!-- Video Background -->
         <video autoplay muted loop playsinline class="absolute inset-0 w-full h-full object-cover z-0">
-            <!-- Using a high quality Pexels video of ocean/waves as placeholder -->
             <source src="https://videos.pexels.com/video-files/853757/853757-hd_1920_1080_25fps.mp4" type="video/mp4">
             Tu navegador no soporta video HTML5.
         </video>
@@ -146,7 +150,7 @@
         </div>
     </header>
 
-    <!-- Services Section - Carousel -->
+    <!-- Services Section - Carousel with Auto-play -->
     <section id="servicios" class="py-20 bg-gray-50">
         <div class="container mx-auto px-6">
             <div class="text-center mb-12">
@@ -170,10 +174,10 @@
                 </button>
 
                 <!-- Carousel Viewport -->
-                <div class="overflow-hidden rounded-xl py-4 px-2">
+                <div class="overflow-hidden rounded-xl py-4 px-2" id="carouselContainer">
                     <div id="carouselTrack" class="flex transition-transform duration-500 ease-out gap-6">
 
-                        <!-- Card 1: Boat Rental (NEW) -->
+                        <!-- Card 1: Boat Rental -->
                         <div
                             class="min-w-full md:min-w-[calc(50%-12px)] lg:min-w-[calc(33.333%-16px)] bg-white rounded-lg shadow-md hover:shadow-2xl transition duration-300 border-t-4 border-bentamar-yellow flex flex-col overflow-hidden">
                             <div class="h-48 bg-gray-200 relative overflow-hidden group-card">
@@ -324,45 +328,337 @@
         </div>
     </section>
 
-    <!-- Fleet / Equipment Section (Simplified for consistency) -->
-    <section id="flota" class="py-20 bg-bentamar-blue text-white relative">
-        <div class="absolute inset-0 opacity-10"
-            style="background-image: radial-gradient(#FFC107 1px, transparent 1px); background-size: 30px 30px;"></div>
+    <!-- Fleet / Equipment Section (Redesigned & Dark Mode) -->
+    <section id="flota" class="py-20 bg-bentamar-blue relative overflow-hidden">
+        <!-- Abstract Background -->
+        <div class="absolute inset-0 opacity-5"
+            style="background-image: url('data:image/svg+xml,%3Csvg width=\'60\' height=\'60\' viewBox=\'0 0 60 60\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Cg fill=\'none\' fill-rule=\'evenodd\'%3E%3Cg fill=\'%23ffffff\' fill-opacity=\'1\'%3E%3Cpath d=\'M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z\'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E');">
+        </div>
+
         <div class="container mx-auto px-6 relative z-10">
-            <h2 class="font-heading text-3xl md:text-4xl font-bold mb-12 text-center">NUESTRA FLOTA</h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-                <!-- Fleet items remain similar but with consistent styling -->
+            <div class="text-center mb-16">
+                <span class="text-bentamar-yellow font-bold tracking-widest uppercase mb-2 block">Capacidad
+                    Operativa</span>
+                <h2 class="font-heading text-3xl md:text-5xl font-bold text-white mb-6">ARRIENDO DE EMBARCACIONES</h2>
+                <div class="h-1 w-32 bg-bentamar-yellow mx-auto"></div>
+                <p class="mt-6 text-gray-300 max-w-2xl mx-auto text-lg font-light">
+                    Nuestra flota certificada está diseñada para operaciones exigentes y logística marítima en el sur de
+                    Chile.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-10">
+                <!-- Fleet Card 1: Bento -->
                 <div
-                    class="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 hover:bg-white/10 transition">
-                    <h3 class="text-bentamar-yellow font-bold text-lg">BENTO</h3>
-                    <p class="text-sm text-gray-300">Fibra de Vidrio | 50 HP</p>
-                    <a href="bento.html"
-                        class="block mt-4 text-xs font-bold uppercase tracking-wide hover:text-bentamar-yellow">Ver
-                        Ficha &rarr;</a>
+                    class="bg-gray-800 rounded-2xl overflow-hidden shadow-2xl hover:shadow-bentamar-yellow/20 hover:shadow-2xl transition duration-500 group flex flex-col md:flex-row">
+                    <div class="md:w-2/5 relative h-64 md:h-auto overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1544410976-59c55776d492?q=80&w=2070&auto=format&fit=crop"
+                            class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                            alt="Bento">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"></div>
+                        <div class="absolute bottom-4 left-4 flex items-center space-x-2 text-white/80 text-xs">
+                            <span class="bg-white/20 backdrop-blur px-2 py-1 rounded flex items-center">
+                                <svg class="w-3 h-3 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z">
+                                    </path>
+                                </svg>
+                                Ver Galería
+                            </span>
+                        </div>
+                    </div>
+                    <div
+                        class="md:w-3/5 p-8 flex flex-col justify-between relative bg-gradient-to-br from-gray-800 to-gray-900">
+                        <div>
+                            <div class="flex justify-between items-start mb-4 bg-transparent">
+                                <h3
+                                    class="font-heading text-2xl font-bold text-white group-hover:text-bentamar-yellow transition-colors">
+                                    BENTO</h3>
+                                <span
+                                    class="bg-bentamar-yellow text-bentamar-blue text-xs font-bold px-2 py-1 rounded uppercase">Fibra
+                                    de Vidrio</span>
+                            </div>
+                            <div class="grid grid-cols-2 gap-4 mb-6">
+                                <div>
+                                    <span class="block text-gray-500 text-xs uppercase tracking-wide">Eslora</span>
+                                    <span class="text-white font-medium">6.8 Metros</span>
+                                </div>
+                                <div>
+                                    <span class="block text-gray-500 text-xs uppercase tracking-wide">Motor</span>
+                                    <span class="text-white font-medium">Yamaha 50 HP</span>
+                                </div>
+                            </div>
+                            <!-- Mini Gallery Preview -->
+                            <div class="flex gap-2 mb-6 opacity-60 hover:opacity-100 transition-opacity">
+                                <div
+                                    class="w-12 h-12 rounded bg-gray-700 overflow-hidden cursor-pointer border border-gray-600 hover:border-bentamar-yellow">
+                                    <img src="https://images.unsplash.com/photo-1544410976-59c55776d492?q=80&w=2070&auto=format&fit=crop"
+                                        class="w-full h-full object-cover">
+                                </div>
+                                <div
+                                    class="w-12 h-12 rounded bg-gray-700 overflow-hidden cursor-pointer border border-gray-600 hover:border-bentamar-yellow">
+                                    <img src="https://images.unsplash.com/photo-1541963463532-d68292c34b19?q=80&w=2070&auto=format&fit=crop"
+                                        class="w-full h-full object-cover">
+                                </div>
+                            </div>
+                        </div>
+                        <a href="bento.html"
+                            class="inline-flex items-center justify-center w-full bg-transparent border border-gray-600 text-white font-bold py-3 rounded hover:bg-bentamar-yellow hover:text-bentamar-blue hover:border-bentamar-yellow transition-all duration-300">
+                            FICHA TÉCNICA Y FOTOS
+                        </a>
+                    </div>
                 </div>
+
+                <!-- Fleet Card 2: Palomita I -->
                 <div
-                    class="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 hover:bg-white/10 transition">
-                    <h3 class="text-bentamar-yellow font-bold text-lg">PALOMITA I</h3>
-                    <p class="text-sm text-gray-300">C/ Cabina | 90 HP</p>
-                    <a href="palomita-1.html"
-                        class="block mt-4 text-xs font-bold uppercase tracking-wide hover:text-bentamar-yellow">Ver
-                        Ficha &rarr;</a>
+                    class="bg-gray-800 rounded-2xl overflow-hidden shadow-2xl hover:shadow-bentamar-yellow/20 hover:shadow-2xl transition duration-500 group flex flex-col md:flex-row">
+                    <div class="md:w-2/5 relative h-64 md:h-auto overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1559775073-d14cfce13220?q=80&w=2070&auto=format&fit=crop"
+                            class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                            alt="Palomita I">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"></div>
+                        <div class="absolute bottom-4 left-4 flex items-center space-x-2 text-white/80 text-xs">
+                            <span class="bg-white/20 backdrop-blur px-2 py-1 rounded flex items-center">
+                                <svg class="w-3 h-3 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z">
+                                    </path>
+                                </svg>
+                                Ver Galería
+                            </span>
+                        </div>
+                    </div>
+                    <div
+                        class="md:w-3/5 p-8 flex flex-col justify-between relative bg-gradient-to-br from-gray-800 to-gray-900">
+                        <div>
+                            <div class="flex justify-between items-start mb-4 bg-transparent">
+                                <h3
+                                    class="font-heading text-2xl font-bold text-white group-hover:text-bentamar-yellow transition-colors">
+                                    PALOMITA I</h3>
+                                <span
+                                    class="bg-bentamar-yellow text-bentamar-blue text-xs font-bold px-2 py-1 rounded uppercase">Con
+                                    Cabina</span>
+                            </div>
+                            <div class="grid grid-cols-2 gap-4 mb-6">
+                                <div>
+                                    <span class="block text-gray-500 text-xs uppercase tracking-wide">Eslora</span>
+                                    <span class="text-white font-medium">6.8 Metros</span>
+                                </div>
+                                <div>
+                                    <span class="block text-gray-500 text-xs uppercase tracking-wide">Motor</span>
+                                    <span class="text-white font-medium">Suzuki 90 HP</span>
+                                </div>
+                            </div>
+                            <!-- Mini Gallery Preview -->
+                            <div class="flex gap-2 mb-6 opacity-60 hover:opacity-100 transition-opacity">
+                                <div
+                                    class="w-12 h-12 rounded bg-gray-700 overflow-hidden cursor-pointer border border-gray-600 hover:border-bentamar-yellow">
+                                    <img src="https://images.unsplash.com/photo-1559775073-d14cfce13220?q=80&w=2070&auto=format&fit=crop"
+                                        class="w-full h-full object-cover">
+                                </div>
+                                <div
+                                    class="w-12 h-12 rounded bg-gray-700 overflow-hidden cursor-pointer border border-gray-600 hover:border-bentamar-yellow">
+                                    <img src="https://images.unsplash.com/photo-1566370138090-e555986fe49b?q=80&w=1956&auto=format&fit=crop"
+                                        class="w-full h-full object-cover">
+                                </div>
+                            </div>
+                        </div>
+                        <a href="palomita-1.html"
+                            class="inline-flex items-center justify-center w-full bg-transparent border border-gray-600 text-white font-bold py-3 rounded hover:bg-bentamar-yellow hover:text-bentamar-blue hover:border-bentamar-yellow transition-all duration-300">
+                            FICHA TÉCNICA Y FOTOS
+                        </a>
+                    </div>
                 </div>
+
+                <!-- Fleet Card 3: Palomita II -->
                 <div
-                    class="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 hover:bg-white/10 transition">
-                    <h3 class="text-bentamar-yellow font-bold text-lg">PALOMITA II</h3>
-                    <p class="text-sm text-gray-300">HDPE | 115 HP</p>
-                    <a href="palomita-2.html"
-                        class="block mt-4 text-xs font-bold uppercase tracking-wide hover:text-bentamar-yellow">Ver
-                        Ficha &rarr;</a>
+                    class="bg-gray-800 rounded-2xl overflow-hidden shadow-2xl hover:shadow-bentamar-yellow/20 hover:shadow-2xl transition duration-500 group flex flex-col md:flex-row">
+                    <div class="md:w-2/5 relative h-64 md:h-auto overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1543719881-80bb4fb61922?q=80&w=2069&auto=format&fit=crop"
+                            class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                            alt="Palomita II">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"></div>
+                        <div class="absolute bottom-4 left-4 flex items-center space-x-2 text-white/80 text-xs">
+                            <span class="bg-white/20 backdrop-blur px-2 py-1 rounded flex items-center">
+                                <svg class="w-3 h-3 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z">
+                                    </path>
+                                </svg>
+                                Ver Galería
+                            </span>
+                        </div>
+                    </div>
+                    <div
+                        class="md:w-3/5 p-8 flex flex-col justify-between relative bg-gradient-to-br from-gray-800 to-gray-900">
+                        <div>
+                            <div class="flex justify-between items-start mb-4 bg-transparent">
+                                <h3
+                                    class="font-heading text-2xl font-bold text-white group-hover:text-bentamar-yellow transition-colors">
+                                    PALOMITA II</h3>
+                                <span
+                                    class="bg-bentamar-yellow text-bentamar-blue text-xs font-bold px-2 py-1 rounded uppercase">HDPE
+                                    Reforzado</span>
+                            </div>
+                            <div class="grid grid-cols-2 gap-4 mb-6">
+                                <div>
+                                    <span class="block text-gray-500 text-xs uppercase tracking-wide">Eslora</span>
+                                    <span class="text-white font-medium">8.0 Metros</span>
+                                </div>
+                                <div>
+                                    <span class="block text-gray-500 text-xs uppercase tracking-wide">Motor</span>
+                                    <span class="text-white font-medium">Suzuki 115 HP</span>
+                                </div>
+                            </div>
+                            <!-- Mini Gallery Preview -->
+                            <div class="flex gap-2 mb-6 opacity-60 hover:opacity-100 transition-opacity">
+                                <div
+                                    class="w-12 h-12 rounded bg-gray-700 overflow-hidden cursor-pointer border border-gray-600 hover:border-bentamar-yellow">
+                                    <img src="https://images.unsplash.com/photo-1543719881-80bb4fb61922?q=80&w=2069&auto=format&fit=crop"
+                                        class="w-full h-full object-cover">
+                                </div>
+                                <div
+                                    class="w-12 h-12 rounded bg-gray-700 overflow-hidden cursor-pointer border border-gray-600 hover:border-bentamar-yellow">
+                                    <img src="https://images.unsplash.com/photo-1498188737303-39d739507f35?q=80&w=2070&auto=format&fit=crop"
+                                        class="w-full h-full object-cover">
+                                </div>
+                            </div>
+                        </div>
+                        <a href="palomita-2.html"
+                            class="inline-flex items-center justify-center w-full bg-transparent border border-gray-600 text-white font-bold py-3 rounded hover:bg-bentamar-yellow hover:text-bentamar-blue hover:border-bentamar-yellow transition-all duration-300">
+                            FICHA TÉCNICA Y FOTOS
+                        </a>
+                    </div>
                 </div>
+
+                <!-- Fleet Card 4: Palomita III -->
                 <div
-                    class="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 hover:bg-white/10 transition">
-                    <h3 class="text-bentamar-yellow font-bold text-lg">PALOMITA III</h3>
-                    <p class="text-sm text-gray-300">HDPE | 50 HP</p>
-                    <a href="palomita-3.html"
-                        class="block mt-4 text-xs font-bold uppercase tracking-wide hover:text-bentamar-yellow">Ver
-                        Ficha &rarr;</a>
+                    class="bg-gray-800 rounded-2xl overflow-hidden shadow-2xl hover:shadow-bentamar-yellow/20 hover:shadow-2xl transition duration-500 group flex flex-col md:flex-row">
+                    <div class="md:w-2/5 relative h-64 md:h-auto overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1560205001-a70119f2f90e?q=80&w=2070&auto=format&fit=crop"
+                            class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                            alt="Palomita III">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"></div>
+                        <div class="absolute bottom-4 left-4 flex items-center space-x-2 text-white/80 text-xs">
+                            <span class="bg-white/20 backdrop-blur px-2 py-1 rounded flex items-center">
+                                <svg class="w-3 h-3 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z">
+                                    </path>
+                                </svg>
+                                Ver Galería
+                            </span>
+                        </div>
+                    </div>
+                    <div
+                        class="md:w-3/5 p-8 flex flex-col justify-between relative bg-gradient-to-br from-gray-800 to-gray-900">
+                        <div>
+                            <div class="flex justify-between items-start mb-4 bg-transparent">
+                                <h3
+                                    class="font-heading text-2xl font-bold text-white group-hover:text-bentamar-yellow transition-colors">
+                                    PALOMITA III</h3>
+                                <span
+                                    class="bg-bentamar-yellow text-bentamar-blue text-xs font-bold px-2 py-1 rounded uppercase">HDPE
+                                    Ligero</span>
+                            </div>
+                            <div class="grid grid-cols-2 gap-4 mb-6">
+                                <div>
+                                    <span class="block text-gray-500 text-xs uppercase tracking-wide">Eslora</span>
+                                    <span class="text-white font-medium">6.0 Metros</span>
+                                </div>
+                                <div>
+                                    <span class="block text-gray-500 text-xs uppercase tracking-wide">Motor</span>
+                                    <span class="text-white font-medium">Yamaha 50 HP</span>
+                                </div>
+                            </div>
+                            <!-- Mini Gallery Preview -->
+                            <div class="flex gap-2 mb-6 opacity-60 hover:opacity-100 transition-opacity">
+                                <div
+                                    class="w-12 h-12 rounded bg-gray-700 overflow-hidden cursor-pointer border border-gray-600 hover:border-bentamar-yellow">
+                                    <img src="https://images.unsplash.com/photo-1560205001-a70119f2f90e?q=80&w=2070&auto=format&fit=crop"
+                                        class="w-full h-full object-cover">
+                                </div>
+                                <div
+                                    class="w-12 h-12 rounded bg-gray-700 overflow-hidden cursor-pointer border border-gray-600 hover:border-bentamar-yellow">
+                                    <img src="https://images.unsplash.com/photo-1569263979104-865dc7da8600?q=80&w=2072&auto=format&fit=crop"
+                                        class="w-full h-full object-cover">
+                                </div>
+                            </div>
+                        </div>
+                        <a href="palomita-3.html"
+                            class="inline-flex items-center justify-center w-full bg-transparent border border-gray-600 text-white font-bold py-3 rounded hover:bg-bentamar-yellow hover:text-bentamar-blue hover:border-bentamar-yellow transition-all duration-300">
+                            FICHA TÉCNICA Y FOTOS
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Tourism & Expeditions Section (New) -->
+    <section id="turismo" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row justify-between items-end mb-12">
+                <div>
+                    <span class="text-bentamar-blue font-bold tracking-[0.2em] uppercase text-sm mb-2 block">Nuevos
+                        Horizontes</span>
+                    <h2 class="font-heading text-3xl md:text-4xl font-bold text-bentamar-blue">EXPEDICIONES Y TURISMO
+                        PRIVADO</h2>
+                </div>
+                <div class="mt-4 md:mt-0 max-w-lg">
+                    <p class="text-gray-600">
+                        Descubra la belleza indómita del sur de Chile desde una perspectiva única. Experiencias
+                        exclusivas diseñadas para amantes de la naturaleza y el mar.
+                    </p>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Tour 1: Fishing -->
+                <div class="group rounded-2xl overflow-hidden relative h-[500px] shadow-xl">
+                    <img src="https://images.unsplash.com/photo-1517456950275-c052af9610f6?q=80&w=1964&auto=format&fit=crop"
+                        class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                        alt="Pesca Deportiva">
+                    <div class="absolute inset-0 bg-gradient-to-t from-bentamar-blue to-transparent opacity-90"></div>
+                    <div class="absolute top-6 right-6">
+                        <span
+                            class="bg-white text-bentamar-blue font-bold px-4 py-2 rounded-full text-xs box-shadow border border-gray-200">
+                            Por Temporada
+                        </span>
+                    </div>
+                    <div class="absolute bottom-0 left-0 p-8 w-full">
+                        <h3 class="font-heading text-2xl font-bold text-white mb-2">Tour de Pesca Deportiva</h3>
+                        <p class="text-gray-300 mb-6 text-sm">Experiencia de pesca exclusiva con equipamiento
+                            profesional y guías locales expertos que conocen los mejores spots.</p>
+                        <a href="#contacto"
+                            class="inline-block w-full bg-bentamar-yellow text-bentamar-blue text-center font-bold py-3 rounded hover:bg-white transition duration-300">
+                            RESERVAR EXPERIENCIA
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Tour 2: Chacao -->
+                <div class="group rounded-2xl overflow-hidden relative h-[500px] shadow-xl">
+                    <img src="https://images.unsplash.com/photo-1470770841072-f978cf4d019e?q=80&w=2070&auto=format&fit=crop"
+                        class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                        alt="Puente Chacao">
+                    <div class="absolute inset-0 bg-gradient-to-t from-bentamar-blue to-transparent opacity-90"></div>
+                    <div class="absolute top-6 right-6">
+                        <span
+                            class="bg-white text-bentamar-blue font-bold px-4 py-2 rounded-full text-xs box-shadow border border-gray-200">
+                            Todo el Año
+                        </span>
+                    </div>
+                    <div class="absolute bottom-0 left-0 p-8 w-full">
+                        <h3 class="font-heading text-2xl font-bold text-white mb-2">Ruta Puente Chacao y Naturaleza</h3>
+                        <p class="text-gray-300 mb-6 text-sm">Navegación escénica hacia el Canal de Chacao, avistamiento
+                            de fauna marina y vistas privilegiadas de la megaestructura.</p>
+                        <a href="#contacto"
+                            class="inline-block w-full bg-bentamar-yellow text-bentamar-blue text-center font-bold py-3 rounded hover:bg-white transition duration-300">
+                            RESERVAR EXPERIENCIA
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -421,16 +717,19 @@
             }
         });
 
-        // Carousel Logic
+        // Carousel Logic with Auto-play and Pause on Hover
         document.addEventListener('DOMContentLoaded', () => {
             const track = document.getElementById('carouselTrack');
+            const container = document.getElementById('carouselContainer');
             const prevBtn = document.getElementById('prevBtn');
             const nextBtn = document.getElementById('nextBtn');
             const cards = track.children;
 
             // Configuration
-            const gap = 24; // matches gap-6 (6 * 4px = 24px)
+            const gap = 24;
             let currentIndex = 0;
+            let autoPlayInterval;
+            const autoPlayDelay = 4000; // 4 seconds
 
             function getVisibleCards() {
                 if (window.innerWidth >= 1024) return 3;
@@ -440,13 +739,12 @@
 
             function updateCarousel() {
                 const visibleCards = getVisibleCards();
-                const cardWidth = cards[0].offsetWidth; // Get actual width of a card
-                // Calculate move distance: (card width + gap) * index
+                const cardWidth = cards[0].offsetWidth;
                 const moveAmount = (cardWidth + gap) * currentIndex;
 
                 track.style.transform = `translateX(-${moveAmount}px)`;
 
-                // Button visibility logic
+                // Button visibility
                 prevBtn.style.opacity = currentIndex === 0 ? '0.5' : '1';
                 prevBtn.style.cursor = currentIndex === 0 ? 'default' : 'pointer';
 
@@ -455,31 +753,63 @@
                 nextBtn.style.cursor = currentIndex >= maxIndex ? 'default' : 'pointer';
             }
 
-            nextBtn.addEventListener('click', () => {
+            function moveNext() {
                 const visibleCards = getVisibleCards();
                 const maxIndex = cards.length - visibleCards;
                 if (currentIndex < maxIndex) {
                     currentIndex++;
-                    updateCarousel();
+                } else {
+                    // Start over (Infinite loop feel)
+                    currentIndex = 0;
                 }
-            });
+                updateCarousel();
+            }
 
-            prevBtn.addEventListener('click', () => {
+            function movePrev() {
                 if (currentIndex > 0) {
                     currentIndex--;
                     updateCarousel();
                 }
+            }
+
+            // Auto-play Logic
+            function startAutoPlay() {
+                stopAutoPlay(); // Clear existing to be safe
+                autoPlayInterval = setInterval(moveNext, autoPlayDelay);
+            }
+
+            function stopAutoPlay() {
+                if (autoPlayInterval) {
+                    clearInterval(autoPlayInterval);
+                }
+            }
+
+            // Event Listeners
+            nextBtn.addEventListener('click', () => {
+                moveNext();
+                stopAutoPlay(); // Reset timer on interaction
+                startAutoPlay();
             });
+
+            prevBtn.addEventListener('click', () => {
+                movePrev();
+                stopAutoPlay();
+                startAutoPlay();
+            });
+
+            // Pause on Hover
+            container.addEventListener('mouseenter', stopAutoPlay);
+            container.addEventListener('mouseleave', startAutoPlay);
 
             // Handle resize
             window.addEventListener('resize', () => {
-                // Reset to 0 on resize to avoid layout bugs, or recalculate carefully
                 currentIndex = 0;
                 updateCarousel();
             });
 
-            // Initial call
+            // Initialize
             updateCarousel();
+            startAutoPlay();
         });
 
         // Form Logic

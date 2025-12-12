@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inspección ROV | BENTAMAR SPA</title>
+    <link rel="icon" type="image/x-icon" href="img/Logo_Oficial.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Roboto:wght@300;400;500;700&display=swap"
+        rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        bentamar: {
+                            blue: '#002B5C',
+                            yellow: '#FFC107',
+                            gray: '#F4F6F6',
+                            dark: '#1a1a1a'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Roboto', 'sans-serif'],
+                        heading: ['Montserrat', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+
+<body class="font-sans text-gray-700 bg-gray-50 flex flex-col min-h-screen">
+    <!-- Navbar -->
+    <nav class="bg-bentamar-blue text-white fixed w-full z-50 shadow-md">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="index.html" class="flex items-center gap-3">
+                <img src="img/Logo_Monocromatico_Blanco.png" alt="Bentamar Logo"
+                    class="h-10 md:h-12 w-auto object-contain">
+                <span class="font-heading font-bold text-xl tracking-wider hidden md:block">BENTAMAR</span>
+            </a>
+            <ul class="hidden md:flex space-x-8 font-medium text-sm items-center">
+                <li><a href="index.html#inicio" class="hover:text-bentamar-yellow transition-colors">Inicio</a></li>
+                <li><a href="index.html#servicios" class="hover:text-bentamar-yellow transition-colors">Servicios</a>
+                </li>
+                <li><a href="index.html#flota" class="hover:text-bentamar-yellow transition-colors">Flota</a></li>
+                <li><a href="index.html#turismo" class="hover:text-bentamar-yellow transition-colors">Turismo</a></li>
+                <li><a href="index.html#contacto"
+                        class="bg-bentamar-yellow text-bentamar-blue px-6 py-2 rounded-sm font-bold uppercase hover:bg-white transition-colors shadow-lg">Cotizar</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <header class="relative h-64 md:h-80 flex items-center justify-center bg-bentamar-blue overflow-hidden mt-16">
+        <div class="absolute inset-0 opacity-40">
+            <img src="https://images.unsplash.com/photo-1544551763-46a813d3205c?q=80&w=2069&auto=format&fit=crop"
+                class="w-full h-full object-cover" alt="Inspección ROV">
+        </div>
+        <div class="relative z-10 text-center px-4">
+            <h1 class="text-3xl md:text-5xl font-bold text-white font-heading uppercase tracking-wider drop-shadow-md">
+                Inspección ROV</h1>
+            <div class="h-1.5 w-24 bg-bentamar-yellow mx-auto mt-4 rounded-full"></div>
+        </div>
+    </header>
+
+    <!-- Content -->
+    <section class="container mx-auto px-6 py-16 flex-grow">
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-12">
+            <!-- Left Column -->
+            <div class="lg:col-span-2 space-y-6 text-lg text-gray-600 leading-relaxed">
+                <h2 class="text-2xl md:text-3xl font-bold text-bentamar-blue font-heading">Tecnología Robótica Submarina
+                </h2>
+                <p>
+                    Ofrecemos servicios de inspección con ROV (Vehículo Operado Remotamente) capaz de operar hasta 100
+                    metros de profundidad. Esta tecnología nos permite acceder a zonas de riesgo para buzos y realizar
+                    inspecciones prolongadas sin límites de descompresión.
+                </p>
+                <p>
+                    Principales usos:
+                </p>
+                <ul class="list-disc pl-6 space-y-2 mt-4 marker:text-bentamar-yellow">
+                    <li>Inspección de fondos marinos y levantamientos visuales.</li>
+                    <li>Revisión de redes loberas y peceras en centros de cultivo.</li>
+                    <li>Inspección de cascos y hélices sin buceo.</li>
+                    <li>Apoyo visual en maniobras complejas.</li>
+                </ul>
+            </div>
+
+            <!-- Right Column -->
+            <div class="space-y-8">
+                <!-- Video Placeholder -->
+                <div
+                    class="bg-gray-800 rounded-lg h-48 flex items-center justify-center relative overflow-hidden shadow-lg group cursor-pointer border-2 border-transparent hover:border-bentamar-yellow transition-all">
+                    <img src="https://images.unsplash.com/photo-1544551763-46a813d3205c?q=80&w=2069&auto=format&fit=crop"
+                        class="absolute inset-0 w-full h-full object-cover opacity-50 bg-blend-overlay">
+                    <div
+                        class="relative z-10 bg-white/10 p-4 rounded-full backdrop-blur-sm group-hover:scale-110 transition-transform">
+                        <svg class="w-10 h-10 text-white" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M8 5v14l11-7z" />
+                        </svg>
+                    </div>
+                </div>
+
+                <!-- CTA -->
+                <div class="bg-white p-8 rounded-xl shadow-xl border-t-4 border-bentamar-yellow">
+                    <h3 class="font-bold text-xl text-bentamar-blue mb-2 font-heading">¿Necesita este servicio?</h3>
+                    <p class="text-sm text-gray-500 mb-6">Contáctenos hoy para recibir una cotización técnica
+                        personalizada.</p>
+                    <a href="index.html#contacto"
+                        class="block w-full text-center bg-bentamar-blue text-white font-bold py-4 rounded hover:bg-bentamar-yellow hover:text-bentamar-blue transition duration-300 uppercase tracking-wide">
+                        Cotizar Ahora
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-gray-400 py-10 border-t border-gray-800 text-center text-sm">
+        <p>&copy; 2024 BENTAMAR SPA. Todos los derechos reservados.</p>
+    </footer>
+</body>
+
+</html>

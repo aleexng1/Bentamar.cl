@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arriendo de Embarcaciones | BENTAMAR SPA</title>
+    <link rel="icon" type="image/x-icon" href="img/Logo_Oficial.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Roboto:wght@300;400;500;700&display=swap"
+        rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        bentamar: {
+                            blue: '#002B5C',
+                            yellow: '#FFC107',
+                            gray: '#F4F6F6',
+                            dark: '#1a1a1a'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Roboto', 'sans-serif'],
+                        heading: ['Montserrat', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+
+<body class="font-sans text-gray-700 bg-gray-50 flex flex-col min-h-screen">
+    <!-- Navbar -->
+    <nav class="bg-bentamar-blue text-white fixed w-full z-50 shadow-md">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="index.html" class="flex items-center gap-3">
+                <img src="img/Logo_Monocromatico_Blanco.png" alt="Bentamar Logo"
+                    class="h-10 md:h-12 w-auto object-contain">
+                <span class="font-heading font-bold text-xl tracking-wider hidden md:block">BENTAMAR</span>
+            </a>
+            <ul class="hidden md:flex space-x-8 font-medium text-sm items-center">
+                <li><a href="index.html#inicio" class="hover:text-bentamar-yellow transition-colors">Inicio</a></li>
+                <li><a href="index.html#servicios" class="hover:text-bentamar-yellow transition-colors">Servicios</a>
+                </li>
+                <li><a href="index.html#flota" class="hover:text-bentamar-yellow transition-colors">Flota</a></li>
+                <li><a href="index.html#turismo" class="hover:text-bentamar-yellow transition-colors">Turismo</a></li>
+                <li><a href="index.html#contacto"
+                        class="bg-bentamar-yellow text-bentamar-blue px-6 py-2 rounded-sm font-bold uppercase hover:bg-white transition-colors shadow-lg">Cotizar</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <header class="relative h-64 md:h-80 flex items-center justify-center bg-bentamar-blue overflow-hidden mt-16">
+        <div class="absolute inset-0 opacity-40">
+            <img src="img/arriendoembarcaciones.jpg" class="w-full h-full object-cover" alt="Arriendo de Embarcaciones">
+        </div>
+        <div class="relative z-10 text-center px-4">
+            <h1 class="text-3xl md:text-5xl font-bold text-white font-heading uppercase tracking-wider drop-shadow-md">
+                Arriendo de Embarcaciones y Logística</h1>
+            <div class="h-1.5 w-24 bg-bentamar-yellow mx-auto mt-4 rounded-full"></div>
+        </div>
+    </header>
+
+    <!-- Content -->
+    <section class="container mx-auto px-6 py-16 flex-grow">
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-12">
+            <!-- Left Column -->
+            <div class="lg:col-span-2 space-y-6 text-lg text-gray-600 leading-relaxed">
+                <h2 class="text-2xl md:text-3xl font-bold text-bentamar-blue font-heading">Apoyo Logístico Integral</h2>
+                <p>
+                    Brindamos apoyo logístico integral para centros de cultivo, obras civiles marítimas y proyectos
+                    científicos.
+                    Nuestra flota está diseñada para operar con seguridad y eficiencia en las condiciones del sur de
+                    Chile,
+                    facilitando el transporte de personal técnico, carga de materiales, víveres y actuando como
+                    plataformas
+                    de trabajo seguras.
+                </p>
+                <p>
+                    Características del servicio:
+                </p>
+                <ul class="list-disc pl-6 space-y-2 mt-4 marker:text-bentamar-yellow">
+                    <li>Flota certificada con todos los dispositivos de seguridad al día.</li>
+                    <li>Patrones de nave con amplia experiencia en la zona.</li>
+                    <li>Disponibilidad para faenas puntuales o contratos a largo plazo.</li>
+                    <li>Versatilidad: desde lanchas rápidas de fibra hasta embarcaciones de trabajo pesado HDPE.</li>
+                </ul>
+            </div>
+
+            <!-- Right Column -->
+            <div class="space-y-8">
+                <!-- Video/Image Placeholder -->
+                <div
+                    class="bg-gray-800 rounded-lg h-48 flex items-center justify-center relative overflow-hidden shadow-lg group cursor-pointer border-2 border-transparent hover:border-bentamar-yellow transition-all">
+                    <img src="img/arriendoembarcaciones.jpg"
+                        class="absolute inset-0 w-full h-full object-cover opacity-50 bg-blend-overlay">
+                    <div
+                        class="relative z-10 bg-white/10 p-4 rounded-full backdrop-blur-sm group-hover:scale-110 transition-transform">
+                        <svg class="w-10 h-10 text-white" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M8 5v14l11-7z" />
+                        </svg>
+                    </div>
+                </div>
+
+                <!-- Quick Links to Fleet Specs -->
+                <div class="bg-gray-50 p-6 rounded-xl border border-gray-200">
+                    <h3 class="font-bold text-lg text-bentamar-blue mb-4 font-heading border-b border-gray-200 pb-2">
+                        Fichas Técnicas de Flota</h3>
+                    <ul class="space-y-3">
+                        <li>
+                            <a href="bento.html"
+                                class="flex items-center text-gray-600 hover:text-bentamar-blue hover:translate-x-1 transition-all group">
+                                <span
+                                    class="w-2 h-2 bg-bentamar-yellow rounded-full mr-3 group-hover:scale-125 transition-transform"></span>
+                                Ver Ficha <strong>&nbsp;Bento</strong>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="palomita-1.html"
+                                class="flex items-center text-gray-600 hover:text-bentamar-blue hover:translate-x-1 transition-all group">
+                                <span
+                                    class="w-2 h-2 bg-bentamar-yellow rounded-full mr-3 group-hover:scale-125 transition-transform"></span>
+                                Ver Ficha <strong>&nbsp;Palomita I</strong>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="palomita-2.html"
+                                class="flex items-center text-gray-600 hover:text-bentamar-blue hover:translate-x-1 transition-all group">
+                                <span
+                                    class="w-2 h-2 bg-bentamar-yellow rounded-full mr-3 group-hover:scale-125 transition-transform"></span>
+                                Ver Ficha <strong>&nbsp;Palomita II</strong>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="palomita-3.html"
+                                class="flex items-center text-gray-600 hover:text-bentamar-blue hover:translate-x-1 transition-all group">
+                                <span
+                                    class="w-2 h-2 bg-bentamar-yellow rounded-full mr-3 group-hover:scale-125 transition-transform"></span>
+                                Ver Ficha <strong>&nbsp;Palomita III</strong>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- CTA -->
+                <div class="bg-white p-8 rounded-xl shadow-xl border-t-4 border-bentamar-yellow">
+                    <h3 class="font-bold text-xl text-bentamar-blue mb-2 font-heading">¿Necesita arriendo?</h3>
+                    <p class="text-sm text-gray-500 mb-6">Contáctenos para verificar disponibilidad y tarifas.</p>
+                    <a href="index.html#contacto"
+                        class="block w-full text-center bg-bentamar-blue text-white font-bold py-4 rounded hover:bg-bentamar-yellow hover:text-bentamar-blue transition duration-300 uppercase tracking-wide">
+                        Cotizar Arriendo
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Fleet Grid Section -->
+    <section class="py-16 bg-white border-t border-gray-100">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center text-bentamar-blue mb-2 font-heading">Nuestra Flota Disponible
+            </h2>
+            <div class="h-1 w-20 bg-bentamar-yellow mx-auto mb-12 rounded-full"></div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Boat Card 1: Bento -->
+                <div
+                    class="bg-gray-50 rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 group border border-gray-200">
+                    <div class="h-48 overflow-hidden relative">
+                        <img src="img/bento-1.JPG" alt="Bento"
+                            class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    </div>
+                    <div class="p-6 text-center">
+                        <h3 class="font-bold text-xl text-bentamar-blue mb-1">BENTO</h3>
+                        <p class="text-sm text-gray-500 mb-4">Lancha de Trabajo</p>
+                        <a href="bento.html"
+                            class="inline-block w-full py-2 border-2 border-bentamar-blue text-bentamar-blue font-bold rounded hover:bg-bentamar-blue hover:text-white transition-colors uppercase text-sm tracking-wide">
+                            Ver Ficha
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Boat Card 2: Palomita I -->
+                <div
+                    class="bg-gray-50 rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 group border border-gray-200">
+                    <div class="h-48 overflow-hidden relative">
+                        <img src="img/palomita1-1.JPG" alt="Palomita I"
+                            class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    </div>
+                    <div class="p-6 text-center">
+                        <h3 class="font-bold text-xl text-bentamar-blue mb-1">PALOMITA I</h3>
+                        <p class="text-sm text-gray-500 mb-4">Bote con Cabina</p>
+                        <a href="palomita-1.html"
+                            class="inline-block w-full py-2 border-2 border-bentamar-blue text-bentamar-blue font-bold rounded hover:bg-bentamar-blue hover:text-white transition-colors uppercase text-sm tracking-wide">
+                            Ver Ficha
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Boat Card 3: Palomita II -->
+                <div
+                    class="bg-gray-50 rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 group border border-gray-200">
+                    <div class="h-48 overflow-hidden relative">
+                        <img src="img/palomita2-1.JPG" alt="Palomita II"
+                            class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    </div>
+                    <div class="p-6 text-center">
+                        <h3 class="font-bold text-xl text-bentamar-blue mb-1">PALOMITA II</h3>
+                        <p class="text-sm text-gray-500 mb-4">Bote HDPE Reforzado</p>
+                        <a href="palomita-2.html"
+                            class="inline-block w-full py-2 border-2 border-bentamar-blue text-bentamar-blue font-bold rounded hover:bg-bentamar-blue hover:text-white transition-colors uppercase text-sm tracking-wide">
+                            Ver Ficha
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Boat Card 4: Palomita III -->
+                <div
+                    class="bg-gray-50 rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 group border border-gray-200">
+                    <div class="h-48 overflow-hidden relative">
+                        <img src="img/palomita3-1.JPG" alt="Palomita III"
+                            class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    </div>
+                    <div class="p-6 text-center">
+                        <h3 class="font-bold text-xl text-bentamar-blue mb-1">PALOMITA III</h3>
+                        <p class="text-sm text-gray-500 mb-4">Bote HDPE Ligero</p>
+                        <a href="palomita-3.html"
+                            class="inline-block w-full py-2 border-2 border-bentamar-blue text-bentamar-blue font-bold rounded hover:bg-bentamar-blue hover:text-white transition-colors uppercase text-sm tracking-wide">
+                            Ver Ficha
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-gray-400 py-10 border-t border-gray-800 text-center text-sm">
+        <p>&copy; 2024 BENTAMAR SPA. Todos los derechos reservados.</p>
+    </footer>
+</body>
+
+</html>

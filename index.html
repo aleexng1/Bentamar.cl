@@ -4,6 +4,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Bentamar SPA: Soluciones técnicas submarinas, buceo profesional y arriendo de embarcaciones en Puerto Montt y sur de Chile.">
+    <meta name="keywords" content="Buceo Comercial, ROV, Arriendo Lanchas, Puerto Montt, Salmoneras, Bentamar">
+    <meta name="author" content="Bentamar SPA">
+    <meta property="og:description"
+        content="Bentamar SPA: Soluciones técnicas submarinas, buceo profesional y arriendo de embarcaciones en Puerto Montt y sur de Chile.">
+    <meta property="og:image" content="img/arriendoembarcaciones.webp">
+    <meta property="og:title" content="BENTAMAR SPA | Soluciones Técnicas Submarinas">
     <title>BENTAMAR SPA | Soluciones Técnicas Submarinas</title>
     <link rel="icon" type="image/x-icon" href="img/Logo_Oficial.png">
 
@@ -18,26 +26,7 @@
     <script src="https://cdn.tailwindcss.com"></script>
 
     <!-- Tailwind Configuration -->
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        bentamar: {
-                            blue: '#002B5C',   // Primary Navy
-                            yellow: '#FFC107', // Secondary Warning Yellow
-                            gray: '#F4F6F6',   // Light Gray Background
-                            dark: '#1a1a1a'    // Dark Text
-                        }
-                    },
-                    fontFamily: {
-                        sans: ['Roboto', 'sans-serif'],
-                        heading: ['Montserrat', 'sans-serif'],
-                    }
-                }
-            }
-        }
-    </script>
+    <script src="js/tailwind-config.js"></script>
     <style>
         .text-shadow {
             text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
@@ -65,8 +54,8 @@
         <div class="container mx-auto px-6 py-4 flex justify-between items-center">
             <!-- Logo -->
             <a href="#" class="flex items-center gap-3">
-                <img src="img/Logo_Monocromatico_Blanco.png" alt="Bentamar Logo"
-                    class="h-10 md:h-12 w-auto object-contain">
+                <img src="img/Logo_Secundario_Blanco.webp" alt="Bentamar Logo"
+                    class="h-12 md:h-14 w-auto object-contain">
                 <span class="font-heading font-bold text-xl tracking-wider hidden md:block">BENTAMAR</span>
             </a>
 
@@ -119,10 +108,22 @@
         <!-- Content -->
         <div class="relative z-20 max-w-5xl mx-auto animate-fade-in-up">
             <div class="text-center">
-                <h1 class="text-4xl tracking-tight font-extrabold text-white sm:text-5xl md:text-6xl">
-                    <span class="block uppercase">Soluciones Técnicas</span>
-                    <span class="block text-[#FFC107] mt-1">Submarinas y Logísticas</span>
-                </h1>
+                <div class="flex flex-col md:flex-row items-center justify-center gap-6 md:gap-10 mb-8">
+                    <!-- Elemento Izquierdo (Logo) -->
+                    <!-- Elemento Izquierdo (Logo) -->
+                    <img src="img/Logo_Oficial.png" alt="Bentamar Oficial"
+                        class="w-28 h-28 md:w-40 md:h-40 object-contain">
+
+                    <!-- Elemento Derecho (Textos) -->
+                    <div class="text-center md:text-left">
+                        <h1 class="text-5xl md:text-7xl font-extrabold text-white tracking-wider leading-tight">
+                            BENTAMAR
+                        </h1>
+                        <span class="text-[#FFC107] text-xl md:text-3xl font-bold uppercase tracking-widest mt-2 block">
+                            BUCEO PROFESIONAL
+                        </span>
+                    </div>
+                </div>
                 <p
                     class="mt-4 max-w-md mx-auto text-base text-gray-200 sm:text-lg md:mt-5 md:text-xl md:max-w-3xl font-light">
                     Buceo profesional, inspección ROV y arriendo de embarcaciones con estricto
@@ -156,205 +157,275 @@
         </div>
     </header>
 
-    <!-- Services Section - Carousel with Auto-play -->
+    <!-- Services Section - Static Grid -->
     <section id="servicios" class="py-20 bg-gray-50">
         <div class="container mx-auto px-6">
             <div class="text-center mb-12">
                 <h2 class="font-heading text-3xl md:text-5xl font-bold text-bentamar-blue mb-4">NUESTROS SERVICIOS</h2>
                 <div class="h-1.5 w-24 bg-bentamar-yellow mx-auto rounded-full"></div>
-                <p class="mt-6 text-gray-600 max-w-2xl mx-auto">
-                    Tecnología de punta y personal calificado para cada desafío subacuático.
+                <p class="mt-6 text-gray-600 max-w-2xl mx-auto font-medium text-lg">
+                    Divisiones especializadas para desafíos complejos en la industria acuícola y marítima.
                 </p>
             </div>
 
-            <!-- Carousel Container -->
-            <div class="relative max-w-7xl mx-auto group">
+            <!-- Main Grid Container -->
+            <div class="flex flex-col gap-12">
 
-                <!-- Left Arrow -->
-                <button id="prevBtn"
-                    class="absolute left-0 top-1/2 -translate-y-1/2 -ml-4 md:-ml-12 z-30 bg-bentamar-blue text-white p-3 rounded-full shadow-lg hover:bg-bentamar-yellow hover:text-bentamar-blue transition duration-300 focus:outline-none">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7">
-                        </path>
-                    </svg>
-                </button>
+                <!-- Group 1: INGENIERÍA & OBRAS SUBMARINAS -->
+                <div>
+                    <h3
+                        class="text-bentamar-blue font-bold uppercase tracking-wide text-xl mb-6 border-l-4 border-bentamar-yellow pl-4">
+                        Ingeniería & Obras Submarinas</h3>
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                        <!-- Soldadura -->
+                        <a href="servicio-soldadura.html"
+                            class="bg-white rounded-sm shadow-md hover:shadow-2xl transition-all duration-300 group overflow-hidden hover:-translate-y-1 block">
+                            <div
+                                class="h-48 overflow-hidden relative border-b-4 border-transparent group-hover:border-bentamar-yellow transition-all duration-300">
+                                <div class="absolute inset-0 flex items-center justify-center group-hover:bg-black/20 transition cursor-pointer z-10"
+                                    onclick="event.preventDefault(); openVideo('TLIYgxYyFVk')">
+                                    <div
+                                        class="bg-bentamar-blue/80 text-white rounded-full w-16 h-16 flex items-center justify-center hover:scale-110 hover:bg-bentamar-yellow hover:text-bentamar-blue transition shadow-lg">
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 ml-1" fill="none"
+                                            viewBox="0 0 24 24" stroke="currentColor">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z" />
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                        </svg>
+                                    </div>
+                                </div>
+                                <img src="https://img.youtube.com/vi/TLIYgxYyFVk/hqdefault.jpg"
+                                    alt="Soldadura Submarina"
+                                    class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
+                            </div>
+                            <div class="p-6">
+                                <h4 class="font-bold text-bentamar-blue text-lg mb-2">Soldadura y Corte</h4>
+                                <p class="text-sm text-gray-600 line-clamp-2">Reparaciones estructurales submarinas
+                                    realizadas por buzos comerciales certificados.</p>
+                            </div>
+                        </a>
+                        <!-- Emisarios -->
+                        <a href="servicio-emisarios.html"
+                            class="bg-white rounded-sm shadow-md hover:shadow-2xl transition-all duration-300 group overflow-hidden hover:-translate-y-1 block">
+                            <div
+                                class="h-48 overflow-hidden relative border-b-4 border-transparent group-hover:border-bentamar-yellow transition-all duration-300">
+                                <div class="absolute inset-0 flex items-center justify-center group-hover:bg-black/20 transition cursor-pointer z-10"
+                                    onclick="event.preventDefault(); openVideo('nvX-DtHQpac')">
+                                    <div
+                                        class="bg-bentamar-blue/80 text-white rounded-full w-16 h-16 flex items-center justify-center hover:scale-110 hover:bg-bentamar-yellow hover:text-bentamar-blue transition shadow-lg">
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 ml-1" fill="none"
+                                            viewBox="0 0 24 24" stroke="currentColor">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z" />
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                        </svg>
+                                    </div>
+                                </div>
+                                <img src="https://img.youtube.com/vi/nvX-DtHQpac/hqdefault.jpg"
+                                    alt="Emisarios y Tuberías"
+                                    class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
+                            </div>
+                            <div class="p-6">
+                                <h4 class="font-bold text-bentamar-blue text-lg mb-2">Emisarios y Tuberías</h4>
+                                <p class="text-sm text-gray-600 line-clamp-2">Instalación y mantención de emisarios
+                                    submarinos, aducción de aguas y salmoductos.</p>
+                            </div>
+                        </a>
+                        <!-- Fondeo -->
+                        <a href="servicio-fondeos.html"
+                            class="bg-white rounded-sm shadow-md hover:shadow-2xl transition-all duration-300 group overflow-hidden hover:-translate-y-1 block">
+                            <div
+                                class="h-48 overflow-hidden relative border-b-4 border-transparent group-hover:border-bentamar-yellow transition-all duration-300">
+                                <div class="absolute inset-0 flex items-center justify-center group-hover:bg-black/20 transition cursor-pointer z-10"
+                                    onclick="event.preventDefault(); openVideo('hoIm_qyG-zs')">
+                                    <div
+                                        class="bg-bentamar-blue/80 text-white rounded-full w-16 h-16 flex items-center justify-center hover:scale-110 hover:bg-bentamar-yellow hover:text-bentamar-blue transition shadow-lg">
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 ml-1" fill="none"
+                                            viewBox="0 0 24 24" stroke="currentColor">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z" />
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                        </svg>
+                                    </div>
+                                </div>
+                                <img src="https://img.youtube.com/vi/hoIm_qyG-zs/hqdefault.jpg" alt="Líneas de Fondeo"
+                                    class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
+                            </div>
+                            <div class="p-6">
+                                <h4 class="font-bold text-bentamar-blue text-lg mb-2">Líneas de Fondeo</h4>
+                                <p class="text-sm text-gray-600 line-clamp-2">Inspección y mantención técnica de
+                                    sistemas de fondeo.</p>
+                            </div>
+                        </a>
+                        <!-- Reflotamiento -->
+                        <a href="servicio-reflotamiento.html"
+                            class="bg-white rounded-sm shadow-md hover:shadow-2xl transition-all duration-300 group overflow-hidden hover:-translate-y-1 block">
+                            <div
+                                class="h-48 overflow-hidden relative border-b-4 border-transparent group-hover:border-bentamar-yellow transition-all duration-300">
+                                <img src="https://images.unsplash.com/photo-1621255554605-59b3af5d8f6d?q=80&w=2070&auto=format&fit=crop"
+                                    alt="Reflotamiento"
+                                    class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
+                            </div>
+                            <div class="p-6">
+                                <h4 class="font-bold text-bentamar-blue text-lg mb-2">Reflotamiento</h4>
+                                <p class="text-sm text-gray-600 line-clamp-2">Maniobras especializadas para recuperación
+                                    y reflotamiento de naves.</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
 
-                <!-- Carousel Viewport -->
-                <div class="overflow-hidden rounded-xl py-4 px-2" id="carouselContainer">
-                    <div id="carouselTrack" class="flex transition-transform duration-500 ease-out gap-6">
+                <!-- Group 2: INSPECCIÓN & TECNOLOGÍA -->
+                <div>
+                    <h3
+                        class="text-bentamar-blue font-bold uppercase tracking-wide text-xl mb-6 border-l-4 border-bentamar-yellow pl-4">
+                        Inspección & Tecnología</h3>
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                        <!-- ROV -->
+                        <a href="servicio-rov.html"
+                            class="bg-white rounded-sm shadow-md hover:shadow-2xl transition-all duration-300 group overflow-hidden hover:-translate-y-1 block">
+                            <div
+                                class="h-48 overflow-hidden relative border-b-4 border-transparent group-hover:border-bentamar-yellow transition-all duration-300">
+                                <div class="absolute inset-0 flex items-center justify-center group-hover:bg-black/20 transition cursor-pointer z-10"
+                                    onclick="event.preventDefault(); openVideo('OGUQTYfDTsM')">
+                                    <div
+                                        class="bg-bentamar-blue/80 text-white rounded-full w-16 h-16 flex items-center justify-center hover:scale-110 hover:bg-bentamar-yellow hover:text-bentamar-blue transition shadow-lg">
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 ml-1" fill="none"
+                                            viewBox="0 0 24 24" stroke="currentColor">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z" />
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                        </svg>
+                                    </div>
+                                </div>
+                                <img src="https://img.youtube.com/vi/OGUQTYfDTsM/hqdefault.jpg" alt="Inspección ROV"
+                                    class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
+                            </div>
+                            <div class="p-6">
+                                <h4 class="font-bold text-bentamar-blue text-lg mb-2">Inspección ROV</h4>
+                                <p class="text-sm text-gray-600 line-clamp-2">Inspecciones submarinas con ROV hasta 100m
+                                    de profundidad.</p>
+                            </div>
+                        </a>
+                        <!-- Cascos -->
+                        <a href="servicio-inspeccion-cascos.html"
+                            class="bg-white rounded-sm shadow-md hover:shadow-2xl transition-all duration-300 group overflow-hidden hover:-translate-y-1 block">
+                            <div
+                                class="h-48 overflow-hidden relative border-b-4 border-transparent group-hover:border-bentamar-yellow transition-all duration-300">
+                                <div class="absolute inset-0 flex items-center justify-center group-hover:bg-black/20 transition cursor-pointer z-10"
+                                    onclick="event.preventDefault(); openVideo('xWqLA9h2OD8')">
+                                    <div
+                                        class="bg-bentamar-blue/80 text-white rounded-full w-16 h-16 flex items-center justify-center hover:scale-110 hover:bg-bentamar-yellow hover:text-bentamar-blue transition shadow-lg">
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 ml-1" fill="none"
+                                            viewBox="0 0 24 24" stroke="currentColor">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z" />
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                        </svg>
+                                    </div>
+                                </div>
+                                <img src="https://img.youtube.com/vi/xWqLA9h2OD8/hqdefault.jpg"
+                                    alt="Inspección de Cascos"
+                                    class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
+                            </div>
+                            <div class="p-6">
+                                <h4 class="font-bold text-bentamar-blue text-lg mb-2">Inspección de Cascos</h4>
+                                <p class="text-sm text-gray-600 line-clamp-2">Evaluación técnica y limpieza de cascos
+                                    para optimizar el rendimiento de la nave.</p>
+                            </div>
+                        </a>
+                        <!-- Filmación -->
+                        <a href="servicio-filmacion.html"
+                            class="bg-white rounded-sm shadow-md hover:shadow-2xl transition-all duration-300 group overflow-hidden hover:-translate-y-1 block">
+                            <div
+                                class="h-48 overflow-hidden relative border-b-4 border-transparent group-hover:border-bentamar-yellow transition-all duration-300">
+                                <div class="absolute inset-0 flex items-center justify-center group-hover:bg-black/20 transition cursor-pointer z-10"
+                                    onclick="event.preventDefault(); openVideo('PAlvQmilMo0')">
+                                    <div
+                                        class="bg-bentamar-blue/80 text-white rounded-full w-16 h-16 flex items-center justify-center hover:scale-110 hover:bg-bentamar-yellow hover:text-bentamar-blue transition shadow-lg">
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 ml-1" fill="none"
+                                            viewBox="0 0 24 24" stroke="currentColor">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z" />
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                        </svg>
+                                    </div>
+                                </div>
+                                <img src="https://img.youtube.com/vi/PAlvQmilMo0/hqdefault.jpg"
+                                    alt="Filmación Subacuática"
+                                    class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
+                            </div>
+                            <div class="p-6">
+                                <h4 class="font-bold text-bentamar-blue text-lg mb-2">Filmación Subacuática</h4>
+                                <p class="text-sm text-gray-600 line-clamp-2">Registro audiovisual HD para informes,
+                                    auditorías y monitoreo ambiental.</p>
+                            </div>
+                        </a>
+                        <!-- Correntómetros -->
+                        <a href="servicio-correntometros.html"
+                            class="bg-white rounded-sm shadow-md hover:shadow-2xl transition-all duration-300 group overflow-hidden hover:-translate-y-1 block">
+                            <div
+                                class="h-48 overflow-hidden relative border-b-4 border-transparent group-hover:border-bentamar-yellow transition-all duration-300">
+                                <img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=2072&auto=format&fit=crop"
+                                    alt="Correntómetros"
+                                    class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
+                            </div>
+                            <div class="p-6">
+                                <h4 class="font-bold text-bentamar-blue text-lg mb-2">Correntómetros</h4>
+                                <p class="text-sm text-gray-600 line-clamp-2">Instalación precisa de equipos para
+                                    medición de corrientes marinas.</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
 
-                        <!-- Card 1: Arriendo de Embarcaciones -->
+                <!-- Group 3: LOGÍSTICA & APOYO -->
+                <div>
+                    <h3
+                        class="text-bentamar-blue font-bold uppercase tracking-wide text-xl mb-6 border-l-4 border-bentamar-yellow pl-4">
+                        Logística & Apoyo</h3>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+                        <!-- Embarcaciones -->
                         <a href="servicio-arriendo.html"
-                            class="min-w-full md:min-w-[calc(50%-12px)] lg:min-w-[calc(33.333%-16px)] bg-white rounded-lg shadow-md hover:shadow-2xl transition duration-300 border-t-4 border-bentamar-yellow flex flex-col overflow-hidden group">
-                            <div class="h-48 bg-gray-200 relative overflow-hidden">
-                                <img src="img/arriendoembarcaciones.jpg" alt="Arriendo Embarcaciones"
-                                    class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                            class="bg-white rounded-sm shadow-md hover:shadow-2xl transition-all duration-300 group overflow-hidden hover:-translate-y-1 block">
+                            <div
+                                class="h-48 overflow-hidden relative border-b-4 border-transparent group-hover:border-bentamar-yellow transition-all duration-300">
+                                <img src="img/arriendoembarcaciones.webp" alt="Arriendo Embarcaciones"
+                                    class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
                                 <div
                                     class="absolute top-2 right-2 bg-bentamar-yellow text-bentamar-blue text-xs font-bold px-2 py-1 rounded uppercase">
                                     Destacado</div>
                             </div>
-                            <div class="p-6 flex-grow flex flex-col">
-                                <h3 class="font-heading font-bold text-xl text-bentamar-blue mb-3">Arriendo de
-                                    Embarcaciones</h3>
-                                <p class="text-sm text-gray-500 flex-grow">Apoyo logístico integral con nuestra flota
+                            <div class="p-6">
+                                <h4 class="font-bold text-bentamar-blue text-lg mb-2">Arriendo de Embarcaciones</h4>
+                                <p class="text-sm text-gray-600 line-clamp-2">Apoyo logístico integral con nuestra flota
                                     certificada de embarcaciones Bento y Palomitas.</p>
                             </div>
                         </a>
-
-                        <!-- Card 2: Inspección de cascos de embarcaciones -->
-                        <a href="servicio-inspeccion-cascos.html"
-                            class="min-w-full md:min-w-[calc(50%-12px)] lg:min-w-[calc(33.333%-16px)] bg-white rounded-lg shadow-md hover:shadow-2xl transition duration-300 border-t-4 border-bentamar-blue flex flex-col overflow-hidden group">
-                            <div class="h-48 bg-gray-200 relative overflow-hidden">
-                                <img src="https://images.unsplash.com/photo-1621255554605-59b3af5d8f6d?q=80&w=2070&auto=format&fit=crop"
-                                    alt="Inspección Cascos"
-                                    class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
-                            </div>
-                            <div class="p-6 flex-grow flex flex-col">
-                                <h3 class="font-heading font-bold text-xl text-bentamar-blue mb-3">Inspección de Cascos
-                                </h3>
-                                <p class="text-sm text-gray-500 flex-grow">Evaluación técnica y limpieza de cascos para
-                                    optimizar el rendimiento de la nave.</p>
-                            </div>
-                        </a>
-
-                        <!-- Card 2: Instalación y mantención de emisarios, etc -->
-                        <a href="servicio-emisarios.html"
-                            class="min-w-full md:min-w-[calc(50%-12px)] lg:min-w-[calc(33.333%-16px)] bg-white rounded-lg shadow-md hover:shadow-2xl transition duration-300 border-t-4 border-bentamar-blue flex flex-col overflow-hidden group">
-                            <div class="h-48 bg-gray-200 relative overflow-hidden">
-                                <img src="https://images.unsplash.com/photo-1605218427368-35b820b6e92b?q=80&w=2067&auto=format&fit=crop"
-                                    alt="Emisarios y Tuberías"
-                                    class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
-                            </div>
-                            <div class="p-6 flex-grow flex flex-col">
-                                <h3 class="font-heading font-bold text-lg text-bentamar-blue mb-3">Emisarios y Tuberías
-                                </h3>
-                                <p class="text-sm text-gray-500 flex-grow">Instalación y mantención de emisarios
-                                    submarinos, aducción de aguas y salmoductos.</p>
-                            </div>
-                        </a>
-
-                        <!-- Card 3: Filmación sub acuática -->
-                        <a href="servicio-filmacion.html"
-                            class="min-w-full md:min-w-[calc(50%-12px)] lg:min-w-[calc(33.333%-16px)] bg-white rounded-lg shadow-md hover:shadow-2xl transition duration-300 border-t-4 border-bentamar-blue flex flex-col overflow-hidden group">
-                            <div class="h-48 bg-gray-200 relative overflow-hidden">
-                                <img src="https://images.unsplash.com/photo-1518306727298-4c17244eb5cb?q=80&w=2070&auto=format&fit=crop"
-                                    alt="Filmación Subacuática"
-                                    class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
-                            </div>
-                            <div class="p-6 flex-grow flex flex-col">
-                                <h3 class="font-heading font-bold text-xl text-bentamar-blue mb-3">Filmación Subacuática
-                                </h3>
-                                <p class="text-sm text-gray-500 flex-grow">Registro audiovisual HD para informes,
-                                    auditorías y monitoreo ambiental.</p>
-                            </div>
-                        </a>
-
-                        <!-- Card 4: Soldadura y corte submarino -->
-                        <a href="servicio-soldadura.html"
-                            class="min-w-full md:min-w-[calc(50%-12px)] lg:min-w-[calc(33.333%-16px)] bg-white rounded-lg shadow-md hover:shadow-2xl transition duration-300 border-t-4 border-bentamar-blue flex flex-col overflow-hidden group">
-                            <div class="h-48 bg-gray-200 relative overflow-hidden">
-                                <img src="https://images.unsplash.com/photo-1569420077276-80f4c330df30?q=80&w=2070&auto=format&fit=crop"
-                                    alt="Soldadura Submarina"
-                                    class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
-                            </div>
-                            <div class="p-6 flex-grow flex flex-col">
-                                <h3 class="font-heading font-bold text-xl text-bentamar-blue mb-3">Soldadura y Corte
-                                </h3>
-                                <p class="text-sm text-gray-500 flex-grow">Reparaciones estructurales submarinas
-                                    realizadas por buzos comerciales certificados.</p>
-                            </div>
-                        </a>
-
-                        <!-- Card 5: Instalación de correntómetros -->
-                        <a href="servicio-correntometros.html"
-                            class="min-w-full md:min-w-[calc(50%-12px)] lg:min-w-[calc(33.333%-16px)] bg-white rounded-lg shadow-md hover:shadow-2xl transition duration-300 border-t-4 border-bentamar-blue flex flex-col overflow-hidden group">
-                            <div class="h-48 bg-gray-200 relative overflow-hidden">
-                                <img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=2072&auto=format&fit=crop"
-                                    alt="Correntómetros"
-                                    class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
-                            </div>
-                            <div class="p-6 flex-grow flex flex-col">
-                                <h3 class="font-heading font-bold text-xl text-bentamar-blue mb-3">Correntómetros</h3>
-                                <p class="text-sm text-gray-500 flex-grow">Instalación precisa de equipos para medición
-                                    de corrientes marinas.</p>
-                            </div>
-                        </a>
-
-                        <!-- Card 6: ROV -->
-                        <a href="servicio-rov.html"
-                            class="min-w-full md:min-w-[calc(50%-12px)] lg:min-w-[calc(33.333%-16px)] bg-white rounded-lg shadow-md hover:shadow-2xl transition duration-300 border-t-4 border-bentamar-blue flex flex-col overflow-hidden group">
-                            <div class="h-48 bg-gray-200 relative overflow-hidden">
-                                <img src="https://images.unsplash.com/photo-1544551763-46a813d3205c?q=80&w=2069&auto=format&fit=crop"
-                                    alt="ROV"
-                                    class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
-                            </div>
-                            <div class="p-6 flex-grow flex flex-col">
-                                <h3 class="font-heading font-bold text-xl text-bentamar-blue mb-3">Inspección ROV</h3>
-                                <p class="text-sm text-gray-500 flex-grow">Inspecciones submarinas con ROV hasta 100m de
-                                    profundidad.</p>
-                            </div>
-                        </a>
-
-                        <!-- Card 7: Líneas de Fondeo -->
-                        <a href="servicio-fondeos.html"
-                            class="min-w-full md:min-w-[calc(50%-12px)] lg:min-w-[calc(33.333%-16px)] bg-white rounded-lg shadow-md hover:shadow-2xl transition duration-300 border-t-4 border-bentamar-blue flex flex-col overflow-hidden group">
-                            <div class="h-48 bg-gray-200 relative overflow-hidden">
-                                <img src="https://images.unsplash.com/photo-1541963463532-d68292c34b19?q=80&w=1976&auto=format&fit=crop"
-                                    alt="Fondeo"
-                                    class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
-                            </div>
-                            <div class="p-6 flex-grow flex flex-col">
-                                <h3 class="font-heading font-bold text-xl text-bentamar-blue mb-3">Líneas de Fondeo</h3>
-                                <p class="text-sm text-gray-500 flex-grow">Inspección y mantención técnica de sistemas
-                                    de fondeo.</p>
-                            </div>
-                        </a>
-
-                        <!-- Card 8: Reflotamiento -->
-                        <a href="servicio-reflotamiento.html"
-                            class="min-w-full md:min-w-[calc(50%-12px)] lg:min-w-[calc(33.333%-16px)] bg-white rounded-lg shadow-md hover:shadow-2xl transition duration-300 border-t-4 border-bentamar-blue flex flex-col overflow-hidden group">
-                            <div class="h-48 bg-gray-200 relative overflow-hidden">
-                                <img src="https://images.unsplash.com/photo-1621255554605-59b3af5d8f6d?q=80&w=2070&auto=format&fit=crop"
-                                    alt="Reflotamiento"
-                                    class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
-                            </div>
-                            <div class="p-6 flex-grow flex flex-col">
-                                <h3 class="font-heading font-bold text-xl text-bentamar-blue mb-3">Reflotamiento</h3>
-                                <p class="text-sm text-gray-500 flex-grow">Maniobras especializadas para recuperación y
-                                    reflotamiento de naves.</p>
-                            </div>
-                        </a>
-
-                        <!-- Card 9: Búsqueda y Rescate -->
+                        <!-- Búsqueda -->
                         <a href="servicio-busqueda.html"
-                            class="min-w-full md:min-w-[calc(50%-12px)] lg:min-w-[calc(33.333%-16px)] bg-white rounded-lg shadow-md hover:shadow-2xl transition duration-300 border-t-4 border-bentamar-blue flex flex-col overflow-hidden group">
-                            <div class="h-48 bg-gray-200 relative overflow-hidden">
+                            class="bg-white rounded-sm shadow-md hover:shadow-2xl transition-all duration-300 group overflow-hidden hover:-translate-y-1 block">
+                            <div
+                                class="h-48 overflow-hidden relative border-b-4 border-transparent group-hover:border-bentamar-yellow transition-all duration-300">
                                 <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=2070&auto=format&fit=crop"
-                                    alt="Búsqueda Submarina"
-                                    class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                                    alt="Búsqueda y Rescate"
+                                    class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
                             </div>
-                            <div class="p-6 flex-grow flex flex-col">
-                                <h3 class="font-heading font-bold text-xl text-bentamar-blue mb-3">Búsqueda y Rescate
-                                </h3>
-                                <p class="text-sm text-gray-500 flex-grow">Operaciones de búsqueda y recuperación de
+                            <div class="p-6">
+                                <h4 class="font-bold text-bentamar-blue text-lg mb-2">Búsqueda y Rescate</h4>
+                                <p class="text-sm text-gray-600 line-clamp-2">Operaciones de búsqueda y recuperación de
                                     objetos submarinos.</p>
                             </div>
                         </a>
-
-
-
-
-
                     </div>
                 </div>
 
-                <!-- Right Arrow -->
-                <button id="nextBtn"
-                    class="absolute right-0 top-1/2 -translate-y-1/2 -mr-4 md:-mr-12 z-30 bg-bentamar-blue text-white p-3 rounded-full shadow-lg hover:bg-bentamar-yellow hover:text-bentamar-blue transition duration-300 focus:outline-none">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
-                    </svg>
-                </button>
             </div>
         </div>
     </section>
@@ -378,16 +449,16 @@
                 </p>
             </div>
 
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-10">
+            <div class="flex flex-wrap justify-center gap-8">
                 <!-- Fleet Card 1: Bento -->
                 <div
-                    class="bg-gray-800 rounded-2xl overflow-hidden shadow-2xl hover:shadow-bentamar-yellow/20 hover:shadow-2xl transition duration-500 group flex flex-col md:flex-row">
-                    <div class="md:w-2/5 relative h-64 md:h-72 overflow-hidden">
-                        <img src="img/bento-1.JPG"
+                    class="bg-gray-800 rounded-2xl overflow-hidden shadow-2xl hover:shadow-bentamar-yellow/20 hover:shadow-2xl transition duration-500 group flex flex-col w-full md:w-[calc(50%-2rem)] lg:w-[calc(33.33%-2rem)] max-w-sm">
+                    <div class="relative h-64 w-full overflow-hidden">
+                        <img src="img/bento-1_thumb.webp" loading="lazy"
                             class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                             alt="Lancha de trabajo Bento - Bentamar SPA">
                         <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"></div>
-                        <div class="absolute bottom-4 left-4 flex items-center space-x-2 text-white/80 text-xs">
+                        <div class="absolute bottom-4 left-0 right-0 flex justify-center text-white/80 text-xs">
                             <span class="bg-white/20 backdrop-blur px-2 py-1 rounded flex items-center">
                                 <svg class="w-3 h-3 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -399,17 +470,17 @@
                         </div>
                     </div>
                     <div
-                        class="md:w-3/5 p-8 flex flex-col justify-between relative bg-gradient-to-br from-gray-800 to-gray-900">
+                        class="p-6 flex flex-col justify-between relative bg-gradient-to-br from-gray-800 to-gray-900 flex-grow text-center">
                         <div>
-                            <div class="flex justify-between items-start mb-4 bg-transparent">
+                            <div class="flex flex-col items-center mb-4 bg-transparent">
                                 <h3
-                                    class="font-heading text-2xl font-bold text-white group-hover:text-bentamar-yellow transition-colors">
+                                    class="font-heading text-2xl font-bold text-white group-hover:text-bentamar-yellow transition-colors mb-2">
                                     BENTO</h3>
                                 <span
                                     class="bg-bentamar-yellow text-bentamar-blue text-xs font-bold px-2 py-1 rounded uppercase">Fibra
                                     de Vidrio</span>
                             </div>
-                            <div class="grid grid-cols-2 gap-4 mb-6">
+                            <div class="grid grid-cols-2 gap-4 mb-6 text-sm">
                                 <div>
                                     <span class="block text-gray-500 text-xs uppercase tracking-wide">Eslora</span>
                                     <span class="text-white font-medium">6.8 Metros</span>
@@ -417,17 +488,6 @@
                                 <div>
                                     <span class="block text-gray-500 text-xs uppercase tracking-wide">Motor</span>
                                     <span class="text-white font-medium">Yamaha 50 HP</span>
-                                </div>
-                            </div>
-                            <!-- Mini Gallery Preview -->
-                            <div class="flex gap-2 mb-6 opacity-60 hover:opacity-100 transition-opacity">
-                                <div
-                                    class="w-12 h-12 rounded bg-gray-700 overflow-hidden cursor-pointer border border-gray-600 hover:border-bentamar-yellow">
-                                    <img src="img/bento-1.JPG" class="w-full h-full object-cover">
-                                </div>
-                                <div
-                                    class="w-12 h-12 rounded bg-gray-700 overflow-hidden cursor-pointer border border-gray-600 hover:border-bentamar-yellow">
-                                    <img src="img/bento-1.JPG" class="w-full h-full object-cover">
                                 </div>
                             </div>
                         </div>
@@ -438,15 +498,15 @@
                     </div>
                 </div>
 
-                <!-- Fleet Card 2: Palomita I -->
+                <!-- Fleet Card 2: Palomita -->
                 <div
-                    class="bg-gray-800 rounded-2xl overflow-hidden shadow-2xl hover:shadow-bentamar-yellow/20 hover:shadow-2xl transition duration-500 group flex flex-col md:flex-row">
-                    <div class="md:w-2/5 relative h-64 md:h-72 overflow-hidden">
-                        <img src="img/palomita1-1.JPG"
+                    class="bg-gray-800 rounded-2xl overflow-hidden shadow-2xl hover:shadow-bentamar-yellow/20 hover:shadow-2xl transition duration-500 group flex flex-col w-full md:w-[calc(50%-2rem)] lg:w-[calc(33.33%-2rem)] max-w-sm">
+                    <div class="relative h-64 w-full overflow-hidden">
+                        <img src="img/palomita-1.webp" loading="lazy"
                             class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-                            alt="Lancha Palomita I - Bentamar SPA">
+                            alt="Lancha Palomita - Bentamar SPA">
                         <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"></div>
-                        <div class="absolute bottom-4 left-4 flex items-center space-x-2 text-white/80 text-xs">
+                        <div class="absolute bottom-4 left-0 right-0 flex justify-center text-white/80 text-xs">
                             <span class="bg-white/20 backdrop-blur px-2 py-1 rounded flex items-center">
                                 <svg class="w-3 h-3 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -458,17 +518,17 @@
                         </div>
                     </div>
                     <div
-                        class="md:w-3/5 p-8 flex flex-col justify-between relative bg-gradient-to-br from-gray-800 to-gray-900">
+                        class="p-6 flex flex-col justify-between relative bg-gradient-to-br from-gray-800 to-gray-900 flex-grow text-center">
                         <div>
-                            <div class="flex justify-between items-start mb-4 bg-transparent">
+                            <div class="flex flex-col items-center mb-4 bg-transparent">
                                 <h3
-                                    class="font-heading text-2xl font-bold text-white group-hover:text-bentamar-yellow transition-colors">
-                                    PALOMITA I</h3>
+                                    class="font-heading text-2xl font-bold text-white group-hover:text-bentamar-yellow transition-colors mb-2">
+                                    PALOMITA</h3>
                                 <span
                                     class="bg-bentamar-yellow text-bentamar-blue text-xs font-bold px-2 py-1 rounded uppercase">Con
                                     Cabina</span>
                             </div>
-                            <div class="grid grid-cols-2 gap-4 mb-6">
+                            <div class="grid grid-cols-2 gap-4 mb-6 text-sm">
                                 <div>
                                     <span class="block text-gray-500 text-xs uppercase tracking-wide">Eslora</span>
                                     <span class="text-white font-medium">6.8 Metros</span>
@@ -478,15 +538,52 @@
                                     <span class="text-white font-medium">Suzuki 90 HP</span>
                                 </div>
                             </div>
-                            <!-- Mini Gallery Preview -->
-                            <div class="flex gap-2 mb-6 opacity-60 hover:opacity-100 transition-opacity">
-                                <div
-                                    class="w-12 h-12 rounded bg-gray-700 overflow-hidden cursor-pointer border border-gray-600 hover:border-bentamar-yellow">
-                                    <img src="img/palomita1-1.JPG" class="w-full h-full object-cover">
+                        </div>
+                        <a href="palomita.html"
+                            class="inline-flex items-center justify-center w-full bg-transparent border border-gray-600 text-white font-bold py-3 rounded hover:bg-bentamar-yellow hover:text-bentamar-blue hover:border-bentamar-yellow transition-all duration-300">
+                            FICHA TÉCNICA Y FOTOS
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Fleet Card 3: Palomita I -->
+                <div
+                    class="bg-gray-800 rounded-2xl overflow-hidden shadow-2xl hover:shadow-bentamar-yellow/20 hover:shadow-2xl transition duration-500 group flex flex-col w-full md:w-[calc(50%-2rem)] lg:w-[calc(33.33%-2rem)] max-w-sm">
+                    <div class="relative h-64 w-full overflow-hidden">
+                        <img src="img/palomita1-1_thumb.webp" loading="lazy"
+                            class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                            alt="Lancha Palomita I - Bentamar SPA">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"></div>
+                        <div class="absolute bottom-4 left-0 right-0 flex justify-center text-white/80 text-xs">
+                            <span class="bg-white/20 backdrop-blur px-2 py-1 rounded flex items-center">
+                                <svg class="w-3 h-3 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z">
+                                    </path>
+                                </svg>
+                                Ver Galería
+                            </span>
+                        </div>
+                    </div>
+                    <div
+                        class="p-6 flex flex-col justify-between relative bg-gradient-to-br from-gray-800 to-gray-900 flex-grow text-center">
+                        <div>
+                            <div class="flex flex-col items-center mb-4 bg-transparent">
+                                <h3
+                                    class="font-heading text-2xl font-bold text-white group-hover:text-bentamar-yellow transition-colors mb-2">
+                                    PALOMITA I</h3>
+                                <span
+                                    class="bg-bentamar-yellow text-bentamar-blue text-xs font-bold px-2 py-1 rounded uppercase">Con
+                                    Cabina</span>
+                            </div>
+                            <div class="grid grid-cols-2 gap-4 mb-6 text-sm">
+                                <div>
+                                    <span class="block text-gray-500 text-xs uppercase tracking-wide">Eslora</span>
+                                    <span class="text-white font-medium">6.8 Metros</span>
                                 </div>
-                                <div
-                                    class="w-12 h-12 rounded bg-gray-700 overflow-hidden cursor-pointer border border-gray-600 hover:border-bentamar-yellow">
-                                    <img src="img/palomita1-2.JPG" class="w-full h-full object-cover">
+                                <div>
+                                    <span class="block text-gray-500 text-xs uppercase tracking-wide">Motor</span>
+                                    <span class="text-white font-medium">Suzuki 90 HP</span>
                                 </div>
                             </div>
                         </div>
@@ -497,15 +594,15 @@
                     </div>
                 </div>
 
-                <!-- Fleet Card 3: Palomita II -->
+                <!-- Fleet Card 4: Palomita II -->
                 <div
-                    class="bg-gray-800 rounded-2xl overflow-hidden shadow-2xl hover:shadow-bentamar-yellow/20 hover:shadow-2xl transition duration-500 group flex flex-col md:flex-row">
-                    <div class="md:w-2/5 relative h-64 md:h-72 overflow-hidden">
-                        <img src="img/palomita2-1.JPG"
+                    class="bg-gray-800 rounded-2xl overflow-hidden shadow-2xl hover:shadow-bentamar-yellow/20 hover:shadow-2xl transition duration-500 group flex flex-col w-full md:w-[calc(50%-2rem)] lg:w-[calc(33.33%-2rem)] max-w-sm">
+                    <div class="relative h-64 w-full overflow-hidden">
+                        <img src="img/palomita2-1_thumb.webp" loading="lazy"
                             class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                             alt="Lancha Palomita II - Bentamar SPA">
                         <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"></div>
-                        <div class="absolute bottom-4 left-4 flex items-center space-x-2 text-white/80 text-xs">
+                        <div class="absolute bottom-4 left-0 right-0 flex justify-center text-white/80 text-xs">
                             <span class="bg-white/20 backdrop-blur px-2 py-1 rounded flex items-center">
                                 <svg class="w-3 h-3 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -517,17 +614,17 @@
                         </div>
                     </div>
                     <div
-                        class="md:w-3/5 p-8 flex flex-col justify-between relative bg-gradient-to-br from-gray-800 to-gray-900">
+                        class="p-6 flex flex-col justify-between relative bg-gradient-to-br from-gray-800 to-gray-900 flex-grow text-center">
                         <div>
-                            <div class="flex justify-between items-start mb-4 bg-transparent">
+                            <div class="flex flex-col items-center mb-4 bg-transparent">
                                 <h3
-                                    class="font-heading text-2xl font-bold text-white group-hover:text-bentamar-yellow transition-colors">
+                                    class="font-heading text-2xl font-bold text-white group-hover:text-bentamar-yellow transition-colors mb-2">
                                     PALOMITA II</h3>
                                 <span
                                     class="bg-bentamar-yellow text-bentamar-blue text-xs font-bold px-2 py-1 rounded uppercase">HDPE
                                     Reforzado</span>
                             </div>
-                            <div class="grid grid-cols-2 gap-4 mb-6">
+                            <div class="grid grid-cols-2 gap-4 mb-6 text-sm">
                                 <div>
                                     <span class="block text-gray-500 text-xs uppercase tracking-wide">Eslora</span>
                                     <span class="text-white font-medium">8.0 Metros</span>
@@ -535,17 +632,6 @@
                                 <div>
                                     <span class="block text-gray-500 text-xs uppercase tracking-wide">Motor</span>
                                     <span class="text-white font-medium">Suzuki 115 HP</span>
-                                </div>
-                            </div>
-                            <!-- Mini Gallery Preview -->
-                            <div class="flex gap-2 mb-6 opacity-60 hover:opacity-100 transition-opacity">
-                                <div
-                                    class="w-12 h-12 rounded bg-gray-700 overflow-hidden cursor-pointer border border-gray-600 hover:border-bentamar-yellow">
-                                    <img src="img/palomita2-1.JPG" class="w-full h-full object-cover">
-                                </div>
-                                <div
-                                    class="w-12 h-12 rounded bg-gray-700 overflow-hidden cursor-pointer border border-gray-600 hover:border-bentamar-yellow">
-                                    <img src="img/palomita2-2.JPG" class="w-full h-full object-cover">
                                 </div>
                             </div>
                         </div>
@@ -556,15 +642,15 @@
                     </div>
                 </div>
 
-                <!-- Fleet Card 4: Palomita III -->
+                <!-- Fleet Card 5: Palomita III -->
                 <div
-                    class="bg-gray-800 rounded-2xl overflow-hidden shadow-2xl hover:shadow-bentamar-yellow/20 hover:shadow-2xl transition duration-500 group flex flex-col md:flex-row">
-                    <div class="md:w-2/5 relative h-64 md:h-72 overflow-hidden">
-                        <img src="img/palomita3-1.JPG"
+                    class="bg-gray-800 rounded-2xl overflow-hidden shadow-2xl hover:shadow-bentamar-yellow/20 hover:shadow-2xl transition duration-500 group flex flex-col w-full md:w-[calc(50%-2rem)] lg:w-[calc(33.33%-2rem)] max-w-sm">
+                    <div class="relative h-64 w-full overflow-hidden">
+                        <img src="img/palomita3-1_thumb.webp" loading="lazy"
                             class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                             alt="Lancha Palomita III - Bentamar SPA">
                         <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"></div>
-                        <div class="absolute bottom-4 left-4 flex items-center space-x-2 text-white/80 text-xs">
+                        <div class="absolute bottom-4 left-0 right-0 flex justify-center text-white/80 text-xs">
                             <span class="bg-white/20 backdrop-blur px-2 py-1 rounded flex items-center">
                                 <svg class="w-3 h-3 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -576,17 +662,17 @@
                         </div>
                     </div>
                     <div
-                        class="md:w-3/5 p-8 flex flex-col justify-between relative bg-gradient-to-br from-gray-800 to-gray-900">
+                        class="p-6 flex flex-col justify-between relative bg-gradient-to-br from-gray-800 to-gray-900 flex-grow text-center">
                         <div>
-                            <div class="flex justify-between items-start mb-4 bg-transparent">
+                            <div class="flex flex-col items-center mb-4 bg-transparent">
                                 <h3
-                                    class="font-heading text-2xl font-bold text-white group-hover:text-bentamar-yellow transition-colors">
+                                    class="font-heading text-2xl font-bold text-white group-hover:text-bentamar-yellow transition-colors mb-2">
                                     PALOMITA III</h3>
                                 <span
                                     class="bg-bentamar-yellow text-bentamar-blue text-xs font-bold px-2 py-1 rounded uppercase">HDPE
                                     Ligero</span>
                             </div>
-                            <div class="grid grid-cols-2 gap-4 mb-6">
+                            <div class="grid grid-cols-2 gap-4 mb-6 text-sm">
                                 <div>
                                     <span class="block text-gray-500 text-xs uppercase tracking-wide">Eslora</span>
                                     <span class="text-white font-medium">6.0 Metros</span>
@@ -594,17 +680,6 @@
                                 <div>
                                     <span class="block text-gray-500 text-xs uppercase tracking-wide">Motor</span>
                                     <span class="text-white font-medium">Yamaha 50 HP</span>
-                                </div>
-                            </div>
-                            <!-- Mini Gallery Preview -->
-                            <div class="flex gap-2 mb-6 opacity-60 hover:opacity-100 transition-opacity">
-                                <div
-                                    class="w-12 h-12 rounded bg-gray-700 overflow-hidden cursor-pointer border border-gray-600 hover:border-bentamar-yellow">
-                                    <img src="img/palomita3-1.JPG" class="w-full h-full object-cover">
-                                </div>
-                                <div
-                                    class="w-12 h-12 rounded bg-gray-700 overflow-hidden cursor-pointer border border-gray-600 hover:border-bentamar-yellow">
-                                    <img src="img/palomita3-1.JPG" class="w-full h-full object-cover">
                                 </div>
                             </div>
                         </div>
@@ -768,6 +843,22 @@
         <p>&copy; 2024 BENTAMAR SPA. Todos los derechos reservados.</p>
     </footer>
 
+
+    <!-- Video Modal -->
+    <div id="videoModal"
+        class="fixed inset-0 z-50 flex items-center justify-center bg-black/90 hidden backdrop-blur-sm p-4"
+        onclick="closeVideo()">
+        <div class="relative w-full max-w-4xl" onclick="event.stopPropagation()">
+            <button onclick="closeVideo()"
+                class="absolute -top-10 right-0 text-white hover:text-bentamar-yellow text-4xl font-bold">&times;</button>
+            <div class="aspect-video w-full rounded-lg shadow-2xl overflow-hidden bg-black">
+                <iframe id="youtubeFrame" class="w-full h-full" src="" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
+            </div>
+        </div>
+    </div>
+
     <!-- Interactive Scripts -->
     <script>
         // Navbar scroll effect
@@ -782,100 +873,7 @@
             }
         });
 
-        // Carousel Logic with Auto-play and Pause on Hover
-        document.addEventListener('DOMContentLoaded', () => {
-            const track = document.getElementById('carouselTrack');
-            const container = document.getElementById('carouselContainer');
-            const prevBtn = document.getElementById('prevBtn');
-            const nextBtn = document.getElementById('nextBtn');
-            const cards = track.children;
 
-            // Configuration
-            const gap = 24;
-            let currentIndex = 0;
-            let autoPlayInterval;
-            const autoPlayDelay = 4000; // 4 seconds
-
-            function getVisibleCards() {
-                if (window.innerWidth >= 1024) return 3;
-                if (window.innerWidth >= 768) return 2;
-                return 1;
-            }
-
-            function updateCarousel() {
-                const visibleCards = getVisibleCards();
-                const cardWidth = cards[0].offsetWidth;
-                const moveAmount = (cardWidth + gap) * currentIndex;
-
-                track.style.transform = `translateX(-${moveAmount}px)`;
-
-                // Button visibility
-                prevBtn.style.opacity = currentIndex === 0 ? '0.5' : '1';
-                prevBtn.style.cursor = currentIndex === 0 ? 'default' : 'pointer';
-
-                const maxIndex = cards.length - visibleCards;
-                nextBtn.style.opacity = currentIndex >= maxIndex ? '0.5' : '1';
-                nextBtn.style.cursor = currentIndex >= maxIndex ? 'default' : 'pointer';
-            }
-
-            function moveNext() {
-                const visibleCards = getVisibleCards();
-                const maxIndex = cards.length - visibleCards;
-                if (currentIndex < maxIndex) {
-                    currentIndex++;
-                } else {
-                    // Start over (Infinite loop feel)
-                    currentIndex = 0;
-                }
-                updateCarousel();
-            }
-
-            function movePrev() {
-                if (currentIndex > 0) {
-                    currentIndex--;
-                    updateCarousel();
-                }
-            }
-
-            // Auto-play Logic
-            function startAutoPlay() {
-                stopAutoPlay(); // Clear existing to be safe
-                autoPlayInterval = setInterval(moveNext, autoPlayDelay);
-            }
-
-            function stopAutoPlay() {
-                if (autoPlayInterval) {
-                    clearInterval(autoPlayInterval);
-                }
-            }
-
-            // Event Listeners
-            nextBtn.addEventListener('click', () => {
-                moveNext();
-                stopAutoPlay(); // Reset timer on interaction
-                startAutoPlay();
-            });
-
-            prevBtn.addEventListener('click', () => {
-                movePrev();
-                stopAutoPlay();
-                startAutoPlay();
-            });
-
-            // Pause on Hover
-            container.addEventListener('mouseenter', stopAutoPlay);
-            container.addEventListener('mouseleave', startAutoPlay);
-
-            // Handle resize
-            window.addEventListener('resize', () => {
-                currentIndex = 0;
-                updateCarousel();
-            });
-
-            // Initialize
-            updateCarousel();
-            startAutoPlay();
-        });
 
         // Form Logic
         function enviarCotizacion(e) {
@@ -893,6 +891,28 @@
                 setTimeout(() => document.getElementById('alert-box').classList.add('hidden'), 5000);
             }, 1000);
         }
+
+        // Video Modal Logic
+        function openVideo(videoId) {
+            const modal = document.getElementById('videoModal');
+            const iframe = document.getElementById('youtubeFrame');
+            iframe.src = `https://www.youtube.com/embed/${videoId}?autoplay=1&rel=0`;
+            modal.classList.remove('hidden');
+        }
+
+        function closeVideo() {
+            const modal = document.getElementById('videoModal');
+            const iframe = document.getElementById('youtubeFrame');
+            modal.classList.add('hidden');
+            iframe.src = ''; // Detiene el video 
+        }
+
+        // Cerrar con tecla Escape
+        document.addEventListener('keydown', function (event) {
+            if (event.key === 'Escape') {
+                closeVideo();
+            }
+        });
     </script>
 </body>
 

@@ -4,6 +4,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Bentamar SPA: Soluciones técnicas submarinas, buceo profesional y arriendo de embarcaciones en Puerto Montt y sur de Chile.">
+    <meta name="keywords" content="Buceo Comercial, ROV, Arriendo Lanchas, Puerto Montt, Salmoneras, Bentamar">
+    <meta name="author" content="Bentamar SPA">
+    <meta property="og:description"
+        content="Bentamar SPA: Soluciones técnicas submarinas, buceo profesional y arriendo de embarcaciones en Puerto Montt y sur de Chile.">
+    <meta property="og:image" content="img/arriendoembarcaciones.webp">
+    <meta property="og:title" content="Arriendo de Embarcaciones | BENTAMAR SPA">
     <title>Arriendo de Embarcaciones | BENTAMAR SPA</title>
     <link rel="icon" type="image/x-icon" href="img/Logo_Oficial.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -12,26 +20,8 @@
         href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Roboto:wght@300;400;500;700&display=swap"
         rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        bentamar: {
-                            blue: '#002B5C',
-                            yellow: '#FFC107',
-                            gray: '#F4F6F6',
-                            dark: '#1a1a1a'
-                        }
-                    },
-                    fontFamily: {
-                        sans: ['Roboto', 'sans-serif'],
-                        heading: ['Montserrat', 'sans-serif'],
-                    }
-                }
-            }
-        }
-    </script>
+    <!-- Tailwind Configuration -->
+    <script src="js/tailwind-config.js"></script>
 </head>
 
 <body class="font-sans text-gray-700 bg-gray-50 flex flex-col min-h-screen">
@@ -59,7 +49,8 @@
     <!-- Hero -->
     <header class="relative h-64 md:h-80 flex items-center justify-center bg-bentamar-blue overflow-hidden mt-16">
         <div class="absolute inset-0 opacity-40">
-            <img src="img/arriendoembarcaciones.jpg" class="w-full h-full object-cover" alt="Arriendo de Embarcaciones">
+            <img src="img/arriendoembarcaciones.webp" class="w-full h-full object-cover"
+                alt="Arriendo de Embarcaciones">
         </div>
         <div class="relative z-10 text-center px-4">
             <h1 class="text-3xl md:text-5xl font-bold text-white font-heading uppercase tracking-wider drop-shadow-md">
@@ -99,7 +90,7 @@
                 <!-- Video/Image Placeholder -->
                 <div
                     class="bg-gray-800 rounded-lg h-48 flex items-center justify-center relative overflow-hidden shadow-lg group cursor-pointer border-2 border-transparent hover:border-bentamar-yellow transition-all">
-                    <img src="img/arriendoembarcaciones.jpg"
+                    <img src="img/arriendoembarcaciones.webp"
                         class="absolute inset-0 w-full h-full object-cover opacity-50 bg-blend-overlay">
                     <div
                         class="relative z-10 bg-white/10 p-4 rounded-full backdrop-blur-sm group-hover:scale-110 transition-transform">
@@ -146,6 +137,14 @@
                                 Ver Ficha <strong>&nbsp;Palomita III</strong>
                             </a>
                         </li>
+                        <li>
+                            <a href="palomita.html"
+                                class="flex items-center text-gray-600 hover:text-bentamar-blue hover:translate-x-1 transition-all group">
+                                <span
+                                    class="w-2 h-2 bg-bentamar-yellow rounded-full mr-3 group-hover:scale-125 transition-transform"></span>
+                                Ver Ficha <strong>&nbsp;Palomita</strong>
+                            </a>
+                        </li>
                     </ul>
                 </div>
 
@@ -174,7 +173,7 @@
                 <div
                     class="bg-gray-50 rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 group border border-gray-200">
                     <div class="h-48 overflow-hidden relative">
-                        <img src="img/bento-1.JPG" alt="Bento"
+                        <img src="img/bento-1.webp" alt="Bento"
                             class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
                     </div>
                     <div class="p-6 text-center">
@@ -191,7 +190,7 @@
                 <div
                     class="bg-gray-50 rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 group border border-gray-200">
                     <div class="h-48 overflow-hidden relative">
-                        <img src="img/palomita1-1.JPG" alt="Palomita I"
+                        <img src="img/palomita1-1.webp" alt="Palomita I"
                             class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
                     </div>
                     <div class="p-6 text-center">
@@ -208,7 +207,7 @@
                 <div
                     class="bg-gray-50 rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 group border border-gray-200">
                     <div class="h-48 overflow-hidden relative">
-                        <img src="img/palomita2-1.JPG" alt="Palomita II"
+                        <img src="img/palomita2-1.webp" alt="Palomita II"
                             class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
                     </div>
                     <div class="p-6 text-center">
@@ -225,13 +224,30 @@
                 <div
                     class="bg-gray-50 rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 group border border-gray-200">
                     <div class="h-48 overflow-hidden relative">
-                        <img src="img/palomita3-1.JPG" alt="Palomita III"
+                        <img src="img/palomita3-1.webp" alt="Palomita III"
                             class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
                     </div>
                     <div class="p-6 text-center">
                         <h3 class="font-bold text-xl text-bentamar-blue mb-1">PALOMITA III</h3>
                         <p class="text-sm text-gray-500 mb-4">Bote HDPE Ligero</p>
                         <a href="palomita-3.html"
+                            class="inline-block w-full py-2 border-2 border-bentamar-blue text-bentamar-blue font-bold rounded hover:bg-bentamar-blue hover:text-white transition-colors uppercase text-sm tracking-wide">
+                            Ver Ficha
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Boat Card 5: Palomita -->
+                <div
+                    class="bg-gray-50 rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 group border border-gray-200">
+                    <div class="h-48 overflow-hidden relative">
+                        <img src="img/palomita1-1.webp" alt="Palomita"
+                            class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    </div>
+                    <div class="p-6 text-center">
+                        <h3 class="font-bold text-xl text-bentamar-blue mb-1">PALOMITA</h3>
+                        <p class="text-sm text-gray-500 mb-4">Bote con Cabina</p>
+                        <a href="palomita.html"
                             class="inline-block w-full py-2 border-2 border-bentamar-blue text-bentamar-blue font-bold rounded hover:bg-bentamar-blue hover:text-white transition-colors uppercase text-sm tracking-wide">
                             Ver Ficha
                         </a>

@@ -4,6 +4,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Bentamar SPA: Soluciones técnicas submarinas, buceo profesional y arriendo de embarcaciones en Puerto Montt y sur de Chile.">
+    <meta name="keywords" content="Buceo Comercial, ROV, Arriendo Lanchas, Puerto Montt, Salmoneras, Bentamar">
+    <meta name="author" content="Bentamar SPA">
+    <meta property="og:description"
+        content="Bentamar SPA: Soluciones técnicas submarinas, buceo profesional y arriendo de embarcaciones en Puerto Montt y sur de Chile.">
+    <meta property="og:image" content="img/arriendoembarcaciones.webp">
+    <meta property="og:title" content="Bento - Ficha Técnica | BENTAMAR SPA">
     <title>Bento - Ficha Técnica | BENTAMAR SPA</title>
 
     <!-- Google Fonts: Roboto -->
@@ -15,25 +23,7 @@
     <script src="https://cdn.tailwindcss.com"></script>
 
     <!-- Tailwind Configuration -->
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        bentamar: {
-                            blue: '#002B5C',   // Primary
-                            yellow: '#FFC107', // Secondary
-                            gray: '#F4F6F6',   // Background
-                            text: '#333333'    // Text
-                        }
-                    },
-                    fontFamily: {
-                        sans: ['Roboto', 'sans-serif'],
-                    }
-                }
-            }
-        }
-    </script>
+    <script src="js/tailwind-config.js"></script>
 </head>
 
 <body class="bg-bentamar-gray flex flex-col min-h-screen">
@@ -69,7 +59,7 @@
                 <div class="flex flex-col md:flex-row justify-between items-start md:items-center mb-10">
                     <div>
                         <div class="flex items-center gap-4 mb-2">
-                            <img src="img/bento-1.JPG"
+                            <img src="img/bento-1.webp"
                                 class="w-20 h-20 rounded-full object-cover border-2 border-[#FFC107]" alt="Bento">
                             <h1 class="text-4xl font-black text-bentamar-blue">BENTO</h1>
                         </div>
@@ -118,7 +108,7 @@
                     <h3 class="font-bold text-2xl text-bentamar-blue mb-6">Galería de Imágenes</h3>
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
                         <div class="h-64 rounded-lg overflow-hidden shadow-lg group">
-                            <img src="img/bento-1.JPG" alt="Bento - Foto 1"
+                            <img src="img/bento-1.webp" alt="Bento - Foto 1"
                                 class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
                         </div>
                     </div>
@@ -129,8 +119,12 @@
                         class="inline-block bg-bentamar-blue text-white font-bold text-lg px-8 py-4 rounded hover:bg-bentamar-yellow hover:text-bentamar-blue transform transition duration-300 shadow-xl">
                         Cotizar Arriendo
                     </a>
-                    <a href="index.html#flota"
+                    <a href="servicio-arriendo.html"
                         class="block mt-4 text-gray-500 hover:text-bentamar-blue underline text-sm">
+                        &larr; Volver a Servicios
+                    </a>
+                    <a href="index.html#flota"
+                        class="block mt-2 text-gray-500 hover:text-bentamar-blue underline text-sm">
                         &larr; Volver a la Flota
                     </a>
                 </div>

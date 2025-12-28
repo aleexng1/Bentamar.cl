@@ -86,9 +86,9 @@
             <!-- Right Column -->
             <div class="space-y-8">
                 <!-- Video Placeholder -->
-                <div
+                <div onclick="openVideo('TLIYgxYyFVk')"
                     class="bg-gray-800 rounded-lg h-48 flex items-center justify-center relative overflow-hidden shadow-lg group cursor-pointer border-2 border-transparent hover:border-bentamar-yellow transition-all">
-                    <img src="https://images.unsplash.com/photo-1569420077276-80f4c330df30?q=80&w=2070&auto=format&fit=crop"
+                    <img src="https://img.youtube.com/vi/TLIYgxYyFVk/hqdefault.jpg"
                         class="absolute inset-0 w-full h-full object-cover opacity-50 bg-blend-overlay">
                     <div
                         class="relative z-10 bg-white/10 p-4 rounded-full backdrop-blur-sm group-hover:scale-110 transition-transform">
@@ -116,6 +116,39 @@
     <footer class="bg-gray-900 text-gray-400 py-10 border-t border-gray-800 text-center text-sm">
         <p>&copy; 2024 BENTAMAR SPA. Todos los derechos reservados.</p>
     </footer>
+
+    <div id="videoModal"
+        class="fixed inset-0 z-50 flex items-center justify-center bg-black/90 hidden backdrop-blur-sm p-4"
+        onclick="closeVideo()">
+        <div class="relative w-full max-w-4xl" onclick="event.stopPropagation()">
+            <button onclick="closeVideo()"
+                class="absolute -top-10 right-0 text-white hover:text-bentamar-yellow text-4xl font-bold">&times;</button>
+            <div class="aspect-video w-full rounded-lg shadow-2xl overflow-hidden bg-black">
+                <iframe id="youtubeFrame" class="w-full h-full" src="" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function openVideo(videoId) {
+            const modal = document.getElementById('videoModal');
+            const iframe = document.getElementById('youtubeFrame');
+            iframe.src = `https://www.youtube.com/embed/${videoId}?autoplay=1&rel=0&origin=${window.location.origin}`;
+            modal.classList.remove('hidden');
+        }
+        function closeVideo() {
+            const modal = document.getElementById('videoModal');
+            const iframe = document.getElementById('youtubeFrame');
+            modal.classList.add('hidden');
+            iframe.src = '';
+        }
+        document.addEventListener('keydown', function (event) {
+            if (event.key === 'Escape') { closeVideo(); }
+        });
+    </script>
+
 </body>
 
 </html>

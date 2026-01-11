@@ -43,6 +43,13 @@
             scrollbar-width: none;
             /* Firefox */
         }
+
+        /* Patrón de puntos sutil */
+        .bg-halftone {
+            background-image: radial-gradient(rgba(0, 0, 0, 0.15) 1px, transparent 1px);
+            background-size: 4px 4px;
+            /* Ajusta el tamaño de la trama */
+        }
     </style>
 </head>
 
@@ -50,17 +57,17 @@
 
     <!-- Navigation -->
     <nav
-        class="bg-bentamar-blue/90 backdrop-blur-sm text-white fixed w-full z-50 shadow-md transition-all duration-300">
-        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+        class="bg-bentamar-blue/90 backdrop-blur-md text-white fixed w-full z-50 shadow-lg transition-all duration-300 py-4">
+        <div class="container mx-auto px-6 flex justify-between items-center">
             <!-- Logo -->
-            <a href="#" class="flex items-center gap-3">
+            <a href="index.html" class="flex items-center gap-3">
                 <img src="img/general/Logo_Secundario_Blanco.webp" alt="Bentamar Logo"
-                    class="h-12 w-auto object-contain">
+                    class="h-14 w-auto object-contain">
                 <span class="font-heading font-bold text-xl tracking-wider hidden md:block">BENTAMAR</span>
             </a>
 
             <!-- Desktop Menu -->
-            <ul class="hidden md:flex space-x-8 font-medium text-sm">
+            <ul class="hidden md:flex space-x-8 font-medium text-lg items-center">
                 <li><a href="#inicio" class="hover:text-bentamar-yellow transition-colors relative group">
                         Inicio
                         <span
@@ -76,6 +83,16 @@
                         <span
                             class="absolute -bottom-1 left-0 w-0 h-0.5 bg-bentamar-yellow transition-all duration-300 group-hover:w-full"></span>
                     </a></li>
+                <li><a href="#proyectos" class="hover:text-bentamar-yellow transition-colors relative group">
+                        Proyectos
+                        <span
+                            class="absolute -bottom-1 left-0 w-0 h-0.5 bg-bentamar-yellow transition-all duration-300 group-hover:w-full"></span>
+                    </a></li>
+                <li><a href="#nosotros" class="hover:text-bentamar-yellow transition-colors relative group">
+                        Nosotros
+                        <span
+                            class="absolute -bottom-1 left-0 w-0 h-0.5 bg-bentamar-yellow transition-all duration-300 group-hover:w-full"></span>
+                    </a></li>
                 <li class="hidden"><a href="#turismo"
                         class="hover:text-bentamar-yellow transition-colors relative group">
                         Turismo
@@ -83,8 +100,8 @@
                             class="absolute -bottom-1 left-0 w-0 h-0.5 bg-bentamar-yellow transition-all duration-300 group-hover:w-full"></span>
                     </a></li>
                 <li><a href="#contacto"
-                        class="hidden md:inline-block bg-bentamar-yellow text-bentamar-blue px-6 py-2 rounded-sm font-bold text-sm uppercase tracking-wide hover:bg-white transition-colors duration-300 shadow-lg">
-                        Cotizar
+                        class="hidden md:inline-block bg-bentamar-yellow text-bentamar-blue px-6 py-2 rounded-sm font-bold text-base uppercase tracking-wide hover:bg-white transition-colors duration-300 shadow-lg">
+                        Contacto
                     </a></li>
             </ul>
 
@@ -104,20 +121,22 @@
         </video>
 
         <!-- Dark Overlay -->
-        <div class="absolute inset-0 bg-bentamar-blue/60 z-10"></div>
+        <div class="absolute inset-0 bg-halftone z-10"></div>
 
         <!-- Content -->
         <div class="relative z-20 max-w-5xl mx-auto animate-fade-in-up">
             <div class="text-center">
                 <div class="flex flex-col md:flex-row items-center justify-center gap-6 md:gap-10 mb-8">
                     <!-- Elemento Izquierdo (Logo) -->
-                    <!-- Elemento Izquierdo (Logo) -->
-                    <img src="img/general/Logo_Oficial.png" alt="Bentamar Oficial"
-                        class="w-28 h-28 md:w-40 md:h-40 object-contain">
+                    <div class="mb-4">
+                        <img src="img/general/Logo_Oficial.webp" alt="Bentamar Logo Principal"
+                            class="w-56 md:w-72 h-auto mx-auto drop-shadow-lg filter">
+                    </div>
 
                     <!-- Elemento Derecho (Textos) -->
                     <div class="text-center md:text-left">
-                        <h1 class="text-5xl md:text-7xl font-extrabold text-white tracking-wider leading-tight">
+                        <h1
+                            class="text-5xl md:text-7xl font-extrabold text-white tracking-wider leading-tight drop-shadow-[0_5px_5px_rgba(0,0,0,1)]">
                             BENTAMAR
                         </h1>
                         <span class="text-[#FFC107] text-xl md:text-3xl font-bold uppercase tracking-widest mt-2 block">
@@ -126,7 +145,7 @@
                     </div>
                 </div>
                 <p
-                    class="mt-4 max-w-md mx-auto text-base text-gray-200 sm:text-lg md:mt-5 md:text-xl md:max-w-3xl font-light">
+                    class="mt-4 max-w-md mx-auto text-base text-white sm:text-lg md:mt-5 md:text-xl md:max-w-3xl font-light drop-shadow-[0_5px_5px_rgba(0,0,0,1)]">
                     Buceo profesional, inspección ROV y arriendo de embarcaciones con estricto
                     <span class="font-bold text-white">cumplimiento normativo</span> y seguridad operativa para la
                     industria acuícola.
@@ -299,9 +318,9 @@
                                     class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
                             </div>
                             <div class="p-6">
-                                <h4 class="font-bold text-bentamar-blue text-lg mb-2">Correntómetros</h4>
-                                <p class="text-sm text-gray-600 line-clamp-2">Instalación precisa de equipos para
-                                    medición de corrientes marinas.</p>
+                                <h4 class="font-bold text-bentamar-blue text-lg mb-2">Medición Submarina</h4>
+                                <p class="text-sm text-gray-600 line-clamp-2">Instalación y monitoreo de equipos para
+                                    medición de corrientes, batimetría y calidad de agua.</p>
                             </div>
                         </a>
                     </div>
@@ -370,14 +389,15 @@
                 </p>
             </div>
 
-            <div class="flex flex-wrap justify-center gap-8">
+            <div
+                class="flex flex-nowrap overflow-x-auto snap-x snap-mandatory gap-4 pb-8 scrollbar-hide justify-start px-4 md:px-0 lg:grid lg:grid-cols-5 lg:gap-4 lg:overflow-visible lg:pb-0 lg:justify-center">
                 <!-- Fleet Card 1: Bento -->
                 <div
-                    class="bg-gray-800 rounded-2xl overflow-hidden shadow-2xl hover:shadow-bentamar-yellow/20 hover:shadow-2xl transition duration-500 group flex flex-col w-full md:w-[calc(50%-2rem)] lg:w-[calc(33.33%-2rem)] max-w-sm">
-                    <div class="relative h-64 w-full overflow-hidden">
+                    class="flex-none w-80 lg:w-full snap-center h-full bg-gray-800 rounded-2xl overflow-hidden shadow-2xl hover:shadow-bentamar-yellow/20 hover:shadow-2xl transition duration-500 group flex flex-col">
+                    <div class="relative h-56 lg:h-48 xl:h-56 w-full overflow-hidden">
                         <img src="img/bento/bento-portada.webp" loading="lazy"
                             class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-                            alt="Lancha de trabajo Bento - Bentamar SPA">
+                            alt="Lancha Bento - Bentamar SPA">
                         <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"></div>
                         <div class="absolute bottom-4 left-0 right-0 flex justify-center text-white/80 text-xs">
                             <span class="bg-white/20 backdrop-blur px-2 py-1 rounded flex items-center">
@@ -391,39 +411,39 @@
                         </div>
                     </div>
                     <div
-                        class="p-6 flex flex-col justify-between relative bg-gradient-to-br from-gray-800 to-gray-900 flex-grow text-center">
+                        class="p-5 flex flex-col justify-between relative bg-gradient-to-br from-gray-800 to-gray-900 flex-grow text-center">
                         <div>
-                            <div class="flex flex-col items-center mb-4 bg-transparent">
+                            <div class="flex flex-col items-center mb-3 bg-transparent">
                                 <h3
-                                    class="font-heading text-2xl font-bold text-white group-hover:text-bentamar-yellow transition-colors mb-2">
+                                    class="font-heading text-xl lg:text-lg xl:text-xl font-bold text-white group-hover:text-bentamar-yellow transition-colors mb-1">
                                     <a href="bento.html" class="hover:text-bentamar-yellow transition-colors">BENTO</a>
                                 </h3>
                                 <span
-                                    class="bg-bentamar-yellow text-bentamar-blue text-xs font-bold px-2 py-1 rounded uppercase">Fibra
-                                    de Vidrio</span>
+                                    class="bg-bentamar-yellow text-bentamar-blue text-xs font-bold px-2 py-0.5 rounded uppercase">Buque
+                                    Insignia</span>
                             </div>
-                            <div class="grid grid-cols-2 gap-4 mb-6 text-sm">
+                            <div class="grid grid-cols-2 gap-3 mb-4 text-sm lg:text-xs xl:text-sm">
                                 <div>
                                     <span class="block text-gray-500 text-xs uppercase tracking-wide">Eslora</span>
-                                    <span class="text-white font-medium">6.8 Metros</span>
+                                    <span class="text-white font-medium">12.5 M</span>
                                 </div>
                                 <div>
                                     <span class="block text-gray-500 text-xs uppercase tracking-wide">Motor</span>
-                                    <span class="text-white font-medium">Yamaha 50 HP</span>
+                                    <span class="text-white font-medium">50 HP</span>
                                 </div>
                             </div>
                         </div>
                         <a href="bento.html"
-                            class="inline-flex items-center justify-center w-full bg-transparent border border-gray-600 text-white font-bold py-3 rounded hover:bg-bentamar-yellow hover:text-bentamar-blue hover:border-bentamar-yellow transition-all duration-300">
-                            FICHA TÉCNICA Y FOTOS
+                            class="inline-flex items-center justify-center w-full bg-transparent border border-gray-600 text-white font-bold py-2 text-sm rounded hover:bg-bentamar-yellow hover:text-bentamar-blue hover:border-bentamar-yellow transition-all duration-300">
+                            FICHA TÉCNICA
                         </a>
                     </div>
                 </div>
 
                 <!-- Fleet Card 2: Palomita -->
                 <div
-                    class="bg-gray-800 rounded-2xl overflow-hidden shadow-2xl hover:shadow-bentamar-yellow/20 hover:shadow-2xl transition duration-500 group flex flex-col w-full md:w-[calc(50%-2rem)] lg:w-[calc(33.33%-2rem)] max-w-sm">
-                    <div class="relative h-64 w-full overflow-hidden">
+                    class="flex-none w-80 lg:w-full snap-center h-full bg-gray-800 rounded-2xl overflow-hidden shadow-2xl hover:shadow-bentamar-yellow/20 hover:shadow-2xl transition duration-500 group flex flex-col">
+                    <div class="relative h-56 lg:h-48 xl:h-56 w-full overflow-hidden">
                         <img src="img/palomita/palomita-portada.webp" loading="lazy"
                             class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                             alt="Lancha Palomita - Bentamar SPA">
@@ -440,40 +460,40 @@
                         </div>
                     </div>
                     <div
-                        class="p-6 flex flex-col justify-between relative bg-gradient-to-br from-gray-800 to-gray-900 flex-grow text-center">
+                        class="p-5 flex flex-col justify-between relative bg-gradient-to-br from-gray-800 to-gray-900 flex-grow text-center">
                         <div>
-                            <div class="flex flex-col items-center mb-4 bg-transparent">
+                            <div class="flex flex-col items-center mb-3 bg-transparent">
                                 <h3
-                                    class="font-heading text-2xl font-bold text-white group-hover:text-bentamar-yellow transition-colors mb-2">
+                                    class="font-heading text-xl lg:text-lg xl:text-xl font-bold text-white group-hover:text-bentamar-yellow transition-colors mb-1">
                                     <a href="palomita.html"
                                         class="hover:text-bentamar-yellow transition-colors">PALOMITA</a>
                                 </h3>
                                 <span
-                                    class="bg-bentamar-yellow text-bentamar-blue text-xs font-bold px-2 py-1 rounded uppercase">Con
+                                    class="bg-bentamar-yellow text-bentamar-blue text-xs font-bold px-2 py-0.5 rounded uppercase">Con
                                     Cabina</span>
                             </div>
-                            <div class="grid grid-cols-2 gap-4 mb-6 text-sm">
+                            <div class="grid grid-cols-2 gap-3 mb-4 text-sm lg:text-xs xl:text-sm">
                                 <div>
                                     <span class="block text-gray-500 text-xs uppercase tracking-wide">Eslora</span>
-                                    <span class="text-white font-medium">6.8 Metros</span>
+                                    <span class="text-white font-medium">6.8 M</span>
                                 </div>
                                 <div>
                                     <span class="block text-gray-500 text-xs uppercase tracking-wide">Motor</span>
-                                    <span class="text-white font-medium">Suzuki 90 HP</span>
+                                    <span class="text-white font-medium">90 HP</span>
                                 </div>
                             </div>
                         </div>
                         <a href="palomita.html"
-                            class="inline-flex items-center justify-center w-full bg-transparent border border-gray-600 text-white font-bold py-3 rounded hover:bg-bentamar-yellow hover:text-bentamar-blue hover:border-bentamar-yellow transition-all duration-300">
-                            FICHA TÉCNICA Y FOTOS
+                            class="inline-flex items-center justify-center w-full bg-transparent border border-gray-600 text-white font-bold py-2 text-sm rounded hover:bg-bentamar-yellow hover:text-bentamar-blue hover:border-bentamar-yellow transition-all duration-300">
+                            FICHA TÉCNICA
                         </a>
                     </div>
                 </div>
 
                 <!-- Fleet Card 3: Palomita I -->
                 <div
-                    class="bg-gray-800 rounded-2xl overflow-hidden shadow-2xl hover:shadow-bentamar-yellow/20 hover:shadow-2xl transition duration-500 group flex flex-col w-full md:w-[calc(50%-2rem)] lg:w-[calc(33.33%-2rem)] max-w-sm">
-                    <div class="relative h-64 w-full overflow-hidden">
+                    class="flex-none w-80 lg:w-full snap-center h-full bg-gray-800 rounded-2xl overflow-hidden shadow-2xl hover:shadow-bentamar-yellow/20 hover:shadow-2xl transition duration-500 group flex flex-col">
+                    <div class="relative h-56 lg:h-48 xl:h-56 w-full overflow-hidden">
                         <img src="img/palomita1/palomita1-portada.webp" loading="lazy"
                             class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                             alt="Lancha Palomita I - Bentamar SPA">
@@ -490,40 +510,41 @@
                         </div>
                     </div>
                     <div
-                        class="p-6 flex flex-col justify-between relative bg-gradient-to-br from-gray-800 to-gray-900 flex-grow text-center">
+                        class="p-5 flex flex-col justify-between relative bg-gradient-to-br from-gray-800 to-gray-900 flex-grow text-center">
                         <div>
-                            <div class="flex flex-col items-center mb-4 bg-transparent">
+                            <div class="flex flex-col items-center mb-3 bg-transparent">
                                 <h3
-                                    class="font-heading text-2xl font-bold text-white group-hover:text-bentamar-yellow transition-colors mb-2">
+                                    class="font-heading text-xl lg:text-lg xl:text-xl font-bold text-white group-hover:text-bentamar-yellow transition-colors mb-1">
                                     <a href="palomita-1.html"
-                                        class="hover:text-bentamar-yellow transition-colors">PALOMITA I</a>
+                                        class="hover:text-bentamar-yellow transition-colors">PALOMITA
+                                        I</a>
                                 </h3>
                                 <span
-                                    class="bg-bentamar-yellow text-bentamar-blue text-xs font-bold px-2 py-1 rounded uppercase">Con
+                                    class="bg-bentamar-yellow text-bentamar-blue text-xs font-bold px-2 py-0.5 rounded uppercase">Con
                                     Cabina</span>
                             </div>
-                            <div class="grid grid-cols-2 gap-4 mb-6 text-sm">
+                            <div class="grid grid-cols-2 gap-3 mb-4 text-sm lg:text-xs xl:text-sm">
                                 <div>
                                     <span class="block text-gray-500 text-xs uppercase tracking-wide">Eslora</span>
-                                    <span class="text-white font-medium">6.8 Metros</span>
+                                    <span class="text-white font-medium">6.8 M</span>
                                 </div>
                                 <div>
                                     <span class="block text-gray-500 text-xs uppercase tracking-wide">Motor</span>
-                                    <span class="text-white font-medium">Suzuki 90 HP</span>
+                                    <span class="text-white font-medium">90 HP</span>
                                 </div>
                             </div>
                         </div>
                         <a href="palomita-1.html"
-                            class="inline-flex items-center justify-center w-full bg-transparent border border-gray-600 text-white font-bold py-3 rounded hover:bg-bentamar-yellow hover:text-bentamar-blue hover:border-bentamar-yellow transition-all duration-300">
-                            FICHA TÉCNICA Y FOTOS
+                            class="inline-flex items-center justify-center w-full bg-transparent border border-gray-600 text-white font-bold py-2 text-sm rounded hover:bg-bentamar-yellow hover:text-bentamar-blue hover:border-bentamar-yellow transition-all duration-300">
+                            FICHA TÉCNICA
                         </a>
                     </div>
                 </div>
 
                 <!-- Fleet Card 4: Palomita II -->
                 <div
-                    class="bg-gray-800 rounded-2xl overflow-hidden shadow-2xl hover:shadow-bentamar-yellow/20 hover:shadow-2xl transition duration-500 group flex flex-col w-full md:w-[calc(50%-2rem)] lg:w-[calc(33.33%-2rem)] max-w-sm">
-                    <div class="relative h-64 w-full overflow-hidden">
+                    class="flex-none w-80 lg:w-full snap-center h-full bg-gray-800 rounded-2xl overflow-hidden shadow-2xl hover:shadow-bentamar-yellow/20 hover:shadow-2xl transition duration-500 group flex flex-col">
+                    <div class="relative h-56 lg:h-48 xl:h-56 w-full overflow-hidden">
                         <img src="img/palomita2/palomita-portada.webp" loading="lazy"
                             class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                             alt="Lancha Palomita II - Bentamar SPA">
@@ -540,40 +561,41 @@
                         </div>
                     </div>
                     <div
-                        class="p-6 flex flex-col justify-between relative bg-gradient-to-br from-gray-800 to-gray-900 flex-grow text-center">
+                        class="p-5 flex flex-col justify-between relative bg-gradient-to-br from-gray-800 to-gray-900 flex-grow text-center">
                         <div>
-                            <div class="flex flex-col items-center mb-4 bg-transparent">
+                            <div class="flex flex-col items-center mb-3 bg-transparent">
                                 <h3
-                                    class="font-heading text-2xl font-bold text-white group-hover:text-bentamar-yellow transition-colors mb-2">
+                                    class="font-heading text-xl lg:text-lg xl:text-xl font-bold text-white group-hover:text-bentamar-yellow transition-colors mb-1">
                                     <a href="palomita-2.html"
-                                        class="hover:text-bentamar-yellow transition-colors">PALOMITA II</a>
+                                        class="hover:text-bentamar-yellow transition-colors">PALOMITA
+                                        II</a>
                                 </h3>
                                 <span
-                                    class="bg-bentamar-yellow text-bentamar-blue text-xs font-bold px-2 py-1 rounded uppercase">HDPE
+                                    class="bg-bentamar-yellow text-bentamar-blue text-xs font-bold px-2 py-0.5 rounded uppercase">HDPE
                                     Reforzado</span>
                             </div>
-                            <div class="grid grid-cols-2 gap-4 mb-6 text-sm">
+                            <div class="grid grid-cols-2 gap-3 mb-4 text-sm lg:text-xs xl:text-sm">
                                 <div>
                                     <span class="block text-gray-500 text-xs uppercase tracking-wide">Eslora</span>
-                                    <span class="text-white font-medium">8.0 Metros</span>
+                                    <span class="text-white font-medium">8.0 M</span>
                                 </div>
                                 <div>
                                     <span class="block text-gray-500 text-xs uppercase tracking-wide">Motor</span>
-                                    <span class="text-white font-medium">Suzuki 115 HP</span>
+                                    <span class="text-white font-medium">115 HP</span>
                                 </div>
                             </div>
                         </div>
                         <a href="palomita-2.html"
-                            class="inline-flex items-center justify-center w-full bg-transparent border border-gray-600 text-white font-bold py-3 rounded hover:bg-bentamar-yellow hover:text-bentamar-blue hover:border-bentamar-yellow transition-all duration-300">
-                            FICHA TÉCNICA Y FOTOS
+                            class="inline-flex items-center justify-center w-full bg-transparent border border-gray-600 text-white font-bold py-2 text-sm rounded hover:bg-bentamar-yellow hover:text-bentamar-blue hover:border-bentamar-yellow transition-all duration-300">
+                            FICHA TÉCNICA
                         </a>
                     </div>
                 </div>
 
                 <!-- Fleet Card 5: Palomita III -->
                 <div
-                    class="bg-gray-800 rounded-2xl overflow-hidden shadow-2xl hover:shadow-bentamar-yellow/20 hover:shadow-2xl transition duration-500 group flex flex-col w-full md:w-[calc(50%-2rem)] lg:w-[calc(33.33%-2rem)] max-w-sm">
-                    <div class="relative h-64 w-full overflow-hidden">
+                    class="flex-none w-80 lg:w-full snap-center h-full bg-gray-800 rounded-2xl overflow-hidden shadow-2xl hover:shadow-bentamar-yellow/20 hover:shadow-2xl transition duration-500 group flex flex-col">
+                    <div class="relative h-56 lg:h-48 xl:h-56 w-full overflow-hidden">
                         <img src="img/palomita3/palomita3-portada.webp" loading="lazy"
                             class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                             alt="Lancha Palomita III - Bentamar SPA">
@@ -590,32 +612,32 @@
                         </div>
                     </div>
                     <div
-                        class="p-6 flex flex-col justify-between relative bg-gradient-to-br from-gray-800 to-gray-900 flex-grow text-center">
+                        class="p-5 flex flex-col justify-between relative bg-gradient-to-br from-gray-800 to-gray-900 flex-grow text-center">
                         <div>
-                            <div class="flex flex-col items-center mb-4 bg-transparent">
+                            <div class="flex flex-col items-center mb-3 bg-transparent">
                                 <h3
-                                    class="font-heading text-2xl font-bold text-white group-hover:text-bentamar-yellow transition-colors mb-2">
+                                    class="font-heading text-xl lg:text-lg xl:text-xl font-bold text-white group-hover:text-bentamar-yellow transition-colors mb-1">
                                     <a href="palomita-3.html"
                                         class="hover:text-bentamar-yellow transition-colors">PALOMITA III</a>
                                 </h3>
                                 <span
-                                    class="bg-bentamar-yellow text-bentamar-blue text-xs font-bold px-2 py-1 rounded uppercase">HDPE
+                                    class="bg-bentamar-yellow text-bentamar-blue text-xs font-bold px-2 py-0.5 rounded uppercase">HDPE
                                     Ligero</span>
                             </div>
-                            <div class="grid grid-cols-2 gap-4 mb-6 text-sm">
+                            <div class="grid grid-cols-2 gap-3 mb-4 text-sm lg:text-xs xl:text-sm">
                                 <div>
                                     <span class="block text-gray-500 text-xs uppercase tracking-wide">Eslora</span>
-                                    <span class="text-white font-medium">6.0 Metros</span>
+                                    <span class="text-white font-medium">6.0 M</span>
                                 </div>
                                 <div>
                                     <span class="block text-gray-500 text-xs uppercase tracking-wide">Motor</span>
-                                    <span class="text-white font-medium">Yamaha 50 HP</span>
+                                    <span class="text-white font-medium">50 HP</span>
                                 </div>
                             </div>
                         </div>
                         <a href="palomita-3.html"
-                            class="inline-flex items-center justify-center w-full bg-transparent border border-gray-600 text-white font-bold py-3 rounded hover:bg-bentamar-yellow hover:text-bentamar-blue hover:border-bentamar-yellow transition-all duration-300">
-                            FICHA TÉCNICA Y FOTOS
+                            class="inline-flex items-center justify-center w-full bg-transparent border border-gray-600 text-white font-bold py-2 text-sm rounded hover:bg-bentamar-yellow hover:text-bentamar-blue hover:border-bentamar-yellow transition-all duration-300">
+                            FICHA TÉCNICA
                         </a>
                     </div>
                 </div>
@@ -888,6 +910,7 @@
                             <source src="video/sobrebentamar.mp4" type="video/mp4">
                             Tu navegador no soporta videos HTML5.
                         </video>
+
                     </div>
                 </div>
             </div>
@@ -1023,9 +1046,11 @@
                 <div class="text-center md:text-left">
                     <h4 class="text-xl font-bold mb-6 text-bentamar-yellow uppercase tracking-wider">Legal</h4>
                     <ul class="space-y-3 text-gray-300">
-                        <li><a href="#" class="hover:text-white transition-colors hover:underline">Política de
+                        <li><a href="#" onclick="openModal('legalPrivacy'); return false;"
+                                class="hover:text-white transition-colors hover:underline">Política de
                                 Privacidad</a></li>
-                        <li><a href="#" class="hover:text-white transition-colors hover:underline">Términos y
+                        <li><a href="#" onclick="openModal('legalTerms'); return false;"
+                                class="hover:text-white transition-colors hover:underline">Términos y
                                 Condiciones</a></li>
                     </ul>
                 </div>
@@ -1033,65 +1058,106 @@
 
             <!-- Copyright -->
             <div class="border-t border-gray-800 pt-8 mt-8 text-center text-gray-500 text-sm">
-                <p>&copy; 2024 BENTAMAR SPA. Todos los derechos reservados.</p>
+                <p>&copy; 2026 BENTAMAR SPA. Todos los derechos reservados.</p>
                 <p class="mt-2 text-xs">Diseñado con excelencia en el Sur de Chile.</p>
             </div>
         </div>
     </footer>
 
 
-    <!-- Video Modal -->
+    <!-- Video/Image Modal -->
     <div id="videoModal"
-        class="fixed inset-0 z-50 flex items-center justify-center bg-black/90 hidden backdrop-blur-sm p-4"
-        onclick="closeVideo()">
-        <div class="relative w-full max-w-4xl" onclick="event.stopPropagation()">
+        class="fixed inset-0 z-50 hidden bg-black/90 backdrop-blur-md flex items-center justify-center p-4">
+        <div class="relative w-full max-w-5xl aspect-video rounded-xl overflow-hidden shadow-2xl bg-black">
             <button onclick="closeVideo()"
-                class="absolute -top-10 right-0 text-white hover:text-bentamar-yellow text-4xl font-bold">&times;</button>
-            <div class="aspect-video w-full rounded-lg shadow-2xl overflow-hidden bg-black">
-                <iframe id="youtubeFrame" class="w-full h-full" src="" frameborder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowfullscreen></iframe>
-            </div>
+                class="absolute top-4 right-4 text-white hover:text-red-500 z-10 p-2 bg-black/20 rounded-full transition-colors">
+                <svg class="h-8 w-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12">
+                    </path>
+                </svg>
+            </button>
+            <iframe id="youtubeFrame" class="w-full h-full" src="" title="YouTube video player" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen></iframe>
+            <!-- Image Container -->
+            <img id="modalImage" src="" class="w-full h-full object-contain hidden" alt="Vista ampliada">
         </div>
     </div>
 
     <!-- Interactive Scripts -->
     <script>
-        // Navbar scroll effect
-        window.addEventListener('scroll', () => {
-            const nav = document.querySelector('nav');
-            if (window.scrollY > 50) {
-                nav.classList.add('bg-bentamar-blue', 'shadow-lg');
-                nav.classList.remove('bg-bentamar-blue/90');
-            } else {
-                nav.classList.remove('bg-bentamar-blue', 'shadow-lg');
-                nav.classList.add('bg-bentamar-blue/90');
-            }
-        });
+        // Navbar scroll effect - Removed to maintain static glass style as requested
+        // window.addEventListener('scroll', () => {
+        //     const nav = document.querySelector('nav');
+        //     if (window.scrollY > 50) {
+        //         nav.classList.add('bg-bentamar-blue', 'shadow-lg');
+        //         nav.classList.remove('bg-bentamar-blue/90');
+        //     } else {
+        //         nav.classList.remove('bg-bentamar-blue', 'shadow-lg');
+        //         nav.classList.add('bg-bentamar-blue/90');
+        //     }
+        // });
 
 
-
-
-
-        // Video Modal Logic
+        // Modal Functions
         function openVideo(videoId) {
             const modal = document.getElementById('videoModal');
             const iframe = document.getElementById('youtubeFrame');
-            iframe.src = `https://www.youtube.com/embed/${videoId}?autoplay=1&rel=0`;
+            const img = document.getElementById('modalImage');
+
+            iframe.src = `https://www.youtube.com/embed/${videoId}?autoplay=1&rel=0&origin=${window.location.origin}`;
+            iframe.classList.remove('hidden');
+            img.classList.add('hidden');
+            modal.classList.remove('hidden');
+        }
+
+        function openImage(imageSrc) {
+            const modal = document.getElementById('videoModal');
+            const iframe = document.getElementById('youtubeFrame');
+            const img = document.getElementById('modalImage');
+
+            iframe.src = ''; // Detener video si había
+            iframe.classList.add('hidden');
+            img.src = imageSrc;
+            img.classList.remove('hidden');
             modal.classList.remove('hidden');
         }
 
         function closeVideo() {
             const modal = document.getElementById('videoModal');
             const iframe = document.getElementById('youtubeFrame');
+            const img = document.getElementById('modalImage');
+
+            iframe.src = '';
+            img.src = '';
             modal.classList.add('hidden');
-            iframe.src = ''; // Detiene el video 
         }
 
-        // Cerrar con tecla Escape
+    </script>
+    <script>
+        // Generic Modal Functions
+        function openModal(modalId) {
+            const modal = document.getElementById(modalId);
+            if (modal) {
+                modal.classList.remove('hidden');
+                document.body.style.overflow = 'hidden'; // Prevent background scrolling
+            }
+        }
+
+        function closeModal(modalId) {
+            const modal = document.getElementById(modalId);
+            if (modal) {
+                modal.classList.add('hidden');
+                document.body.style.overflow = ''; // Restore scrolling
+            }
+        }
+
+        // Close on Escape key (Enhanced to cover new modals)
         document.addEventListener('keydown', function (event) {
             if (event.key === 'Escape') {
                 closeVideo();
+                closeModal('legalPrivacy');
+                closeModal('legalTerms');
             }
         });
     </script>
@@ -1112,11 +1178,22 @@
                 // Estilo y animación de entrada
                 div.className = "group relative overflow-hidden rounded-lg shadow-lg aspect-[4/3] animate-fade-in-up";
                 div.innerHTML = `
+                    <div class="absolute inset-0 flex items-center justify-center z-10 cursor-pointer opacity-0 group-hover:opacity-100 transition duration-300"
+                        onclick="openImage('img/trabajos/trabajos%20(${i}).webp')">
+                        <div
+                            class="bg-bentamar-blue/80 text-white rounded-full w-12 h-12 flex items-center justify-center hover:scale-110 hover:bg-bentamar-yellow hover:text-bentamar-blue transition shadow-lg">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7" />
+                            </svg>
+                        </div>
+                    </div>
                     <img src="img/trabajos/trabajos%20(${i}).webp" 
                          alt="Proyecto Bentamar ${i}" 
                          class="w-full h-full object-cover transform transition duration-500 group-hover:scale-110"
                          onerror="this.parentElement.style.display='none'"> 
-                    <div class="absolute inset-0 bg-gradient-to-t from-bentamar-blue/90 to-transparent opacity-0 group-hover:opacity-100 transition duration-300 flex items-end p-6">
+                    <div class="absolute inset-0 bg-gradient-to-t from-bentamar-blue/90 to-transparent opacity-0 group-hover:opacity-100 transition duration-300 flex items-end p-6 pointer-events-none">
                         <span class="text-white font-bold text-lg">Proyecto #${i}</span>
                     </div>
                 `;
@@ -1134,6 +1211,92 @@
         // Cargar el primer lote automáticamente al iniciar
         document.addEventListener('DOMContentLoaded', loadMorePhotos);
     </script>
+    <!-- Modal Privacy #legalPrivacy -->
+    <div id="legalPrivacy"
+        class="fixed inset-0 z-50 hidden bg-black/90 backdrop-blur-sm flex items-center justify-center p-4"
+        onclick="if(event.target === this) closeModal('legalPrivacy')">
+        <div
+            class="bg-white rounded-lg shadow-2xl w-full max-w-2xl max-h-[80vh] overflow-y-auto relative animate-fade-in-up">
+            <button onclick="closeModal('legalPrivacy')"
+                class="absolute top-4 right-4 text-gray-500 hover:text-red-500 transition-colors z-10 bg-white rounded-full p-1">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12">
+                    </path>
+                </svg>
+            </button>
+            <div class="p-6 text-gray-800 text-sm leading-relaxed">
+                <h2 class="text-2xl font-bold text-bentamar-blue mb-4">POLÍTICA DE PRIVACIDAD Y PROTECCIÓN DE DATOS</h2>
+                <p class="mb-4"><strong>Vigencia:</strong> Octubre 2025 | <strong>Marco:</strong> Ley N° 21.719 y N°
+                    19.628.</p>
+
+                <h3 class="font-bold text-lg mt-4 mb-2">1. Responsabilidad y Compromiso</h3>
+                <p class="mb-2">BENTAMAR SPA (RUT 76.569.288-1) adopta un modelo de Responsabilidad Proactiva.
+                    Garantizamos que los datos gestionados en nuestro ERP (Odoo), web y correos son tratados con
+                    integridad y confidencialidad.</p>
+                <h3 class="font-bold text-lg mt-4 mb-2">2. Datos Recolectados y Finalidad</h3>
+                <ul class="list-disc pl-5 mb-2 space-y-1">
+                    <li><strong>Identificativos:</strong> Nombre, RUT, Matrícula DIRECTEMAR (para contratos y acceso a
+                        faenas).</li>
+                    <li><strong>Contacto:</strong> Email, teléfono, usuario de Telegram (para coordinación operativa).
+                    </li>
+                    <li><strong>Sensibles (Salud):</strong> Exámenes de aptitud física de buzos. Se tratan <em>sin
+                            necesidad de consentimiento</em> bajo la base de cumplimiento de obligaciones legales de
+                        seguridad (Reglamento de Buceo TM-035).</li>
+                    <li><strong>Financieros:</strong> Cuentas bancarias y boletas procesadas por OCR para gestión de
+                        gastos.</li>
+                </ul>
+                <h3 class="font-bold text-lg mt-4 mb-2">3. Uso de IA y Automatización</h3>
+                <p class="mb-2">Utilizamos algoritmos y bots para la lectura automática de documentos. Al enviar
+                    información, el usuario consiente su procesamiento en servidores seguros (Nube/Odoo) y posibles
+                    transferencias internacionales a proveedores certificados (Google/Zoho).</p>
+                <h3 class="font-bold text-lg mt-4 mb-2">4. Derechos ARCOP</h3>
+                <p class="mb-2">Usted puede ejercer sus derechos de Acceso, Rectificación, Cancelación, Oposición y
+                    <strong>Portabilidad</strong> escribiendo a <a href="mailto:administracion@bentamar.cl"
+                        class="text-blue-600 underline">administracion@bentamar.cl</a>. Plazo de respuesta: 30 días.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Terms #legalTerms -->
+    <div id="legalTerms"
+        class="fixed inset-0 z-50 hidden bg-black/90 backdrop-blur-sm flex items-center justify-center p-4"
+        onclick="if(event.target === this) closeModal('legalTerms')">
+        <div
+            class="bg-white rounded-lg shadow-2xl w-full max-w-2xl max-h-[80vh] overflow-y-auto relative animate-fade-in-up">
+            <button onclick="closeModal('legalTerms')"
+                class="absolute top-4 right-4 text-gray-500 hover:text-red-500 transition-colors z-10 bg-white rounded-full p-1">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12">
+                    </path>
+                </svg>
+            </button>
+            <div class="p-6 text-gray-800 text-sm leading-relaxed">
+                <h2 class="text-2xl font-bold text-bentamar-blue mb-4">TÉRMINOS Y CONDICIONES DE SERVICIO (B2B)</h2>
+
+                <h3 class="font-bold text-lg mt-4 mb-2">1. Validez de Cotizaciones</h3>
+                <p class="mb-2">Las cotizaciones web o PDF son <strong>presupuestos referenciales</strong> válidos por
+                    10 días. El contrato se perfecciona únicamente mediante el intercambio de Orden de Compra y
+                    Aceptación expresa (Ley 19.799).</p>
+                <h3 class="font-bold text-lg mt-4 mb-2">2. Autoridad del Capitán y Fuerza Mayor</h3>
+                <p class="mb-2">Conforme a la Ley de Navegación, el Capitán tiene autoridad absoluta. Las suspensiones
+                    de faena por decisión del Capitán (clima, seguridad) o Cierre de Puerto se califican como
+                    <strong>Fuerza Mayor</strong>, eximiendo a Bentamar de multas por retraso.
+                </p>
+                <h3 class="font-bold text-lg mt-4 mb-2">3. Tarifa Stand-By</h3>
+                <p class="mb-2">Si la operación se detiene por causas climáticas o demoras del Cliente, se aplicará una
+                    tarifa Stand-By (100% de la tarifa diaria) para cubrir costos operativos, salvo pacto en contrario.
+                </p>
+                <h3 class="font-bold text-lg mt-4 mb-2">4. Limitación de Responsabilidad</h3>
+                <p class="mb-2">Bentamar SpA <strong>excluye expresamente</strong> la responsabilidad por lucro cesante,
+                    daños indirectos o consecuenciales (ej. paralización de planta del cliente). La responsabilidad
+                    máxima se limita al monto pagado por el servicio específico.</p>
+                <h3 class="font-bold text-lg mt-4 mb-2">5. Propiedad Intelectual</h3>
+                <p class="mb-2">Informes, videos de ROV y batimetrías son propiedad de Bentamar hasta el pago total del
+                    servicio.</p>
+            </div>
+        </div>
+    </div>
 </body>
 
 </html>

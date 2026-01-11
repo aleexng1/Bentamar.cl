@@ -5,20 +5,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description"
-        content="Bentamar SPA: Soluciones técnicas submarinas, buceo profesional y arriendo de embarcaciones en Puerto Montt y sur de Chile.">
-    <meta name="keywords" content="Buceo Comercial, ROV, Arriendo Lanchas, Puerto Montt, Salmoneras, Bentamar">
-    <meta name="author" content="Bentamar SPA">
-    <meta property="og:description"
-        content="Bentamar SPA: Soluciones técnicas submarinas, buceo profesional y arriendo de embarcaciones en Puerto Montt y sur de Chile.">
-    <meta property="og:image" content="img/general/arriendoembarcaciones.webp">
-    <meta property="og:title" content="Correntómetros | BENTAMAR SPA">
-    <title>Correntómetros | BENTAMAR SPA</title>
+        content="Servicio de instalación de correntómetros y equipos de medición oceanográfica en Puerto Montt y sur de Chile. Bentamar SPA.">
+    <title>Medición Submarina | Bentamar SPA</title>
     <link rel="icon" type="image/x-icon" href="img/general/Logo_Oficial.png">
+
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
         href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Roboto:wght@300;400;500;700&display=swap"
         rel="stylesheet">
+    <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- Tailwind Configuration -->
     <script src="js/tailwind-config.js"></script>
@@ -27,17 +24,17 @@
 <body class="font-sans text-gray-700 bg-gray-50 flex flex-col min-h-screen">
     <!-- Navbar -->
     <nav
-        class="bg-bentamar-blue/90 backdrop-blur-sm text-white fixed w-full z-50 shadow-md transition-all duration-300">
-        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+        class="bg-bentamar-blue/90 backdrop-blur-md text-white fixed w-full z-50 shadow-lg transition-all duration-300 py-4">
+        <div class="container mx-auto px-6 flex justify-between items-center">
             <!-- Logo -->
             <a href="index.html" class="flex items-center gap-3">
                 <img src="img/general/Logo_Secundario_Blanco.webp" alt="Bentamar Logo"
-                    class="h-12 w-auto object-contain">
+                    class="h-14 w-auto object-contain">
                 <span class="font-heading font-bold text-xl tracking-wider hidden md:block">BENTAMAR</span>
             </a>
 
             <!-- Desktop Menu -->
-            <ul class="hidden md:flex space-x-8 font-medium text-sm">
+            <ul class="hidden md:flex space-x-8 font-medium text-lg items-center">
                 <li><a href="index.html#inicio" class="hover:text-bentamar-yellow transition-colors relative group">
                         Inicio
                         <span
@@ -53,14 +50,19 @@
                         <span
                             class="absolute -bottom-1 left-0 w-0 h-0.5 bg-bentamar-yellow transition-all duration-300 group-hover:w-full"></span>
                     </a></li>
-                <li><a href="index.html#turismo" class="hover:text-bentamar-yellow transition-colors relative group">
-                        Turismo
+                <li><a href="index.html#proyectos" class="hover:text-bentamar-yellow transition-colors relative group">
+                        Proyectos
+                        <span
+                            class="absolute -bottom-1 left-0 w-0 h-0.5 bg-bentamar-yellow transition-all duration-300 group-hover:w-full"></span>
+                    </a></li>
+                <li><a href="index.html#nosotros" class="hover:text-bentamar-yellow transition-colors relative group">
+                        Nosotros
                         <span
                             class="absolute -bottom-1 left-0 w-0 h-0.5 bg-bentamar-yellow transition-all duration-300 group-hover:w-full"></span>
                     </a></li>
                 <li><a href="index.html#contacto"
-                        class="hidden md:inline-block bg-bentamar-yellow text-bentamar-blue px-6 py-2 rounded-sm font-bold text-sm uppercase tracking-wide hover:bg-white transition-colors duration-300 shadow-lg">
-                        Cotizar
+                        class="hidden md:inline-block bg-bentamar-yellow text-bentamar-blue px-6 py-2 rounded-sm font-bold text-base uppercase tracking-wide hover:bg-white transition-colors duration-300 shadow-lg">
+                        Contacto
                     </a></li>
             </ul>
 
@@ -74,16 +76,13 @@
     <!-- Hero -->
     <header class="relative h-48 md:h-64 flex items-center justify-center bg-bentamar-blue overflow-hidden mt-16">
         <div class="absolute inset-0 z-0">
-            <img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=2072&auto=format&fit=crop"
-                class="absolute inset-0 w-full h-full object-cover" alt="Correntómetros">
-            <div class="absolute inset-0 bg-bentamar-blue/60"></div>
+            <!-- Background Image -->
+            <img src="img/general/correntometros.webp" alt="Fondo Medición"
+                class="w-full h-full object-cover opacity-30">
         </div>
         <div class="relative z-10 text-center px-4">
-            <a href="index.html#servicios"
-                class="text-bentamar-yellow hover:text-white text-sm font-bold tracking-wide mb-2 inline-block">← VOLVER
-                A SERVICIOS</a>
-            <h1 class="text-3xl md:text-5xl font-bold text-white font-heading uppercase tracking-wider drop-shadow-md">
-                Correntómetros</h1>
+            <h1 class="font-heading text-3xl md:text-5xl font-bold text-white uppercase tracking-wide">
+                INSTALACIÓN DE EQUIPOS DE MEDICIÓN SUBMARINA</h1>
             <div class="h-1.5 w-24 bg-bentamar-yellow mx-auto mt-4 rounded-full"></div>
         </div>
     </header>
@@ -93,46 +92,86 @@
         <div class="grid grid-cols-1 lg:grid-cols-3 gap-12">
             <!-- Left Column -->
             <div class="lg:col-span-2 space-y-6 text-lg text-gray-600 leading-relaxed">
-                <h2 class="text-2xl md:text-3xl font-bold text-bentamar-blue font-heading">Instalación y Recuperación de
-                    Sensores</h2>
                 <p>
-                    Apoyamos estudios oceanográficos mediante la instalación segura y precisa de correntómetros (ADCP) y
-                    otros sensores submarinos. Garantizamos el correcto posicionamiento y lastrado para asegurar la
-                    integridad de los datos recolectados.
+                    En <span class="font-bold text-bentamar-blue">Bentamar SPA</span>, brindamos un servicio
+                    especializado en la instalación, mantención y recuperación de equipos de medición oceanográfica y
+                    ambiental.
+                    Nuestro equipo técnico asegura el correcto posicionamiento y funcionamiento de estos instrumentos
+                    críticos.
                 </p>
                 <p>
-                    Nuestra experiencia incluye:
+                    Contamos con experiencia en el despliegue de:
                 </p>
-                <ul class="list-disc pl-6 space-y-2 mt-4 marker:text-bentamar-yellow">
-                    <li>Diseño de líneas de fondeo para instrumentos.</li>
-                    <li>Instalación de marcos protectores anti-arrastre.</li>
-                    <li>Recuperación exitosa de equipos y data.</li>
-                    <li>Mantención de boyas oceanográficas.</li>
+                <ul class="list-disc list-inside space-y-2 ml-4">
+                    <li><span class="font-bold text-bentamar-blue">Correntómetros / ADCP:</span> Para perfiles de
+                        corriente y oleaje.</li>
+                    <li><span class="font-bold text-bentamar-blue">Mareógrafos:</span> Registro de niveles de marea.
+                    </li>
+                    <li><span class="font-bold text-bentamar-blue">Sensores Ambientales:</span> Oxígeno disuelto,
+                        salinidad (CTD), temperatura y fotoperíodo.</li>
+                </ul>
+                <p>
+                    Garantizamos maniobras seguras utilizando nuestras propias embarcaciones y equipos de buceo,
+                    optimizando los tiempos de operación y asegurando la integridad de los datos recolectados.
+                </p>
+                <h3 class="font-heading text-2xl font-bold text-bentamar-blue mt-8 mb-4">Nuestro Compromiso</h3>
+                <ul class="space-y-3">
+                    <li class="flex items-start">
+                        <svg class="h-6 w-6 text-bentamar-yellow mr-2 mt-1" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                        </svg>
+                        Posicionamiento preciso mediante GPS y ecosonda.
+                    </li>
+                    <li class="flex items-start">
+                        <svg class="h-6 w-6 text-bentamar-yellow mr-2 mt-1" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                        </svg>
+                        Anclajes seguros y sistemas de flotación adecuados.
+                    </li>
+                    <li class="flex items-start">
+                        <svg class="h-6 w-6 text-bentamar-yellow mr-2 mt-1" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                        </svg>
+                        Recuperación exitosa de equipos y data.
+                    </li>
+                    <li class="flex items-start">
+                        <svg class="h-6 w-6 text-bentamar-yellow mr-2 mt-1" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                        </svg>
+                        Estudios de batimetría de precisión.
+                    </li>
                 </ul>
             </div>
 
             <!-- Right Column -->
             <div class="space-y-8">
-                <!-- Video Placeholder -->
-                <div
-                    class="bg-gray-800 rounded-lg h-48 flex items-center justify-center relative overflow-hidden shadow-lg group cursor-pointer border-2 border-transparent hover:border-bentamar-yellow transition-all">
-                    <img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=2072&auto=format&fit=crop"
-                        class="absolute inset-0 w-full h-full object-cover opacity-50 bg-blend-overlay">
-                    <div
-                        class="relative z-10 bg-white/10 p-4 rounded-full backdrop-blur-sm group-hover:scale-110 transition-transform">
-                        <svg class="w-10 h-10 text-white" fill="currentColor" viewBox="0 0 24 24">
-                            <path d="M8 5v14l11-7z" />
-                        </svg>
+                <!-- Image Placeholder (No Video) -->
+                <div class="rounded-lg overflow-hidden shadow-lg h-64 relative group cursor-pointer"
+                    onclick="openImage('img/general/correntometros.webp')">
+                    <img src="img/general/correntometros.webp" alt="Medición Submarina"
+                        class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
+                    <div class="absolute top-4 right-4 z-20">
+                        <button onclick="event.stopPropagation(); openImage('img/general/correntometros.webp')"
+                            class="bg-black/50 hover:bg-black/70 text-white p-2 rounded-full backdrop-blur-sm transition-colors cursor-pointer">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7" />
+                            </svg>
+                        </button>
                     </div>
                 </div>
 
                 <!-- CTA -->
                 <div class="bg-white p-8 rounded-xl shadow-xl border-t-4 border-bentamar-yellow">
                     <h3 class="font-bold text-xl text-bentamar-blue mb-2 font-heading">¿Necesita este servicio?</h3>
-                    <p class="text-sm text-gray-500 mb-6">Contáctenos hoy para recibir una cotización técnica
-                        personalizada.</p>
+                    <p class="text-gray-600 mb-6 text-sm">Contáctenos para evaluar su proyecto de medición.</p>
                     <a href="index.html#contacto"
-                        class="block w-full text-center bg-bentamar-blue text-white font-bold py-4 rounded hover:bg-bentamar-yellow hover:text-bentamar-blue transition duration-300 uppercase tracking-wide">
+                        class="block w-full bg-bentamar-blue text-white text-center font-bold py-3 rounded hover:bg-opacity-90 transition-all hover:shadow-lg uppercase tracking-wide">
                         Cotizar Ahora
                     </a>
                 </div>
@@ -141,12 +180,14 @@
     </section>
 
     <!-- Footer -->
-    <footer id="contacto" class="bg-gray-900 text-white pt-16 pb-8 border-t border-gray-800">
+    <!-- Contact Section / Footer -->
+    <footer class="bg-gray-900 text-white pt-16 pb-8 border-t border-gray-800">
         <div class="container mx-auto px-6">
             <div class="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
                 <!-- Column 1: Contact -->
                 <div class="text-center md:text-left">
                     <h4 class="text-xl font-bold mb-6 text-bentamar-yellow uppercase tracking-wider">Contacto</h4>
+
                     <div class="space-y-4">
                         <a href="tel:+56985957506"
                             class="flex items-center justify-center md:justify-start gap-3 text-gray-300 hover:text-white transition-colors group">
@@ -206,11 +247,73 @@
 
             <!-- Copyright -->
             <div class="border-t border-gray-800 pt-8 mt-8 text-center text-gray-500 text-sm">
-                <p>&copy; 2024 BENTAMAR SPA. Todos los derechos reservados.</p>
+                <p>&copy; 2026 BENTAMAR SPA. Todos los derechos reservados.</p>
                 <p class="mt-2 text-xs">Diseñado con excelencia en el Sur de Chile.</p>
             </div>
         </div>
     </footer>
+
+    <!-- Video/Image Modal -->
+    <div id="videoModal"
+        class="fixed inset-0 z-50 hidden bg-black/90 backdrop-blur-md flex items-center justify-center p-4">
+        <div class="relative w-full max-w-5xl aspect-video rounded-xl overflow-hidden shadow-2xl bg-black">
+            <button onclick="closeVideo()"
+                class="absolute top-4 right-4 text-white hover:text-red-500 z-10 p-2 bg-black/20 rounded-full transition-colors">
+                <svg class="h-8 w-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12">
+                    </path>
+                </svg>
+            </button>
+            <iframe id="youtubeFrame" class="w-full h-full" src="" title="YouTube video player" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen></iframe>
+            <!-- Image Container -->
+            <img id="modalImage" src="" class="w-full h-full object-contain hidden" alt="Vista ampliada">
+        </div>
+    </div>
+
+    <script>
+        // Modal Functions
+        function openVideo(videoId) {
+            const modal = document.getElementById('videoModal');
+            const iframe = document.getElementById('youtubeFrame');
+            const img = document.getElementById('modalImage');
+
+            iframe.src = `https://www.youtube.com/embed/${videoId}?autoplay=1&rel=0&origin=${window.location.origin}`;
+            iframe.classList.remove('hidden');
+            img.classList.add('hidden');
+            modal.classList.remove('hidden');
+        }
+
+        function openImage(imageSrc) {
+            const modal = document.getElementById('videoModal');
+            const iframe = document.getElementById('youtubeFrame');
+            const img = document.getElementById('modalImage');
+
+            iframe.src = ''; // Detener video si había
+            iframe.classList.add('hidden');
+            img.src = imageSrc;
+            img.classList.remove('hidden');
+            modal.classList.remove('hidden');
+        }
+
+        function closeVideo() {
+            const modal = document.getElementById('videoModal');
+            const iframe = document.getElementById('youtubeFrame');
+            const img = document.getElementById('modalImage');
+
+            iframe.src = '';
+            img.src = '';
+            modal.classList.add('hidden');
+        }
+
+        // Close on Escape key
+        document.addEventListener('keydown', function (e) {
+            if (e.key === 'Escape') {
+                closeVideo();
+            }
+        });
+    </script>
 </body>
 
 </html>

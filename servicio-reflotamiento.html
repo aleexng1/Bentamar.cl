@@ -27,17 +27,17 @@
 <body class="font-sans text-gray-700 bg-gray-50 flex flex-col min-h-screen">
     <!-- Navbar -->
     <nav
-        class="bg-bentamar-blue/90 backdrop-blur-sm text-white fixed w-full z-50 shadow-md transition-all duration-300">
-        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+        class="bg-bentamar-blue/90 backdrop-blur-md text-white fixed w-full z-50 shadow-lg transition-all duration-300 py-4">
+        <div class="container mx-auto px-6 flex justify-between items-center">
             <!-- Logo -->
             <a href="index.html" class="flex items-center gap-3">
                 <img src="img/general/Logo_Secundario_Blanco.webp" alt="Bentamar Logo"
-                    class="h-12 w-auto object-contain">
+                    class="h-14 w-auto object-contain">
                 <span class="font-heading font-bold text-xl tracking-wider hidden md:block">BENTAMAR</span>
             </a>
 
             <!-- Desktop Menu -->
-            <ul class="hidden md:flex space-x-8 font-medium text-sm">
+            <ul class="hidden md:flex space-x-8 font-medium text-lg items-center">
                 <li><a href="index.html#inicio" class="hover:text-bentamar-yellow transition-colors relative group">
                         Inicio
                         <span
@@ -53,14 +53,19 @@
                         <span
                             class="absolute -bottom-1 left-0 w-0 h-0.5 bg-bentamar-yellow transition-all duration-300 group-hover:w-full"></span>
                     </a></li>
-                <li><a href="index.html#turismo" class="hover:text-bentamar-yellow transition-colors relative group">
-                        Turismo
+                <li><a href="index.html#proyectos" class="hover:text-bentamar-yellow transition-colors relative group">
+                        Proyectos
+                        <span
+                            class="absolute -bottom-1 left-0 w-0 h-0.5 bg-bentamar-yellow transition-all duration-300 group-hover:w-full"></span>
+                    </a></li>
+                <li><a href="index.html#nosotros" class="hover:text-bentamar-yellow transition-colors relative group">
+                        Nosotros
                         <span
                             class="absolute -bottom-1 left-0 w-0 h-0.5 bg-bentamar-yellow transition-all duration-300 group-hover:w-full"></span>
                     </a></li>
                 <li><a href="index.html#contacto"
-                        class="hidden md:inline-block bg-bentamar-yellow text-bentamar-blue px-6 py-2 rounded-sm font-bold text-sm uppercase tracking-wide hover:bg-white transition-colors duration-300 shadow-lg">
-                        Cotizar
+                        class="hidden md:inline-block bg-bentamar-yellow text-bentamar-blue px-6 py-2 rounded-sm font-bold text-base uppercase tracking-wide hover:bg-white transition-colors duration-300 shadow-lg">
+                        Contacto
                     </a></li>
             </ul>
 
@@ -116,14 +121,15 @@
             <!-- Right Column -->
             <div class="space-y-8">
                 <!-- Video Placeholder -->
-                <div
+                <div onclick="openImage('img/general/reflotamiento.webp')"
                     class="bg-gray-800 rounded-lg h-48 flex items-center justify-center relative overflow-hidden shadow-lg group cursor-pointer border-2 border-transparent hover:border-bentamar-yellow transition-all">
                     <img src="img/general/reflotamiento.webp"
                         class="absolute inset-0 w-full h-full object-cover opacity-50 bg-blend-overlay">
                     <div
                         class="relative z-10 bg-white/10 p-4 rounded-full backdrop-blur-sm group-hover:scale-110 transition-transform">
-                        <svg class="w-10 h-10 text-white" fill="currentColor" viewBox="0 0 24 24">
-                            <path d="M8 5v14l11-7z" />
+                        <svg class="h-8 w-8 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7" />
                         </svg>
                     </div>
                 </div>
@@ -143,12 +149,14 @@
     </section>
 
     <!-- Footer -->
-    <footer id="contacto" class="bg-gray-900 text-white pt-16 pb-8 border-t border-gray-800">
+    <!-- Contact Section / Footer -->
+    <footer class="bg-gray-900 text-white pt-16 pb-8 border-t border-gray-800">
         <div class="container mx-auto px-6">
             <div class="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
                 <!-- Column 1: Contact -->
                 <div class="text-center md:text-left">
                     <h4 class="text-xl font-bold mb-6 text-bentamar-yellow uppercase tracking-wider">Contacto</h4>
+
                     <div class="space-y-4">
                         <a href="tel:+56985957506"
                             class="flex items-center justify-center md:justify-start gap-3 text-gray-300 hover:text-white transition-colors group">
@@ -208,11 +216,73 @@
 
             <!-- Copyright -->
             <div class="border-t border-gray-800 pt-8 mt-8 text-center text-gray-500 text-sm">
-                <p>&copy; 2024 BENTAMAR SPA. Todos los derechos reservados.</p>
+                <p>&copy; 2026 BENTAMAR SPA. Todos los derechos reservados.</p>
                 <p class="mt-2 text-xs">Diseñado con excelencia en el Sur de Chile.</p>
             </div>
         </div>
     </footer>
+
+    <!-- Video/Image Modal -->
+    <div id="videoModal"
+        class="fixed inset-0 z-50 hidden bg-black/90 backdrop-blur-md flex items-center justify-center p-4">
+        <div class="relative w-full max-w-5xl aspect-video rounded-xl overflow-hidden shadow-2xl bg-black">
+            <button onclick="closeVideo()"
+                class="absolute top-4 right-4 text-white hover:text-red-500 z-10 p-2 bg-black/20 rounded-full transition-colors">
+                <svg class="h-8 w-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12">
+                    </path>
+                </svg>
+            </button>
+            <iframe id="youtubeFrame" class="w-full h-full" src="" title="YouTube video player" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen></iframe>
+            <!-- Image Container -->
+            <img id="modalImage" src="" class="w-full h-full object-contain hidden" alt="Vista ampliada">
+        </div>
+    </div>
+
+    <script>
+        // Modal Functions
+        function openVideo(videoId) {
+            const modal = document.getElementById('videoModal');
+            const iframe = document.getElementById('youtubeFrame');
+            const img = document.getElementById('modalImage');
+
+            iframe.src = `https://www.youtube.com/embed/${videoId}?autoplay=1&rel=0&origin=${window.location.origin}`;
+            iframe.classList.remove('hidden');
+            img.classList.add('hidden');
+            modal.classList.remove('hidden');
+        }
+
+        function openImage(imageSrc) {
+            const modal = document.getElementById('videoModal');
+            const iframe = document.getElementById('youtubeFrame');
+            const img = document.getElementById('modalImage');
+
+            iframe.src = ''; // Detener video si había
+            iframe.classList.add('hidden');
+            img.src = imageSrc;
+            img.classList.remove('hidden');
+            modal.classList.remove('hidden');
+        }
+
+        function closeVideo() {
+            const modal = document.getElementById('videoModal');
+            const iframe = document.getElementById('youtubeFrame');
+            const img = document.getElementById('modalImage');
+
+            iframe.src = '';
+            img.src = '';
+            modal.classList.add('hidden');
+        }
+
+        // Close on Escape key
+        document.addEventListener('keydown', function (e) {
+            if (e.key === 'Escape') {
+                closeVideo();
+            }
+        });
+    </script>
 </body>
 
 </html>

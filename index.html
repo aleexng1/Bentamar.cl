@@ -51,13 +51,74 @@
             /* Ajusta el tamaño de la trama */
         }
     </style>
+    <style>
+        @media print {
+            @page {
+                margin: 1cm;
+                size: auto;
+            }
+
+            body {
+                -webkit-print-color-adjust: exact;
+                print-color-adjust: exact;
+                background: white;
+            }
+
+            .break-inside-avoid {
+                page-break-inside: avoid;
+            }
+
+            .break-before {
+                page-break-before: always;
+            }
+
+            /* Forzar que el texto sea negro en papel */
+            h1,
+            h2,
+            h3,
+            p {
+                color: black !important;
+                text-shadow: none !important;
+            }
+
+            #servicios,
+            #flota,
+            #proyectos {
+                padding-top: 20px !important;
+                padding-bottom: 20px !important;
+            }
+
+            body>*:not(#print-container) {
+                display: none !important;
+            }
+
+            #print-container {
+                display: block !important;
+            }
+
+            .page-break {
+                page-break-before: always;
+            }
+
+            /* Asegurar colores de fondo e imágenes */
+            body {
+                -webkit-print-color-adjust: exact;
+                print-color-adjust: exact;
+            }
+        }
+    </style>
 </head>
 
 <body class="font-sans text-gray-700 bg-gray-50 flex flex-col min-h-screen">
+    <div class="hidden print:block text-center mb-8 border-b-2 border-bentamar-blue pb-4">
+        <img src="img/Logo_Oficial.png" class="h-24 mx-auto mb-2" alt="Bentamar Logo">
+        <h1 class="text-3xl font-bold text-bentamar-blue">CATÁLOGO DE SERVICIOS Y FLOTA</h1>
+        <p class="text-gray-600">www.bentamar.cl | Puerto Montt, Chile</p>
+    </div>
 
     <!-- Navigation -->
     <nav
-        class="bg-bentamar-blue/90 backdrop-blur-md text-white fixed w-full z-50 shadow-lg transition-all duration-300 py-4">
+        class="print:hidden bg-bentamar-blue/90 backdrop-blur-md text-white fixed w-full z-50 shadow-lg transition-all duration-300 py-4">
         <div class="container mx-auto px-6 flex justify-between items-center">
             <!-- Logo -->
             <a href="index.html" class="flex items-center gap-3">
@@ -115,13 +176,13 @@
     <!-- Hero Section with Background Video -->
     <header id="inicio" class="relative h-screen flex items-center justify-center text-center px-4 overflow-hidden">
         <!-- Video Background -->
-        <video autoplay muted loop playsinline class="absolute inset-0 w-full h-full object-cover z-0">
+        <video autoplay muted loop playsinline class="print:hidden absolute inset-0 w-full h-full object-cover z-0">
             <source src="video/portada.mp4" type="video/mp4">
             Tu navegador no soporta video HTML5.
         </video>
 
         <!-- Dark Overlay -->
-        <div class="absolute inset-0 bg-halftone z-10"></div>
+        <div class="absolute inset-0 bg-halftone z-10 print:hidden"></div>
 
         <!-- Content -->
         <div class="relative z-20 max-w-5xl mx-auto animate-fade-in-up">
@@ -150,6 +211,26 @@
                     <span class="font-bold text-white">cumplimiento normativo</span> y seguridad operativa para la
                     industria acuícola.
                 </p>
+                <div class="mt-8 flex flex-wrap gap-4 print:hidden justify-center">
+                    <a href="catalogo-servicios.html" target="_blank"
+                        class="bg-transparent border-2 border-white text-white hover:bg-white hover:text-bentamar-blue px-6 py-2 rounded-full font-bold transition flex items-center gap-2 text-sm">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z">
+                            </path>
+                        </svg>
+                        CATÁLOGO SERVICIOS
+                    </a>
+                    <a href="catalogo-flota.html" target="_blank"
+                        class="bg-transparent border-2 border-white text-white hover:bg-white hover:text-bentamar-blue px-6 py-2 rounded-full font-bold transition flex items-center gap-2 text-sm">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10">
+                            </path>
+                        </svg>
+                        CATÁLOGO FLOTA
+                    </a>
+                </div>
 
                 <div class="mt-8 max-w-md mx-auto sm:flex sm:justify-center md:mt-10 gap-4">
                     <div class="rounded-md shadow">
@@ -370,7 +451,7 @@
     </section>
 
     <!-- Fleet / Equipment Section (Redesigned & Dark Mode) -->
-    <section id="flota" class="py-20 bg-bentamar-blue relative overflow-hidden">
+    <section id="flota" class="py-20 bg-bentamar-blue relative overflow-hidden break-before">
         <!-- Abstract Background -->
         <div class="absolute inset-0 opacity-5"
             style="background-image: url('data:image/svg+xml,%3Csvg width=\'60\' height=\'60\' viewBox=\'0 0 60 60\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Cg fill=\'none\' fill-rule=\'evenodd\'%3E%3Cg fill=\'%23ffffff\' fill-opacity=\'1\'%3E%3Cpath d=\'M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z\'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E');">
@@ -726,7 +807,7 @@
             <div id="gallery-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                 <!-- Video 1: Emisarios -->
                 <div class="group relative overflow-hidden rounded-lg shadow-lg aspect-[4/3]">
-                    <div class="absolute inset-0 flex items-center justify-center z-10 cursor-pointer"
+                    <div class="absolute inset-0 flex items-center justify-center z-10 cursor-pointer print:hidden"
                         onclick="openVideo('nvX-DtHQpac')">
                         <div
                             class="bg-bentamar-blue/80 text-white rounded-full w-16 h-16 flex items-center justify-center hover:scale-110 hover:bg-bentamar-yellow hover:text-bentamar-blue transition shadow-lg">
@@ -750,7 +831,7 @@
 
                 <!-- Video 2: Soldadura -->
                 <div class="group relative overflow-hidden rounded-lg shadow-lg aspect-[4/3]">
-                    <div class="absolute inset-0 flex items-center justify-center z-10 cursor-pointer"
+                    <div class="absolute inset-0 flex items-center justify-center z-10 cursor-pointer print:hidden"
                         onclick="openVideo('TLIYgxYyFVk')">
                         <div
                             class="bg-bentamar-blue/80 text-white rounded-full w-16 h-16 flex items-center justify-center hover:scale-110 hover:bg-bentamar-yellow hover:text-bentamar-blue transition shadow-lg">
@@ -774,7 +855,7 @@
 
                 <!-- Video 3: Cascos -->
                 <div class="group relative overflow-hidden rounded-lg shadow-lg aspect-[4/3]">
-                    <div class="absolute inset-0 flex items-center justify-center z-10 cursor-pointer"
+                    <div class="absolute inset-0 flex items-center justify-center z-10 cursor-pointer print:hidden"
                         onclick="openVideo('xWqLA9h2OD8')">
                         <div
                             class="bg-bentamar-blue/80 text-white rounded-full w-16 h-16 flex items-center justify-center hover:scale-110 hover:bg-bentamar-yellow hover:text-bentamar-blue transition shadow-lg">
@@ -798,7 +879,7 @@
 
                 <!-- Video 4: ROV -->
                 <div class="group relative overflow-hidden rounded-lg shadow-lg aspect-[4/3]">
-                    <div class="absolute inset-0 flex items-center justify-center z-10 cursor-pointer"
+                    <div class="absolute inset-0 flex items-center justify-center z-10 cursor-pointer print:hidden"
                         onclick="openVideo('OGUQTYfDTsM')">
                         <div
                             class="bg-bentamar-blue/80 text-white rounded-full w-16 h-16 flex items-center justify-center hover:scale-110 hover:bg-bentamar-yellow hover:text-bentamar-blue transition shadow-lg">
@@ -822,7 +903,7 @@
 
                 <!-- Video 5: Filmación -->
                 <div class="group relative overflow-hidden rounded-lg shadow-lg aspect-[4/3]">
-                    <div class="absolute inset-0 flex items-center justify-center z-10 cursor-pointer"
+                    <div class="absolute inset-0 flex items-center justify-center z-10 cursor-pointer print:hidden"
                         onclick="openVideo('PAlvQmilMo0')">
                         <div
                             class="bg-bentamar-blue/80 text-white rounded-full w-16 h-16 flex items-center justify-center hover:scale-110 hover:bg-bentamar-yellow hover:text-bentamar-blue transition shadow-lg">
@@ -846,7 +927,7 @@
 
                 <!-- Video 6: Fondeos -->
                 <div class="group relative overflow-hidden rounded-lg shadow-lg aspect-[4/3]">
-                    <div class="absolute inset-0 flex items-center justify-center z-10 cursor-pointer"
+                    <div class="absolute inset-0 flex items-center justify-center z-10 cursor-pointer print:hidden"
                         onclick="openVideo('-Iih9KzYwOU')">
                         <div
                             class="bg-bentamar-blue/80 text-white rounded-full w-16 h-16 flex items-center justify-center hover:scale-110 hover:bg-bentamar-yellow hover:text-bentamar-blue transition shadow-lg">
@@ -872,7 +953,7 @@
 
             <div class="text-center mt-12">
                 <button id="loadMoreBtn" onclick="loadMorePhotos()"
-                    class="bg-white border-2 border-bentamar-blue text-bentamar-blue px-8 py-3 rounded-full font-bold hover:bg-bentamar-blue hover:text-white transition duration-300 shadow-md">
+                    class="print:hidden bg-white border-2 border-bentamar-blue text-bentamar-blue px-8 py-3 rounded-full font-bold hover:bg-bentamar-blue hover:text-white transition duration-300 shadow-md">
                     VER MÁS PROYECTOS
                 </button>
             </div>
@@ -959,7 +1040,7 @@
     </section>
 
     <!-- Contact Section -->
-    <section id="contacto" class="py-20 bg-gray-100">
+    <section id="contacto" class="py-20 bg-gray-100 print:hidden">
         <div class="container mx-auto px-6 max-w-4xl">
             <h2 class="text-center font-heading text-3xl font-bold text-bentamar-blue mb-10">CONTACTO</h2>
             <div class="bg-white rounded-xl shadow-lg p-8 md:p-12">
@@ -990,7 +1071,7 @@
     </section>
 
     <!-- Footer -->
-    <footer class="bg-gray-900 text-white pt-16 pb-8 border-t border-gray-800">
+    <footer class="bg-gray-900 text-white pt-16 pb-8 border-t border-gray-800 print:hidden">
         <div class="container mx-auto px-6">
             <div class="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
                 <!-- Column 1: Contact -->
@@ -1066,7 +1147,7 @@
 
     <!-- Video/Image Modal -->
     <div id="videoModal"
-        class="fixed inset-0 z-50 hidden bg-black/90 backdrop-blur-md flex items-center justify-center p-4">
+        class="print:hidden fixed inset-0 z-50 hidden bg-black/90 backdrop-blur-md flex items-center justify-center p-4">
         <div class="relative w-full max-w-5xl aspect-video rounded-xl overflow-hidden shadow-2xl bg-black">
             <button onclick="closeVideo()"
                 class="absolute top-4 right-4 text-white hover:text-red-500 z-10 p-2 bg-black/20 rounded-full transition-colors">
@@ -1212,7 +1293,7 @@
     </script>
     <!-- Modal Privacy #legalPrivacy -->
     <div id="legalPrivacy"
-        class="fixed inset-0 z-50 hidden bg-black/90 backdrop-blur-sm flex items-center justify-center p-4"
+        class="print:hidden fixed inset-0 z-50 hidden bg-black/90 backdrop-blur-sm flex items-center justify-center p-4"
         onclick="if(event.target === this) closeModal('legalPrivacy')">
         <div
             class="bg-white rounded-lg shadow-2xl w-full max-w-2xl max-h-[80vh] overflow-y-auto relative animate-fade-in-up">
@@ -1259,7 +1340,7 @@
 
     <!-- Modal Terms #legalTerms -->
     <div id="legalTerms"
-        class="fixed inset-0 z-50 hidden bg-black/90 backdrop-blur-sm flex items-center justify-center p-4"
+        class="print:hidden fixed inset-0 z-50 hidden bg-black/90 backdrop-blur-sm flex items-center justify-center p-4"
         onclick="if(event.target === this) closeModal('legalTerms')">
         <div
             class="bg-white rounded-lg shadow-2xl w-full max-w-2xl max-h-[80vh] overflow-y-auto relative animate-fade-in-up">

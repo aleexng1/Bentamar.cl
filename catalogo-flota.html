@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Catálogo de Flota - Bentamar</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @media print {
+            @page {
+                size: A4;
+                margin: 1cm;
+            }
+
+            body {
+                -webkit-print-color-adjust: exact;
+                print-color-adjust: exact;
+                background: white;
+                margin: 0;
+                padding: 0;
+            }
+
+            .page-break-before {
+                page-break-before: always;
+            }
+
+            .avoid-break {
+                page-break-inside: avoid;
+            }
+
+            /* Ocultar elementos de navegación si se cuelan */
+            header nav,
+            footer,
+            .no-print {
+                display: none !important;
+            }
+        }
+    </style>
+</head>
+
+<body class="bg-white text-gray-900 font-sans">
+    <div id="loader" class="fixed inset-0 flex items-center justify-center bg-white z-50 no-print">
+        <div class="text-center">
+            <div class="animate-spin rounded-full h-12 w-12 border-t-4 border-blue-900 mx-auto mb-4"></div>
+            <p>Generando Catálogo...</p>
+        </div>
+    </div>
+    <div id="content" class="max-w-4xl mx-auto hidden">
+        <div class="flex flex-col justify-center items-center text-center py-24 mb-8 border-b-4 border-blue-900">
+            <img src="img/Logo_Oficial.png" class="w-64 mb-6 object-contain">
+            <h1 class="text-4xl font-bold text-blue-900 mb-2 uppercase">Catálogo de Flota</h1>
+            <p class="text-xl text-gray-600">Ingeniería Submarina y Logística</p>
+            <p class="text-sm text-gray-400 mt-12">www.bentamar.cl</p>
+        </div>
+
+        <div id="services-container"></div>
+    </div>
+    <script>
+        const pages = ['bento.html', 'palomita-1.html', 'palomita-2.html', 'palomita-3.html'];
+        async function buildCatalog() {
+            const container = document.getElementById('services-container');
+
+            for (let i = 0; i < pages.length; i++) {
+                try {
+                    const response = await fetch(pages[i]);
+                    if (!response.ok) throw new Error(`HTTP ${response.status}`);
+                    const text = await response.text();
+                    const parser = new DOMParser();
+                    const doc = parser.parseFromString(text, 'text/html');
+
+                    // Selectores ajustados para FLOTA (que a veces no tienen header)
+                    const header = doc.querySelector('header');
+                    const main = doc.querySelector('main') ||
+                        doc.querySelector('div.container.py-24') ||    // Estructura de Bento
+                        doc.querySelector('div.container.flex-grow') || // Otra posible
+                        doc.querySelector('section.container');
+
+                    if (main) {
+                        const wrapper = document.createElement('div');
+                        wrapper.className = 'page-break-before py-4 avoid-break';
+
+                        // Limpieza
+                        main.querySelectorAll('button, a, iframe, script, .no-print').forEach(el => el.remove());
+
+                        // Intentar sacar título e imagen
+                        let title = 'Ficha Técnica';
+                        let headerImg = null;
+
+                        if (header) {
+                            headerImg = header.querySelector('img');
+                            title = header.querySelector('h1')?.innerText || title;
+                        } else {
+                            // Buscar H1 dentro del main (común en bento.html)
+                            const h1Inside = main.querySelector('h1');
+                            if (h1Inside) title = h1Inside.innerText;
+
+                            // Buscar primera imagen grande si no hay header
+                            const firstImg = main.querySelector('img');
+                            if (firstImg) headerImg = firstImg.cloneNode(true);
+                        }
+
+                        if (headerImg) {
+                            headerImg.className = 'w-full h-64 object-cover rounded-lg mb-6 border border-gray-200';
+                        }
+
+                        const titleEl = document.createElement('h2');
+                        titleEl.className = 'text-3xl font-bold text-blue-900 mb-4 uppercase border-l-4 border-yellow-500 pl-4';
+                        titleEl.innerText = title;
+
+                        wrapper.appendChild(titleEl);
+                        if (headerImg && header) wrapper.appendChild(headerImg); // Si vino del header, ponela acá
+                        // Si la imagen vino del main, ya está en main.outerHTML, no la duplicamos arriba salvo que la quitemos del main
+
+                        wrapper.appendChild(main);
+
+                        container.appendChild(wrapper);
+                    } else {
+                        console.error(`No se encontró contenido válido en ${pages[i]}`);
+                        const errorMsg = document.createElement('div');
+                        errorMsg.innerHTML = `<p class="text-red-500 font-bold p-4 border border-red-500">Error: No se pudo extraer contenido de ${pages[i]}</p>`;
+                        container.appendChild(errorMsg);
+                    }
+                } catch (e) {
+                    console.error('Error:', e);
+                    const errorMsg = document.createElement('div');
+                    errorMsg.innerHTML = `<p class="text-red-500 font-bold p-4 border border-red-500">Error cargando ${pages[i]}: ${e.message}</p>`;
+                    container.appendChild(errorMsg);
+                }
+            }
+            document.getElementById('loader').style.display = 'none';
+            document.getElementById('content').classList.remove('hidden');
+            setTimeout(() => window.print(), 800);
+        }
+        window.onload = buildCatalog;
+    </script>
+</body>
+
+</html>

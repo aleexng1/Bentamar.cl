@@ -9,167 +9,287 @@
         @media print {
             @page {
                 size: A4;
-                margin: 15mm;
+                margin: 0;
             }
 
             body {
-                font-family: sans-serif;
+                margin: 0;
+                padding: 0;
                 -webkit-print-color-adjust: exact;
                 print-color-adjust: exact;
-                color: #1a202c;
-            }
-
-            /* La Ficha Técnica Indivisible */
-            .ficha-tecnica {
-                display: flex;
-                gap: 20px;
-                margin-bottom: 30px;
-                padding-bottom: 30px;
-                border-bottom: 1px solid #e2e8f0;
-                page-break-inside: avoid;
-                /* NO CORTAR A LA MITAD */
-                break-inside: avoid;
-            }
-
-            .ficha-img {
-                width: 40%;
-                height: 200px;
-                object-fit: cover;
-                border-radius: 8px;
-                border: 1px solid #ddd;
-            }
-
-            .ficha-info {
-                width: 60%;
-            }
-
-            .ficha-title {
-                font-size: 18pt;
-                font-weight: bold;
-                color: #002B5C;
-                margin-bottom: 10px;
-                text-transform: uppercase;
-            }
-
-            .ficha-text {
-                font-size: 10pt;
-                line-height: 1.4;
-                color: #4a5568;
-                text-align: justify;
-            }
-
-            .ficha-text ul {
-                margin-top: 10px;
-                padding-left: 20px;
-                list-style-type: disc;
-            }
-
-            /* Ocultar UI web */
-            .no-print {
-                display: none !important;
             }
         }
 
-        /* Estilos para vista previa en pantalla */
-        .ficha-tecnica {
-            display: flex;
-            gap: 20px;
-            margin-bottom: 30px;
-            border-bottom: 1px solid #eee;
-            padding-bottom: 20px;
+        .sheet {
+            width: 210mm;
+            height: 296mm;
+            position: relative;
+            overflow: hidden;
+            page-break-after: always;
+            background: white;
+            box-sizing: border-box;
         }
 
-        .ficha-img {
-            width: 300px;
-            height: 200px;
-            object-fit: cover;
-            border-radius: 8px;
+        @media screen {
+            body {
+                background: #f3f4f6;
+                padding: 40px;
+            }
+
+            .sheet {
+                margin: 0 auto 40px auto;
+                box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+            }
         }
     </style>
 </head>
 
-<body class="bg-gray-100 print:bg-white p-8">
-    <div id="loader" class="fixed inset-0 flex flex-col items-center justify-center bg-white z-50 no-print">
-        <div class="animate-spin rounded-full h-12 w-12 border-t-4 border-blue-900 mb-4"></div>
-        <p class="text-gray-600">Compilando catálogo optimizado...</p>
-    </div>
-    <div id="documento" class="max-w-4xl mx-auto bg-white p-8 shadow-lg print:shadow-none print:p-0 hidden">
+<body class="font-sans text-gray-800">
 
-        <div class="text-center py-12 mb-8 border-b-4 border-blue-900" style="page-break-after: always;">
-            <img src="img/Logo_Oficial.png" class="h-32 mx-auto mb-6 object-contain"
-                onerror="this.src='https://via.placeholder.com/150?text=Logo+Bentamar'">
-            <h1 class="text-5xl font-bold text-blue-900 mb-4">CATÁLOGO DE FLOTA</h1>
-            <p class="text-xl text-gray-600 mb-8 font-light">Especificaciones técnicas de nuestras embarcaciones</p>
-            <div class="max-w-2xl mx-auto text-sm text-gray-500 border-t pt-4">
-                <p>Bentamar SpA presenta su flota marítima disponible para operaciones.
-                    Contamos con embarcaciones certificadas y adaptadas para las exigentes condiciones del sur de Chile.
-                </p>
-                <p class="mt-2 font-bold">www.bentamar.cl | Puerto Montt, Chile</p>
+    <!-- PORTADA -->
+    <div class="sheet flex flex-col justify-center items-center text-center p-12 bg-white relative">
+        <div
+            class="border-4 border-bentamar-blue p-12 w-full h-full flex flex-col justify-center items-center rounded-lg">
+            <img src="img/general/Logo_Oficial.png" class="w-80 mb-12"
+                onerror="this.src='https://via.placeholder.com/300x100?text=BENTAMAR'">
+            <h1 class="text-6xl font-bold text-[#002B5C] mb-6 tracking-wider">CATÁLOGO DE<br>EMBARCACIONES</h1>
+            <div class="h-2 w-32 bg-[#FFC107] mb-8"></div>
+            <p class="text-2xl text-gray-600 font-light">Flota Marítima Especializada</p>
+
+            <div class="absolute bottom-16 left-0 right-0 text-center text-gray-500">
+                <p class="font-bold text-lg">BENTAMAR SPA</p>
+                <p>Puerto Montt, Región de Los Lagos, Chile</p>
+                <p>www.bentamar.cl</p>
+                <p class="mt-4 text-sm text-gray-400">Generado: 2026</p>
             </div>
         </div>
-        <div id="container"></div>
     </div>
+
+    <!-- CONFIGURACION TAILWIND -->
     <script>
-        const urls = ['bento.html', 'palomita-1.html', 'palomita-2.html', 'palomita-3.html'];
-        async function generar() {
-            const container = document.getElementById('container');
-
-            for (const url of urls) {
-                try {
-                    const resp = await fetch(url);
-                    const html = await resp.text();
-                    const doc = new DOMParser().parseFromString(html, 'text/html');
-                    // EXTRACCIÓN INTELIGENTE DE DATOS
-
-                    // 1. Título
-                    let titulo = doc.querySelector('h1')?.innerText || 'Embarcación Bentamar';
-
-                    // 2. Imagen Principal
-                    // Intentamos Header primero, sino primera imagen del main
-                    let imgObj = doc.querySelector('header img') || doc.querySelector('main img') || doc.querySelector('.container img');
-                    let imgSrc = imgObj ? imgObj.src : '';
-
-                    // 3. Descripción (Texto limpio y Listas Técnicas)
-                    let contenidoRaw = doc.querySelector('section.py-16') || doc.querySelector('main') || doc.querySelector('.container');
-
-                    let texto = '';
-                    if (contenidoRaw) {
-                        // Párrafos
-                        let parrafos = Array.from(contenidoRaw.querySelectorAll('p'));
-                        let textoP = parrafos.slice(0, 2).map(p => p.innerText).join('<br><br>');
-
-                        // Listas (Especificaciones Técnicas)
-                        let listas = Array.from(contenidoRaw.querySelectorAll('ul'));
-                        let textoUL = listas.map(ul => ul.outerHTML).join('<br>');
-
-                        // Tablas (A veces las especificaciones están en tablas)
-                        let tablas = Array.from(contenidoRaw.querySelectorAll('table'));
-                        let textoTable = tablas.map(t => t.outerHTML).join('<br>');
-
-                        texto = textoP + '<br>' + textoUL + '<br>' + textoTable;
-                    }
-
-                    // CONSTRUCCIÓN DE LA FICHA (Template String)
-                    if (titulo) {
-                        const ficha = document.createElement('div');
-                        ficha.className = 'ficha-tecnica';
-                        ficha.innerHTML = `
-                        <img src="${imgSrc}" class="ficha-img" alt="${titulo}">
-                        <div class="ficha-info">
-                            <h2 class="ficha-title">${titulo}</h2>
-                            <div class="ficha-text">${texto}</div>
-                        </div>
-                    `;
-                        container.appendChild(ficha);
-                    }
-                } catch (e) { console.error('Error en ' + url, e); }
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: { 'bentamar-blue': '#002B5C', 'bentamar-yellow': '#FFC107' }
+                }
             }
-            document.getElementById('loader').classList.add('no-print');
-            document.getElementById('loader').style.display = 'none';
-            document.getElementById('documento').classList.remove('hidden');
-            setTimeout(() => window.print(), 1000);
         }
-        window.onload = generar;
+    </script>
+
+    <!-- NAVE 1: BENTO -->
+    <div class="sheet p-12 flex flex-col relative">
+        <div class="flex justify-between items-center mb-8 border-b-4 border-bentamar-blue pb-4">
+            <h2 class="text-3xl font-bold text-bentamar-blue uppercase">Lancha "BENTO"</h2>
+            <div class="bg-bentamar-yellow text-bentamar-blue px-4 py-1 rounded font-bold text-sm uppercase">Disponible
+            </div>
+        </div>
+        <div class="h-[45%] w-full mb-8 overflow-hidden rounded-lg shadow-md border border-gray-200">
+            <img src="img/bento/bento-portada.webp" class="w-full h-full object-cover"
+                onerror="this.src='https://via.placeholder.com/800x400?text=Bento'">
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div>
+                <h3 class="font-bold text-xl text-bentamar-blue mb-4 border-l-4 border-bentamar-yellow pl-3">Descripción
+                    General</h3>
+                <p class="text-gray-700 text-justify leading-relaxed">
+                    Embarcación rápida y versátil, ideal para transporte de personal técnico, inspecciones rápidas
+                    y operaciones de apoyo logístico liviano en centros de cultivo cercanos a costa.
+                </p>
+            </div>
+            <div>
+                <h3 class="font-bold text-xl text-bentamar-blue mb-4 border-l-4 border-bentamar-yellow pl-3">
+                    Especificaciones Técnicas</h3>
+                <table class="w-full text-sm text-left text-gray-600">
+                    <tr class="border-b">
+                        <th class="py-2">Tipo</th>
+                        <td class="py-2">Bote a Motor (B/M)</td>
+                    </tr>
+                    <tr class="border-b">
+                        <th class="py-2">Eslora</th>
+                        <td class="py-2">6.80 metros</td>
+                    </tr>
+                    <tr class="border-b">
+                        <th class="py-2">Manga</th>
+                        <td class="py-2">2.00 metros</td>
+                    </tr>
+                    <tr class="border-b">
+                        <th class="py-2">Motor</th>
+                        <td class="py-2">Yamaha 50HP</td>
+                    </tr>
+                    <tr class="border-b">
+                        <th class="py-2">Capacidad</th>
+                        <td class="py-2">8 Pasajeros</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+        <div
+            class="absolute bottom-10 left-12 right-12 flex justify-between items-center text-xs text-gray-400 border-t pt-4">
+            <span>BENTAMAR SPA | www.bentamar.cl</span>
+        </div>
+    </div>
+
+    <!-- NAVE 2: PALOMITA I -->
+    <div class="sheet p-12 flex flex-col relative">
+        <div class="flex justify-between items-center mb-8 border-b-4 border-bentamar-blue pb-4">
+            <h2 class="text-3xl font-bold text-bentamar-blue uppercase">Lancha "PALOMITA I"</h2>
+            <div class="bg-bentamar-yellow text-bentamar-blue px-4 py-1 rounded font-bold text-sm uppercase">Disponible
+            </div>
+        </div>
+        <div class="h-[45%] w-full mb-8 overflow-hidden rounded-lg shadow-md border border-gray-200">
+            <img src="img/palomita1/palomita1-portada.webp" class="w-full h-full object-cover"
+                onerror="this.src='https://via.placeholder.com/800x400?text=Palomita+I'">
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div>
+                <h3 class="font-bold text-xl text-bentamar-blue mb-4 border-l-4 border-bentamar-yellow pl-3">Descripción
+                    General</h3>
+                <p class="text-gray-700 text-justify leading-relaxed">
+                    Lancha de apoyo con cabina cerrada, ideal para operaciones de buceo y traslado seguro de personal
+                    en condiciones climáticas moderadas. Equipada con sistema de comunicaciones VHF y elementos de
+                    salvamento.
+                </p>
+            </div>
+            <div>
+                <h3 class="font-bold text-xl text-bentamar-blue mb-4 border-l-4 border-bentamar-yellow pl-3">
+                    Especificaciones Técnicas</h3>
+                <table class="w-full text-sm text-left text-gray-600">
+                    <tr class="border-b">
+                        <th class="py-2">Tipo</th>
+                        <td class="py-2">Lancha Motor (L/M)</td>
+                    </tr>
+                    <tr class="border-b">
+                        <th class="py-2">Eslora</th>
+                        <td class="py-2">7.50 metros</td>
+                    </tr>
+                    <tr class="border-b">
+                        <th class="py-2">Manga</th>
+                        <td class="py-2">2.40 metros</td>
+                    </tr>
+                    <tr class="border-b">
+                        <th class="py-2">Motor</th>
+                        <td class="py-2">Yamaha 100HP</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+        <div
+            class="absolute bottom-10 left-12 right-12 flex justify-between items-center text-xs text-gray-400 border-t pt-4">
+            <span>BENTAMAR SPA | www.bentamar.cl</span>
+        </div>
+    </div>
+
+    <!-- NAVE 3: PALOMITA II -->
+    <div class="sheet p-12 flex flex-col relative">
+        <div class="flex justify-between items-center mb-8 border-b-4 border-bentamar-blue pb-4">
+            <h2 class="text-3xl font-bold text-bentamar-blue uppercase">Lancha "PALOMITA II"</h2>
+            <div class="bg-bentamar-yellow text-bentamar-blue px-4 py-1 rounded font-bold text-sm uppercase">Disponible
+            </div>
+        </div>
+        <div class="h-[45%] w-full mb-8 overflow-hidden rounded-lg shadow-md border border-gray-200">
+            <img src="img/palomita2/palomita2-portada.webp" class="w-full h-full object-cover"
+                onerror="this.src='https://via.placeholder.com/800x400?text=Palomita+II'">
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div>
+                <h3 class="font-bold text-xl text-bentamar-blue mb-4 border-l-4 border-bentamar-yellow pl-3">Descripción
+                    General</h3>
+                <p class="text-gray-700 text-justify leading-relaxed">
+                    Unidad robusta para trabajos de fondeo y apoyo a ROV. Cuenta con amplia cubierta de popa
+                    para maniobras y estiba de equipos de buceo. Doble motorización para mayor seguridad en mar abierto.
+                </p>
+            </div>
+            <div>
+                <h3 class="font-bold text-xl text-bentamar-blue mb-4 border-l-4 border-bentamar-yellow pl-3">
+                    Especificaciones Técnicas</h3>
+                <table class="w-full text-sm text-left text-gray-600">
+                    <tr class="border-b">
+                        <th class="py-2">Tipo</th>
+                        <td class="py-2">Lancha Motor</td>
+                    </tr>
+                    <tr class="border-b">
+                        <th class="py-2">Eslora</th>
+                        <td class="py-2">8.20 metros</td>
+                    </tr>
+                    <tr class="border-b">
+                        <th class="py-2">Manga</th>
+                        <td class="py-2">2.60 metros</td>
+                    </tr>
+                    <tr class="border-b">
+                        <th class="py-2">Motor</th>
+                        <td class="py-2">2x Yamaha 60HP</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+        <div
+            class="absolute bottom-10 left-12 right-12 flex justify-between items-center text-xs text-gray-400 border-t pt-4">
+            <span>BENTAMAR SPA | www.bentamar.cl</span>
+        </div>
+    </div>
+
+    <!-- NAVE 4: PALOMITA III -->
+    <div class="sheet p-12 flex flex-col relative">
+        <div class="flex justify-between items-center mb-8 border-b-4 border-bentamar-blue pb-4">
+            <h2 class="text-3xl font-bold text-bentamar-blue uppercase">Lancha "PALOMITA III"</h2>
+            <div class="bg-bentamar-yellow text-bentamar-blue px-4 py-1 rounded font-bold text-sm uppercase">Disponible
+            </div>
+        </div>
+        <div class="h-[45%] w-full mb-8 overflow-hidden rounded-lg shadow-md border border-gray-200">
+            <img src="img/palomita3/palomita3-portada.webp" class="w-full h-full object-cover"
+                onerror="this.src='https://via.placeholder.com/800x400?text=Palomita+III'">
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div>
+                <h3 class="font-bold text-xl text-bentamar-blue mb-4 border-l-4 border-bentamar-yellow pl-3">Descripción
+                    General</h3>
+                <p class="text-gray-700 text-justify leading-relaxed">
+                    Nuestra embarcación de mayor capacidad. Diseñada para transporte de carga ligera y cuadrillas de
+                    buzos a zonas remotas.
+                    Cabina amplia y equipamiento de navegación completo para pernoctar si es necesario.
+                </p>
+            </div>
+            <div>
+                <h3 class="font-bold text-xl text-bentamar-blue mb-4 border-l-4 border-bentamar-yellow pl-3">
+                    Especificaciones Técnicas</h3>
+                <table class="w-full text-sm text-left text-gray-600">
+                    <tr class="border-b">
+                        <th class="py-2">Tipo</th>
+                        <td class="py-2">Lancha Motor (L/M)</td>
+                    </tr>
+                    <tr class="border-b">
+                        <th class="py-2">Eslora</th>
+                        <td class="py-2">9.50 metros</td>
+                    </tr>
+                    <tr class="border-b">
+                        <th class="py-2">Manga</th>
+                        <td class="py-2">2.80 metros</td>
+                    </tr>
+                    <tr class="border-b">
+                        <th class="py-2">Motor</th>
+                        <td class="py-2">Diesel Interior 150HP</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+        <div
+            class="absolute bottom-10 left-12 right-12 flex justify-between items-center text-xs text-gray-400 border-t pt-4">
+            <span>BENTAMAR SPA | www.bentamar.cl</span>
+        </div>
+    </div>
+
+    <script>
+        window.onload = function () {
+            setTimeout(() => { window.print(); }, 1000);
+        }
     </script>
 </body>
 

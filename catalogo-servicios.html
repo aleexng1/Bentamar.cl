@@ -46,6 +46,17 @@
 
 <body class="font-sans text-gray-800">
 
+    <!-- CONFIGURACION TAILWIND -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: { 'bentamar-blue': '#002B5C', 'bentamar-yellow': '#FFC107' }
+                }
+            }
+        }
+    </script>
+
     <!-- PORTADA -->
     <div class="sheet flex flex-col justify-center items-center text-center p-12 bg-white relative">
         <div
@@ -54,7 +65,7 @@
                 onerror="this.src='https://via.placeholder.com/300x100?text=BENTAMAR'">
             <h1 class="text-6xl font-bold text-[#002B5C] mb-6 tracking-wider">CATÁLOGO DE<br>SERVICIOS</h1>
             <div class="h-2 w-32 bg-[#FFC107] mb-8"></div>
-            <p class="text-2xl text-gray-600 font-light">Ingeniería Submarina y Operaciones Marítimas</p>
+            <p class="text-2xl text-gray-600 font-light">Soluciones Submarinas Profesionales</p>
 
             <div class="absolute bottom-16 left-0 right-0 text-center text-gray-500">
                 <p class="font-bold text-lg">BENTAMAR SPA</p>
@@ -65,308 +76,414 @@
         </div>
     </div>
 
-    <!-- CONFIGURACIÓN DE COLORES TAILWIND (Simulada) -->
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        'bentamar-blue': '#002B5C',
-                        'bentamar-yellow': '#FFC107',
-                    }
-                }
-            }
-        }
-    </script>
-
-    <!-- 1. EMISARIOS -->
+    <!-- SERVICIO 1: Emisarios y Tuberías -->
     <div class="sheet p-12 flex flex-col relative">
         <div class="flex justify-between items-center mb-8 border-b-4 border-bentamar-blue pb-4">
-            <h2 class="text-3xl font-bold text-bentamar-blue uppercase">Emisarios Submarinos</h2>
-            <img src="img/general/Logo_Oficial.png" class="h-10 opacity-80">
+            <h2 class="text-3xl font-bold text-bentamar-blue uppercase">Emisarios y Tuberías</h2>
+            <img src="img/general/Logo_Oficial.png" class="h-10 opacity-50">
         </div>
         <div class="h-[45%] w-full mb-8 overflow-hidden rounded-lg shadow-md border border-gray-200">
-            <img src="img/general/emisarios.webp" class="w-full h-full object-cover"
-                onerror="this.src='https://via.placeholder.com/800x400?text=Emisarios'">
+            <img src="https://img.youtube.com/vi/nvX-DtHQpac/hqdefault.jpg" class="w-full h-full object-cover">
         </div>
-        <div class="text-gray-700 text-justify leading-relaxed text-lg px-2">
-            <p class="mb-4">
-                Realizamos la instalación, inspección y mantenimiento de emisarios submarinos, tomas de agua y
-                salmoductos.
-                Contamos con la experiencia necesaria para trabajar en condiciones complejas, asegurando la correcta
-                alineación
-                y fijación de las tuberías en el fondo marino.
-            </p>
-            <h3 class="font-bold text-bentamar-blue mt-6 mb-2">Servicios Incluidos:</h3>
-            <ul class="list-disc pl-6 space-y-2 marker:text-bentamar-yellow">
-                <li>Instalación de lastres y muertos de concreto.</li>
-                <li>Reparación de filtraciones y uniones de bridas.</li>
-                <li>Inspección visual y limpieza de difusores.</li>
-                <li>Levantamiento de rutas para nuevos trazados.</li>
-            </ul>
+
+        <div class="space-y-6">
+            <div>
+                <h3 class="font-bold text-xl text-bentamar-blue mb-2 border-l-4 border-bentamar-yellow pl-3">Instalación
+                    y Mantención de Ductos Submarinos</h3>
+                <p class="text-gray-700 text-justify leading-relaxed">
+                    Realizamos la instalación, inspección y mantenimiento de emisarios submarinos, tomas de agua y
+                    salmoductos.
+                    Contamos con la experiencia necesaria para trabajar en condiciones complejas, asegurando la correcta
+                    alineación, lastrado y fijación de las tuberías en el fondo marino.
+                </p>
+            </div>
+
+            <div class="bg-gray-50 p-6 rounded-lg border-l-4 border-bentamar-blue">
+                <h4 class="font-bold text-bentamar-blue mb-4">Nuestros servicios incluyen:</h4>
+                <ul class="list-disc pl-5 space-y-2 text-gray-700">
+                    <li>Instalación de lastres (muertos de concreto) para la fijación de tuberías.</li>
+                    <li>Reparación de filtraciones y uniones de bridas bajo el agua.</li>
+                    <li>Inspección visual y limpieza de difusores.</li>
+                    <li>Levantamiento de rutas para nuevos trazados.</li>
+                </ul>
+            </div>
         </div>
+
         <div
             class="absolute bottom-10 left-12 right-12 flex justify-between items-center text-xs text-gray-400 border-t pt-4">
             <span>BENTAMAR SPA | www.bentamar.cl</span>
+            <span>+56 9 8595 7506</span>
         </div>
     </div>
 
-    <!-- 2. SOLDADURA -->
+    <!-- SERVICIO 2: Soldadura y Corte -->
     <div class="sheet p-12 flex flex-col relative">
         <div class="flex justify-between items-center mb-8 border-b-4 border-bentamar-blue pb-4">
-            <h2 class="text-3xl font-bold text-bentamar-blue uppercase">Soldadura Submarina</h2>
-            <img src="img/general/Logo_Oficial.png" class="h-10 opacity-80">
+            <h2 class="text-3xl font-bold text-bentamar-blue uppercase">Soldadura y Corte</h2>
+            <img src="img/general/Logo_Oficial.png" class="h-10 opacity-50">
         </div>
         <div class="h-[45%] w-full mb-8 overflow-hidden rounded-lg shadow-md border border-gray-200">
-            <img src="img/general/soldadura.webp" class="w-full h-full object-cover"
-                onerror="this.src='https://via.placeholder.com/800x400?text=Soldadura'">
+            <img src="https://img.youtube.com/vi/TLIYgxYyFVk/hqdefault.jpg" class="w-full h-full object-cover">
         </div>
-        <div class="text-gray-700 text-justify leading-relaxed text-lg px-2">
-            <p class="mb-4">
-                Servicios especializados de corte y soldadura húmeda (wet welding) y reparaciones estructurales bajo el
-                agua.
-                Aplicamos procedimientos estandarizados para garantizar la integridad de cascos, pilotes y estructuras
-                portuarias.
-            </p>
-            <h3 class="font-bold text-bentamar-blue mt-6 mb-2">Aplicaciones:</h3>
-            <ul class="list-disc pl-6 space-y-2 marker:text-bentamar-yellow">
-                <li>Reparación de fisuras en cascos de acero.</li>
-                <li>Instalación de ánodos de sacrificio.</li>
-                <li>Corte submarino (Broco) para remoción de estructuras.</li>
-            </ul>
+
+        <div class="space-y-6">
+            <div>
+                <h3 class="font-bold text-xl text-bentamar-blue mb-2 border-l-4 border-bentamar-yellow pl-3">
+                    Reparaciones Estructurales Submarinas</h3>
+                <p class="text-gray-700 text-justify leading-relaxed">
+                    Contamos con equipos especializados para soldadura y corte submarino (oxicorte), permitiendo
+                    realizar
+                    reparaciones estructurales in situ sin necesidad de varar la embarcación o estructura.
+                    Nuestros buzos están calificados en procedimientos de soldadura húmeda.
+                </p>
+            </div>
+
+            <div class="bg-gray-50 p-6 rounded-lg border-l-4 border-bentamar-blue">
+                <h4 class="font-bold text-bentamar-blue mb-4">Aplicaciones comunes:</h4>
+                <ul class="list-disc pl-5 space-y-2 text-gray-700">
+                    <li>Reparación de cascos y timones.</li>
+                    <li>Instalación y reparación de ánodos de sacrificio por soldadura.</li>
+                    <li>Corte de estructuras metálicas, cadenas y cables.</li>
+                    <li>Modificaciones estructurales en muelles y pilotes.</li>
+                </ul>
+            </div>
         </div>
+
         <div
             class="absolute bottom-10 left-12 right-12 flex justify-between items-center text-xs text-gray-400 border-t pt-4">
             <span>BENTAMAR SPA | www.bentamar.cl</span>
+            <span>+56 9 8595 7506</span>
         </div>
     </div>
 
-    <!-- 3. INSPECCIÓN DE CASCOS -->
+    <!-- SERVICIO 3: Inspección de Cascos -->
     <div class="sheet p-12 flex flex-col relative">
         <div class="flex justify-between items-center mb-8 border-b-4 border-bentamar-blue pb-4">
             <h2 class="text-3xl font-bold text-bentamar-blue uppercase">Inspección de Cascos</h2>
-            <img src="img/general/Logo_Oficial.png" class="h-10 opacity-80">
+            <img src="img/general/Logo_Oficial.png" class="h-10 opacity-50">
         </div>
         <div class="h-[45%] w-full mb-8 overflow-hidden rounded-lg shadow-md border border-gray-200">
-            <img src="img/general/inspeccion-cascos.webp" class="w-full h-full object-cover"
-                onerror="this.src='https://via.placeholder.com/800x400?text=Inspeccion'">
+            <img src="https://img.youtube.com/vi/xWqLA9h2OD8/hqdefault.jpg" class="w-full h-full object-cover">
         </div>
-        <div class="text-gray-700 text-justify leading-relaxed text-lg px-2">
-            <p class="mb-4">
-                Realizamos inspecciones visuales y grabaciones CCTV para evaluar el estado de cascos, propulsores,
-                timones y tomas de fondo. Documentación técnica válida para clasificadoras y extensiones de carena.
-            </p>
-            <ul class="list-disc pl-6 space-y-2 marker:text-bentamar-yellow mt-4">
-                <li>Limpieza de rejillas de toma de mar.</li>
-                <li>Pulido de hélices bajo el agua.</li>
-                <li>Informe técnico detallado con fotografía y video HD.</li>
-            </ul>
+
+        <div class="space-y-6">
+            <div>
+                <h3 class="font-bold text-xl text-bentamar-blue mb-2 border-l-4 border-bentamar-yellow pl-3">Limpieza,
+                    revisión de ánodos y certificación</h3>
+                <p class="text-gray-700 text-justify leading-relaxed">
+                    Ofrecemos un servicio integral de inspección y limpieza de cascos para todo tipo de embarcaciones.
+                    Nuestro equipo de buzos profesionales utiliza tecnología de video y fotografía de alta definición
+                    para
+                    documentar el estado exacto de la obra viva, permitiendo detectar a tiempo incrustaciones,
+                    deformaciones
+                    o desgaste de ánodos.
+                </p>
+            </div>
+
+            <div class="bg-gray-50 p-6 rounded-lg border-l-4 border-bentamar-blue">
+                <h4 class="font-bold text-bentamar-blue mb-4">El mantenimiento preventivo del casco es crucial para:
+                </h4>
+                <ul class="list-disc pl-5 space-y-2 text-gray-700">
+                    <li>Reducir el consumo de combustible al mejorar la hidrodinámica.</li>
+                    <li>Prevenir la corrosión mediante el control y reemplazo de ánodos de sacrificio.</li>
+                    <li>Detectar daños estructurales antes de que se conviertan en fallas críticas.</li>
+                    <li>Cumplir con las exigencias de las casas clasificadoras y la autoridad marítima.</li>
+                </ul>
+            </div>
         </div>
+
         <div
             class="absolute bottom-10 left-12 right-12 flex justify-between items-center text-xs text-gray-400 border-t pt-4">
             <span>BENTAMAR SPA | www.bentamar.cl</span>
+            <span>+56 9 8595 7506</span>
         </div>
     </div>
 
-    <!-- 4. ROV -->
+    <!-- SERVICIO 4: Inspección ROV -->
     <div class="sheet p-12 flex flex-col relative">
         <div class="flex justify-between items-center mb-8 border-b-4 border-bentamar-blue pb-4">
-            <h2 class="text-3xl font-bold text-bentamar-blue uppercase">Robótica Submarina (ROV)</h2>
-            <img src="img/general/Logo_Oficial.png" class="h-10 opacity-80">
+            <h2 class="text-3xl font-bold text-bentamar-blue uppercase">Inspección ROV</h2>
+            <img src="img/general/Logo_Oficial.png" class="h-10 opacity-50">
         </div>
         <div class="h-[45%] w-full mb-8 overflow-hidden rounded-lg shadow-md border border-gray-200">
-            <img src="img/general/rov.webp" class="w-full h-full object-cover"
-                onerror="this.src='https://via.placeholder.com/800x400?text=ROV'">
+            <img src="https://img.youtube.com/vi/OGUQTYfDTsM/hqdefault.jpg" class="w-full h-full object-cover">
         </div>
-        <div class="text-gray-700 text-justify leading-relaxed text-lg px-2">
-            <p class="mb-4">
-                Operaciones con Vehículos Operados Remotamente (ROV) para inspecciones profundas y entornos de alto
-                riesgo.
-                Nuestra tecnología permite tiempos de inmersión ilimitados y registro de video de alta definición.
-            </p>
-            <h3 class="font-bold text-bentamar-blue mt-6 mb-2">Capacidades:</h3>
-            <ul class="list-disc pl-6 space-y-2 marker:text-bentamar-yellow">
-                <li>Inspección de fondeos profundos y redes loberas.</li>
-                <li>Recuperación de elementos con brazo manipulador.</li>
-                <li>Soporte visual para maniobras complejas.</li>
-            </ul>
+
+        <div class="space-y-6">
+            <div>
+                <h3 class="font-bold text-xl text-bentamar-blue mb-2 border-l-4 border-bentamar-yellow pl-3">Tecnología
+                    Robótica Submarina</h3>
+                <p class="text-gray-700 text-justify leading-relaxed">
+                    Ofrecemos servicios de inspección con ROV (Vehículo Operado Remotamente) capaz de operar hasta 100
+                    metros de profundidad. Esta tecnología nos permite acceder a zonas de riesgo para buzos y realizar
+                    inspecciones prolongadas sin límites de descompresión.
+                </p>
+            </div>
+
+            <div class="bg-gray-50 p-6 rounded-lg border-l-4 border-bentamar-blue">
+                <h4 class="font-bold text-bentamar-blue mb-4">Principales usos:</h4>
+                <ul class="list-disc pl-5 space-y-2 text-gray-700">
+                    <li>Inspección de fondos marinos y levantamientos visuales.</li>
+                    <li>Revisión de redes loberas y peceras en centros de cultivo.</li>
+                    <li>Inspección de cascos y hélices sin buceo.</li>
+                    <li>Apoyo visual en maniobras complejas.</li>
+                </ul>
+            </div>
         </div>
+
         <div
             class="absolute bottom-10 left-12 right-12 flex justify-between items-center text-xs text-gray-400 border-t pt-4">
             <span>BENTAMAR SPA | www.bentamar.cl</span>
+            <span>+56 9 8595 7506</span>
         </div>
     </div>
 
-    <!-- 5. FILMACIÓN SUBMARINA -->
+    <!-- SERVICIO 5: Filmación Subacuática -->
     <div class="sheet p-12 flex flex-col relative">
         <div class="flex justify-between items-center mb-8 border-b-4 border-bentamar-blue pb-4">
-            <h2 class="text-3xl font-bold text-bentamar-blue uppercase">Filmación y Fotografía</h2>
-            <img src="img/general/Logo_Oficial.png" class="h-10 opacity-80">
+            <h2 class="text-3xl font-bold text-bentamar-blue uppercase">Filmación Subacuática</h2>
+            <img src="img/general/Logo_Oficial.png" class="h-10 opacity-50">
         </div>
         <div class="h-[45%] w-full mb-8 overflow-hidden rounded-lg shadow-md border border-gray-200">
-            <img src="img/general/filmacion.webp" class="w-full h-full object-cover"
-                onerror="this.src='https://via.placeholder.com/800x400?text=Filmacion'">
+            <img src="https://img.youtube.com/vi/PAlvQmilMo0/hqdefault.jpg" class="w-full h-full object-cover">
         </div>
-        <div class="text-gray-700 text-justify leading-relaxed text-lg px-2">
-            <p class="mb-4">
-                Servicios de documentación visual submarina de alta calidad para informes técnicos, publicidad o
-                estudios científicos.
-                Contamos con equipos de iluminación y cámaras 4K optimizadas para condiciones de baja visibilidad.
-            </p>
-            <ul class="list-disc pl-6 space-y-2 marker:text-bentamar-yellow mt-4">
-                <li>Levantamiento de estado de estructuras.</li>
-                <li>Seguimiento de obras marítimas.</li>
-                <li>Monitoreo ambiental visual.</li>
-            </ul>
+
+        <div class="space-y-6">
+            <div>
+                <h3 class="font-bold text-xl text-bentamar-blue mb-2 border-l-4 border-bentamar-yellow pl-3">Registro
+                    Técnico de Alta Definición</h3>
+                <p class="text-gray-700 text-justify leading-relaxed">
+                    Proporcionamos servicios de videografía y fotografía submarina profesional. Nuestra documentación
+                    visual
+                    es fundamental para informes de ingeniería, peritajes, auditorías ambientales y seguimiento de
+                    obras.
+                    Entregamos material editado y crudo según los requerimientos del cliente.
+                </p>
+            </div>
+
+            <div class="bg-gray-50 p-6 rounded-lg border-l-4 border-bentamar-blue">
+                <h4 class="font-bold text-bentamar-blue mb-4">Capacidades técnicas:</h4>
+                <ul class="list-disc pl-5 space-y-2 text-gray-700">
+                    <li>Cámaras 4K y sistemas de iluminación submarina de alta potencia.</li>
+                    <li>Transmisión de video en tiempo real a superficie para supervisión remota.</li>
+                    <li>Fotogrametría para reconstrucción 3D de estructuras.</li>
+                    <li>Informes digitales integrados con evidencia visual georreferenciada.</li>
+                </ul>
+            </div>
         </div>
+
         <div
             class="absolute bottom-10 left-12 right-12 flex justify-between items-center text-xs text-gray-400 border-t pt-4">
             <span>BENTAMAR SPA | www.bentamar.cl</span>
+            <span>+56 9 8595 7506</span>
         </div>
     </div>
 
-    <!-- 6. FONDEOS -->
+    <!-- SERVICIO 6: Líneas de Fondeo -->
     <div class="sheet p-12 flex flex-col relative">
         <div class="flex justify-between items-center mb-8 border-b-4 border-bentamar-blue pb-4">
-            <h2 class="text-3xl font-bold text-bentamar-blue uppercase">Instalación de Fondeos</h2>
-            <img src="img/general/Logo_Oficial.png" class="h-10 opacity-80">
+            <h2 class="text-3xl font-bold text-bentamar-blue uppercase">Líneas de Fondeo</h2>
+            <img src="img/general/Logo_Oficial.png" class="h-10 opacity-50">
         </div>
         <div class="h-[45%] w-full mb-8 overflow-hidden rounded-lg shadow-md border border-gray-200">
-            <img src="img/general/fondeos.webp" class="w-full h-full object-cover"
-                onerror="this.src='https://via.placeholder.com/800x400?text=Fondeos'">
+            <img src="https://img.youtube.com/vi/-Iih9KzYwOU/hqdefault.jpg" class="w-full h-full object-cover">
         </div>
-        <div class="text-gray-700 text-justify leading-relaxed text-lg px-2">
-            <p class="mb-4">
-                Diseño, cálculo e instalación de sistemas de fondeo para centros de cultivo, muelles flotantes, boyas y
-                artefactos navales.
-                Utilizamos software de simulación para garantizar la resistencia ante condiciones climáticas adversas.
-            </p>
-            <ul class="list-disc pl-6 space-y-2 marker:text-bentamar-yellow mt-4">
-                <li>Instalación y reposicionamiento de anclas de alto poder.</li>
-                <li>Tensionado y certificación de líneas.</li>
-                <li>Mantenimiento de cadenas y grilletes.</li>
-            </ul>
+
+        <div class="space-y-6">
+            <div>
+                <h3 class="font-bold text-xl text-bentamar-blue mb-2 border-l-4 border-bentamar-yellow pl-3">Inspección
+                    y Mantención de Centros de Cultivo</h3>
+                <p class="text-gray-700 text-justify leading-relaxed">
+                    Realizamos la inspección técnica visual y el mantenimiento preventivo y correctivo de sistemas de
+                    fondeo.
+                    Nuestros procedimientos aseguran la estabilidad y seguridad de las estructuras flotantes,
+                    minimizando riesgos
+                    operacionales.
+                </p>
+            </div>
+
+            <div class="bg-gray-50 p-6 rounded-lg border-l-4 border-bentamar-blue">
+                <h4 class="font-bold text-bentamar-blue mb-4">Servicios de Fondeo:</h4>
+                <ul class="list-disc pl-5 space-y-2 text-gray-700">
+                    <li>Revisión de tensores, cadenas, grilletes y boyas.</li>
+                    <li>Inspección de anclajes (muertos de concreto o anclas).</li>
+                    <li>Tensado y reconfiguración de líneas.</li>
+                    <li>Certificación de estado de componentes.</li>
+                </ul>
+            </div>
         </div>
+
         <div
             class="absolute bottom-10 left-12 right-12 flex justify-between items-center text-xs text-gray-400 border-t pt-4">
             <span>BENTAMAR SPA | www.bentamar.cl</span>
+            <span>+56 9 8595 7506</span>
         </div>
     </div>
 
-    <!-- 7. REFLOTAMIENTO -->
+    <!-- SERVICIO 7: Reflotamiento -->
     <div class="sheet p-12 flex flex-col relative">
         <div class="flex justify-between items-center mb-8 border-b-4 border-bentamar-blue pb-4">
-            <h2 class="text-3xl font-bold text-bentamar-blue uppercase">Reflotamiento y Salvataje</h2>
-            <img src="img/general/Logo_Oficial.png" class="h-10 opacity-80">
+            <h2 class="text-3xl font-bold text-bentamar-blue uppercase">Reflotamiento</h2>
+            <img src="img/general/Logo_Oficial.png" class="h-10 opacity-50">
         </div>
         <div class="h-[45%] w-full mb-8 overflow-hidden rounded-lg shadow-md border border-gray-200">
-            <img src="img/general/reflotamiento.webp" class="w-full h-full object-cover"
-                onerror="this.src='https://via.placeholder.com/800x400?text=Reflotamiento'">
+            <img src="img/general/reflotamiento.webp" class="w-full h-full object-cover">
         </div>
-        <div class="text-gray-700 text-justify leading-relaxed text-lg px-2">
-            <p class="mb-4">
-                Maniobras de rescate de embarcaciones siniestradas, artefactos navales y equipos hundidos.
-                Despliegue rápido de globos de levante (lift bags) y motobombas de alto caudal para control de averías.
-            </p>
-            <h3 class="font-bold text-bentamar-blue mt-6 mb-2">Protocolos de Emergencia:</h3>
-            <ul class="list-disc pl-6 space-y-2 marker:text-bentamar-yellow">
-                <li>Sellado de vías de agua (parcheo).</li>
-                <li>Achique de compartimentos inundados.</li>
-                <li>Recuperación de carga y prevención de contaminación.</li>
-            </ul>
+
+        <div class="space-y-6">
+            <div>
+                <h3 class="font-bold text-xl text-bentamar-blue mb-2 border-l-4 border-bentamar-yellow pl-3">Salvataje
+                    Naval y Maniobras Complejas</h3>
+                <p class="text-gray-700 text-justify leading-relaxed">
+                    Contamos con la capacidad operativa y técnica para realizar maniobras de reflotamiento de
+                    embarcaciones,
+                    artefactos navales y estructuras hundidas. Nuestros planes de salvataje son rigurosamente
+                    planificados
+                    para garantizar la seguridad del personal y la protección del medio ambiente.
+                </p>
+            </div>
+
+            <div class="bg-gray-50 p-6 rounded-lg border-l-4 border-bentamar-blue">
+                <h4 class="font-bold text-bentamar-blue mb-4">Capacidades:</h4>
+                <ul class="list-disc pl-5 space-y-2 text-gray-700">
+                    <li>Uso de globos de levante (lifting bags) de alta capacidad.</li>
+                    <li>Bombeo y achique de compartimientos estancos.</li>
+                    <li>Sellado de vías de agua submarinas.</li>
+                    <li>Planificación de ingeniería de salvataje.</li>
+                </ul>
+            </div>
         </div>
+
         <div
             class="absolute bottom-10 left-12 right-12 flex justify-between items-center text-xs text-gray-400 border-t pt-4">
             <span>BENTAMAR SPA | www.bentamar.cl</span>
+            <span>+56 9 8595 7506</span>
         </div>
     </div>
 
-    <!-- 8. BÚSQUEDA Y RECUPERACIÓN -->
+    <!-- SERVICIO 8: Búsqueda y Rescate -->
     <div class="sheet p-12 flex flex-col relative">
         <div class="flex justify-between items-center mb-8 border-b-4 border-bentamar-blue pb-4">
-            <h2 class="text-3xl font-bold text-bentamar-blue uppercase">Búsqueda y Recuperación</h2>
-            <img src="img/general/Logo_Oficial.png" class="h-10 opacity-80">
+            <h2 class="text-3xl font-bold text-bentamar-blue uppercase">Búsqueda y Rescate</h2>
+            <img src="img/general/Logo_Oficial.png" class="h-10 opacity-50">
         </div>
         <div class="h-[45%] w-full mb-8 overflow-hidden rounded-lg shadow-md border border-gray-200">
-            <img src="img/general/busqueda.webp" class="w-full h-full object-cover"
-                onerror="this.src='https://via.placeholder.com/800x400?text=Busqueda'">
+            <img src="img/general/busqueda.webp" class="w-full h-full object-cover">
         </div>
-        <div class="text-gray-700 text-justify leading-relaxed text-lg px-2">
-            <p class="mb-4">
-                Localización de objetos perdidos en el fondo marino mediante barrido de sonar de barrido lateral y
-                magnetómetros.
-                Una vez localizado el objetivo, procedemos a su identificación y recuperación segura.
-            </p>
-            <ul class="list-disc pl-6 space-y-2 marker:text-bentamar-yellow mt-4">
-                <li>Rastreo de motores fuera de borda y equipos oceanográficos.</li>
-                <li>Búsqueda de anclas y líneas de fondeo perdidas.</li>
-                <li>Mapeo de restos náufragos.</li>
-            </ul>
+
+        <div class="space-y-6">
+            <div>
+                <h3 class="font-bold text-xl text-bentamar-blue mb-2 border-l-4 border-bentamar-yellow pl-3">
+                    Localización y Recuperación de Objetos</h3>
+                <p class="text-gray-700 text-justify leading-relaxed">
+                    Desplegamos equipos de búsqueda para la localización de objetos sumergidos, motores fuera de borda,
+                    instrumentos científicos y estructuras perdidas. Utilizamos metodologías de búsqueda sistemática
+                    para cubrir grandes áreas de fondo marino de manera eficiente.
+                </p>
+            </div>
+
+            <div class="bg-gray-50 p-6 rounded-lg border-l-4 border-bentamar-blue">
+                <h4 class="font-bold text-bentamar-blue mb-4">Metodología:</h4>
+                <ul class="list-disc pl-5 space-y-2 text-gray-700">
+                    <li>Búsqueda visual con buzos y ROV.</li>
+                    <li>Uso de sonar de barrido lateral (si está disponible).</li>
+                    <li>Marcación y balizamiento del hallazgo.</li>
+                    <li>Planificación segura de la recuperación a superficie.</li>
+                </ul>
+            </div>
         </div>
+
         <div
             class="absolute bottom-10 left-12 right-12 flex justify-between items-center text-xs text-gray-400 border-t pt-4">
             <span>BENTAMAR SPA | www.bentamar.cl</span>
+            <span>+56 9 8595 7506</span>
         </div>
     </div>
 
-    <!-- 9. CORRENTÓMETROS -->
+    <!-- SERVICIO 9: INSTALACIÓN DE EQUIPOS DE MEDICIÓN SUBMARINA -->
     <div class="sheet p-12 flex flex-col relative">
         <div class="flex justify-between items-center mb-8 border-b-4 border-bentamar-blue pb-4">
-            <h2 class="text-3xl font-bold text-bentamar-blue uppercase">Instalación de Correntómetros</h2>
-            <img src="img/general/Logo_Oficial.png" class="h-10 opacity-80">
+            <h2 class="text-3xl font-bold text-bentamar-blue uppercase leading-tight">Instalación de Equipos <br>de
+                Medición Submarina</h2>
+            <img src="img/general/Logo_Oficial.png" class="h-10 opacity-50">
         </div>
         <div class="h-[45%] w-full mb-8 overflow-hidden rounded-lg shadow-md border border-gray-200">
-            <img src="img/general/correntometros.webp" class="w-full h-full object-cover"
-                onerror="this.src='https://via.placeholder.com/800x400?text=Correntometros'">
+            <img src="img/general/medicionsubmarina.webp" class="w-full h-full object-cover">
         </div>
-        <div class="text-gray-700 text-justify leading-relaxed text-lg px-2">
-            <p class="mb-4">
-                Servicio de fondeo y recuperación de equipos ADCP (Perfiladores de Corriente Acústicos Doppler) y
-                sensores oceanográficos. Aseguramos la posición exacta y la estabilidad del equipo para la toma de
-                datos.
-            </p>
-            <ul class="list-disc pl-6 space-y-2 marker:text-bentamar-yellow mt-4">
-                <li>Diseño de líneas de fondeo para instrumentos.</li>
-                <li>Instalación con buzos o ROV.</li>
-                <li>Recambio de baterías y descarga de datos en terreno.</li>
-            </ul>
+
+        <div class="space-y-6">
+            <div>
+                <h3 class="font-bold text-xl text-bentamar-blue mb-2 border-l-4 border-bentamar-yellow pl-3">Servicio
+                    Especializado</h3>
+                <p class="text-gray-700 text-justify leading-relaxed">
+                    En Bentamar SPA, brindamos un servicio especializado en la instalación, mantención y recuperación de
+                    equipos de medición oceanográfica y ambiental. Nuestro equipo técnico asegura el correcto
+                    posicionamiento y funcionamiento de estos instrumentos críticos.
+                </p>
+            </div>
+
+            <div class="bg-gray-50 p-6 rounded-lg border-l-4 border-bentamar-blue">
+                <h4 class="font-bold text-bentamar-blue mb-4">Contamos con experiencia en el despliegue de:</h4>
+                <ul class="list-disc pl-5 space-y-2 text-gray-700">
+                    <li><strong>Correntómetros / ADCP:</strong> Para perfiles de corriente y oleaje.</li>
+                    <li><strong>Mareógrafos:</strong> Registro de niveles de marea.</li>
+                    <li><strong>Sensores Ambientales:</strong> Oxígeno disuelto, salinidad (CTD), temperatura y
+                        fotoperíodo.</li>
+                </ul>
+            </div>
         </div>
+
         <div
             class="absolute bottom-10 left-12 right-12 flex justify-between items-center text-xs text-gray-400 border-t pt-4">
             <span>BENTAMAR SPA | www.bentamar.cl</span>
+            <span>+56 9 8595 7506</span>
         </div>
     </div>
 
-    <!-- 10. ARRIENDO DE EQUIPOS -->
+    <!-- SERVICIO 10: Arriendo de Embarcaciones y Logística -->
     <div class="sheet p-12 flex flex-col relative">
         <div class="flex justify-between items-center mb-8 border-b-4 border-bentamar-blue pb-4">
-            <h2 class="text-3xl font-bold text-bentamar-blue uppercase">Arriendo de Equipos</h2>
-            <img src="img/general/Logo_Oficial.png" class="h-10 opacity-80">
+            <h2 class="text-3xl font-bold text-bentamar-blue uppercase leading-tight">Arriendo de Embarcaciones <br>y
+                Logística</h2>
+            <img src="img/general/Logo_Oficial.png" class="h-10 opacity-50">
         </div>
         <div class="h-[45%] w-full mb-8 overflow-hidden rounded-lg shadow-md border border-gray-200">
-            <img src="img/general/arriendo.webp" class="w-full h-full object-cover"
-                onerror="this.src='https://via.placeholder.com/800x400?text=Arriendo'">
+            <img src="img/general/arriendoembarcaciones.webp" class="w-full h-full object-cover">
         </div>
-        <div class="text-gray-700 text-justify leading-relaxed text-lg px-2">
-            <p class="mb-4">
-                Disponemos de equipos profesionales en arriendo para faenas marítimas y submarinas.
-                Todos nuestros equipos cuentan con mantención al día y certificación operativa.
-            </p>
-            <h3 class="font-bold text-bentamar-blue mt-6 mb-2">Equipamiento Disponible:</h3>
-            <ul class="list-disc pl-6 space-y-2 marker:text-bentamar-yellow">
-                <li>Motobombas de alta presión y caudal (achique/lavado).</li>
-                <li>Compresores de aire respirable (baja y alta presión).</li>
-                <li>Globos de levante (Lift Bags) de diversas capacidades.</li>
-                <li>Generadores eléctricos marinizados.</li>
-            </ul>
+
+        <div class="space-y-6">
+            <div>
+                <h3 class="font-bold text-xl text-bentamar-blue mb-2 border-l-4 border-bentamar-yellow pl-3">Apoyo
+                    Logístico Integral</h3>
+                <p class="text-gray-700 text-justify leading-relaxed">
+                    Brindamos apoyo logístico integral para centros de cultivo, obras civiles marítimas y proyectos
+                    científicos.
+                    Nuestra flota está diseñada para operar con seguridad y eficiencia en las condiciones del sur de
+                    Chile,
+                    facilitando el transporte de personal técnico, carga de materiales, víveres y actuando como
+                    plataformas
+                    de trabajo seguras.
+                </p>
+            </div>
+
+            <div class="bg-gray-50 p-6 rounded-lg border-l-4 border-bentamar-blue">
+                <h4 class="font-bold text-bentamar-blue mb-4">Características del servicio:</h4>
+                <ul class="list-disc pl-5 space-y-2 text-gray-700">
+                    <li>Flota certificada con todos los dispositivos de seguridad al día.</li>
+                    <li>Patrones de nave con amplia experiencia en la zona.</li>
+                    <li>Disponibilidad para faenas puntuales o contratos a largo plazo.</li>
+                    <li>Versatilidad: desde lanchas rápidas de fibra hasta embarcaciones de trabajo pesado HDPE.</li>
+                </ul>
+            </div>
         </div>
+
         <div
             class="absolute bottom-10 left-12 right-12 flex justify-between items-center text-xs text-gray-400 border-t pt-4">
             <span>BENTAMAR SPA | www.bentamar.cl</span>
+            <span>+56 9 8595 7506</span>
         </div>
     </div>
 
-    <!-- SCRIPT FINAL -->
     <script>
         window.onload = function () {
             setTimeout(() => { window.print(); }, 1000);

@@ -79,8 +79,7 @@
     <!-- Hero -->
     <header class="relative h-64 md:h-80 flex items-center justify-center bg-bentamar-blue overflow-hidden mt-16">
         <div class="absolute inset-0 opacity-40">
-            <img src="https://img.youtube.com/vi/TLIYgxYyFVk/hqdefault.jpg" class="w-full h-full object-cover"
-                alt="Soldadura y Corte">
+            <img src="img/general/soldadura.webp" class="w-full h-full object-cover" alt="Soldadura y Corte">
         </div>
         <div class="relative z-10 text-center px-4">
             <h1 class="text-3xl md:text-5xl font-bold text-white font-heading uppercase tracking-wider drop-shadow-md">
@@ -97,7 +96,7 @@
                 <h2 class="text-2xl md:text-3xl font-bold text-bentamar-blue font-heading">Reparaciones Estructurales
                     Submarinas</h2>
                 <p>
-                    Contamos con equipos especializados para soldadura y corte submarino (oxicorte), permitiendo
+                    Contamos con equipos especializados para soldadura y corte submarino (torch), permitiendo
                     realizar
                     reparaciones estructurales in situ sin necesidad de varar la embarcación o estructura.
                     Nuestros buzos están calificados en procedimientos de soldadura húmeda.
@@ -115,15 +114,18 @@
 
             <!-- Right Column -->
             <div class="space-y-8">
-                <!-- Video Placeholder -->
-                <div onclick="openVideo('TLIYgxYyFVk')"
+
+
+                <!-- Image Placeholder -->
+                <div onclick="openImage('img/general/soldadura.webp')"
                     class="bg-gray-800 rounded-lg h-48 flex items-center justify-center relative overflow-hidden shadow-lg group cursor-pointer border-2 border-transparent hover:border-bentamar-yellow transition-all">
-                    <img src="https://img.youtube.com/vi/TLIYgxYyFVk/hqdefault.jpg"
+                    <img src="img/general/soldadura.webp"
                         class="absolute inset-0 w-full h-full object-cover opacity-50 bg-blend-overlay">
                     <div
                         class="relative z-10 bg-white/10 p-4 rounded-full backdrop-blur-sm group-hover:scale-110 transition-transform">
-                        <svg class="w-10 h-10 text-white" fill="currentColor" viewBox="0 0 24 24">
-                            <path d="M8 5v14l11-7z" />
+                        <svg class="h-8 w-8 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7" />
                         </svg>
                     </div>
                 </div>
@@ -139,6 +141,21 @@
                     </a>
                 </div>
             </div>
+        </div>
+
+        <!-- Navigation -->
+        <div class="mt-12 flex flex-col md:flex-row justify-between items-center gap-4 pb-8">
+            <a href="servicio-busqueda.html"
+                class="bg-gray-200 text-gray-700 hover:bg-bentamar-blue hover:text-white font-bold py-2 px-6 rounded transition-colors w-full md:w-auto text-center">
+                &lt; Ir a Búsqueda
+            </a>
+            <a href="index.html" class="text-bentamar-blue font-bold hover:underline">
+                Volver al Inicio
+            </a>
+            <a href="servicio-emisarios.html"
+                class="bg-bentamar-blue text-white hover:bg-bentamar-yellow hover:text-bentamar-blue font-bold py-2 px-6 rounded transition-colors w-full md:w-auto text-center">
+                Ir a Emisarios &gt;
+            </a>
         </div>
     </section>
 
@@ -163,7 +180,7 @@
                             </span>
                             <span>+56 9 8595 7506</span>
                         </a>
-                        <a href="mailto:victor.gonzalez@bentamar.cl"
+                        <a href="mailto:contacto@bentamar.cl"
                             class="flex items-center justify-center md:justify-start gap-3 text-gray-300 hover:text-white transition-colors group">
                             <span class="bg-gray-800 p-2 rounded-full group-hover:bg-bentamar-blue transition-colors">
                                 <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -172,7 +189,7 @@
                                     </path>
                                 </svg>
                             </span>
-                            <span>victor.gonzalez@bentamar.cl</span>
+                            <span>contacto@bentamar.cl</span>
                         </a>
                     </div>
                 </div>

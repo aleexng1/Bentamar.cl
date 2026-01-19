@@ -30,7 +30,7 @@
         class="bg-bentamar-blue/90 backdrop-blur-md text-white fixed w-full z-50 shadow-lg transition-all duration-300 py-4">
         <div class="container mx-auto px-6 flex justify-between items-center">
             <!-- Logo -->
-            <a href="index.html" class="flex items-center gap-3">
+            <a href="/" class="flex items-center gap-3">
                 <img src="img/general/Logo_Secundario_Blanco.webp" alt="Bentamar Logo"
                     class="h-14 w-auto object-contain">
                 <span class="font-heading font-bold text-xl tracking-wider hidden md:block">BENTAMAR</span>
@@ -38,41 +38,57 @@
 
             <!-- Desktop Menu -->
             <ul class="hidden md:flex space-x-8 font-medium text-lg items-center">
-                <li><a href="index.html#inicio" class="hover:text-bentamar-yellow transition-colors relative group">
+                <li><a href="/#inicio" class="hover:text-bentamar-yellow transition-colors relative group">
                         Inicio
                         <span
                             class="absolute -bottom-1 left-0 w-0 h-0.5 bg-bentamar-yellow transition-all duration-300 group-hover:w-full"></span>
                     </a></li>
-                <li><a href="index.html#servicios" class="hover:text-bentamar-yellow transition-colors relative group">
+                <li><a href="/#servicios" class="hover:text-bentamar-yellow transition-colors relative group">
                         Servicios
                         <span
                             class="absolute -bottom-1 left-0 w-0 h-0.5 bg-bentamar-yellow transition-all duration-300 group-hover:w-full"></span>
                     </a></li>
-                <li><a href="index.html#flota" class="hover:text-bentamar-yellow transition-colors relative group">
+                <li><a href="/#flota" class="hover:text-bentamar-yellow transition-colors relative group">
                         Flota
                         <span
                             class="absolute -bottom-1 left-0 w-0 h-0.5 bg-bentamar-yellow transition-all duration-300 group-hover:w-full"></span>
                     </a></li>
-                <li><a href="index.html#proyectos" class="hover:text-bentamar-yellow transition-colors relative group">
+                <li><a href="/#proyectos" class="hover:text-bentamar-yellow transition-colors relative group">
                         Proyectos
                         <span
                             class="absolute -bottom-1 left-0 w-0 h-0.5 bg-bentamar-yellow transition-all duration-300 group-hover:w-full"></span>
                     </a></li>
-                <li><a href="index.html#nosotros" class="hover:text-bentamar-yellow transition-colors relative group">
+                <li><a href="/#nosotros" class="hover:text-bentamar-yellow transition-colors relative group">
                         Nosotros
                         <span
                             class="absolute -bottom-1 left-0 w-0 h-0.5 bg-bentamar-yellow transition-all duration-300 group-hover:w-full"></span>
                     </a></li>
-                <li><a href="index.html#contacto"
+                <li><a href="/#contacto"
                         class="hidden md:inline-block bg-bentamar-yellow text-bentamar-blue px-6 py-2 rounded-sm font-bold text-base uppercase tracking-wide hover:bg-white transition-colors duration-300 shadow-lg">
                         Contacto
                     </a></li>
             </ul>
 
             <!-- Mobile Menu Button -->
-            <button class="md:hidden text-2xl focus:outline-none">
+            <button id="mobile-menu-btn" class="md:hidden text-2xl focus:outline-none text-white">
                 &#9776;
             </button>
+        </div>
+
+        <!-- Mobile Menu (Hidden by default) -->
+        <div id="mobile-menu"
+            class="hidden md:hidden bg-bentamar-blue w-full px-6 pb-4 absolute top-full left-0 shadow-lg border-t border-white/10">
+            <ul class="flex flex-col space-y-4 font-medium text-lg pt-4 text-center">
+                <li><a href="/#inicio" class="block hover:text-bentamar-yellow transition-colors">Inicio</a>
+                </li>
+                <li><a href="/#servicios" class="block hover:text-bentamar-yellow transition-colors">Servicios</a></li>
+                <li><a href="/#flota" class="block hover:text-bentamar-yellow transition-colors">Flota</a></li>
+                <li><a href="/#proyectos" class="block hover:text-bentamar-yellow transition-colors">Proyectos</a></li>
+                <li><a href="/#nosotros" class="block hover:text-bentamar-yellow transition-colors">Nosotros</a></li>
+                <li><a href="/#contacto"
+                        class="block bg-bentamar-yellow text-bentamar-blue px-6 py-2 rounded-sm font-bold text-base uppercase tracking-wide hover:bg-white transition-colors duration-300 shadow-lg mx-auto w-max">Contacto</a>
+                </li>
+            </ul>
         </div>
     </nav>
 
@@ -132,7 +148,7 @@
                     <h3 class="font-bold text-xl text-bentamar-blue mb-2 font-heading">¿Necesita este servicio?</h3>
                     <p class="text-sm text-gray-500 mb-6">Contáctenos hoy para recibir una cotización técnica
                         personalizada.</p>
-                    <a href="index.html#contacto"
+                    <a href="/#contacto"
                         class="block w-full text-center bg-bentamar-blue text-white font-bold py-4 rounded hover:bg-bentamar-yellow hover:text-bentamar-blue transition duration-300 uppercase tracking-wide">
                         Cotizar Ahora
                     </a>
@@ -142,14 +158,14 @@
 
         <!-- Navigation -->
         <div class="mt-12 flex flex-col md:flex-row justify-between items-center gap-4 pb-8">
-            <a href="servicio-inspeccion-cascos.html"
+            <a href="/servicio-inspeccion-cascos"
                 class="bg-gray-200 text-gray-700 hover:bg-bentamar-blue hover:text-white font-bold py-2 px-6 rounded transition-colors w-full md:w-auto text-center">
                 &lt; Ir a Inspección Cascos
             </a>
-            <a href="index.html" class="text-bentamar-blue font-bold hover:underline">
+            <a href="/" class="text-bentamar-blue font-bold hover:underline">
                 Volver al Inicio
             </a>
-            <a href="servicio-correntometros.html"
+            <a href="/servicio-correntometros"
                 class="bg-bentamar-blue text-white hover:bg-bentamar-yellow hover:text-bentamar-blue font-bold py-2 px-6 rounded transition-colors w-full md:w-auto text-center">
                 Ir a Medición &gt;
             </a>
@@ -290,6 +306,16 @@
                 closeVideo();
             }
         });
+    </script>
+    <script>
+        const btn = document.getElementById('mobile-menu-btn');
+        const menu = document.getElementById('mobile-menu');
+
+        if (btn && menu) {
+            btn.addEventListener('click', () => {
+                menu.classList.toggle('hidden');
+            });
+        }
     </script>
 </body>
 

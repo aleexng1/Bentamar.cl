@@ -121,7 +121,7 @@
         class="print:hidden bg-bentamar-blue/90 backdrop-blur-md text-white fixed w-full z-50 shadow-lg transition-all duration-300 py-4">
         <div class="container mx-auto px-6 flex justify-between items-center">
             <!-- Logo -->
-            <a href="index.html" class="flex items-center gap-3">
+            <a href="/" class="flex items-center gap-3">
                 <img src="img/general/Logo_Secundario_Blanco.webp" alt="Bentamar Logo"
                     class="h-14 w-auto object-contain">
                 <span class="font-heading font-bold text-xl tracking-wider hidden md:block">BENTAMAR</span>
@@ -167,9 +167,24 @@
             </ul>
 
             <!-- Mobile Menu Button -->
-            <button class="md:hidden text-2xl focus:outline-none">
+            <button id="mobile-menu-btn" class="md:hidden text-2xl focus:outline-none text-white">
                 &#9776;
             </button>
+        </div>
+
+        <!-- Mobile Menu (Hidden by default) -->
+        <div id="mobile-menu"
+            class="hidden md:hidden bg-bentamar-blue w-full px-6 pb-4 absolute top-full left-0 shadow-lg border-t border-white/10">
+            <ul class="flex flex-col space-y-4 font-medium text-lg pt-4 text-center">
+                <li><a href="#inicio" class="block hover:text-bentamar-yellow transition-colors">Inicio</a></li>
+                <li><a href="#servicios" class="block hover:text-bentamar-yellow transition-colors">Servicios</a></li>
+                <li><a href="#flota" class="block hover:text-bentamar-yellow transition-colors">Flota</a></li>
+                <li><a href="#proyectos" class="block hover:text-bentamar-yellow transition-colors">Proyectos</a></li>
+                <li><a href="#nosotros" class="block hover:text-bentamar-yellow transition-colors">Nosotros</a></li>
+                <li><a href="#contacto"
+                        class="block bg-bentamar-yellow text-bentamar-blue px-6 py-2 rounded-sm font-bold text-base uppercase tracking-wide hover:bg-white transition-colors duration-300 shadow-lg mx-auto w-max">Contacto</a>
+                </li>
+            </ul>
         </div>
     </nav>
 
@@ -214,7 +229,7 @@
                     industria acuícola.
                 </p>
                 <div class="mt-6 flex flex-wrap gap-3 md:gap-4 print:hidden justify-center">
-                    <a href="catalogo-servicios.html" target="_blank"
+                    <a href="/catalogo-servicios" target="_blank"
                         class="bg-transparent border-2 border-white text-white hover:bg-white hover:text-bentamar-blue px-6 py-2 rounded-full font-bold transition flex items-center gap-2 text-sm">
                         <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -223,7 +238,7 @@
                         </svg>
                         CATÁLOGO SERVICIOS
                     </a>
-                    <a href="catalogo-flota.html" target="_blank"
+                    <a href="/catalogo-flota" target="_blank"
                         class="bg-transparent border-2 border-white text-white hover:bg-white hover:text-bentamar-blue px-6 py-2 rounded-full font-bold transition flex items-center gap-2 text-sm">
                         <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -281,7 +296,7 @@
                         Ingeniería & Obras Submarinas</h3>
                     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
                         <!-- Soldadura -->
-                        <a href="servicio-soldadura.html"
+                        <a href="/servicio-soldadura"
                             class="bg-white rounded-sm shadow-md hover:shadow-2xl transition-all duration-300 group overflow-hidden hover:-translate-y-1 block">
                             <div
                                 class="h-48 overflow-hidden relative border-b-4 border-transparent group-hover:border-bentamar-yellow transition-all duration-300">
@@ -295,7 +310,7 @@
                             </div>
                         </a>
                         <!-- Emisarios -->
-                        <a href="servicio-emisarios.html"
+                        <a href="/servicio-emisarios"
                             class="bg-white rounded-sm shadow-md hover:shadow-2xl transition-all duration-300 group overflow-hidden hover:-translate-y-1 block">
                             <div
                                 class="h-48 overflow-hidden relative border-b-4 border-transparent group-hover:border-bentamar-yellow transition-all duration-300">
@@ -309,7 +324,7 @@
                             </div>
                         </a>
                         <!-- Fondeo -->
-                        <a href="servicio-fondeos.html"
+                        <a href="/servicio-fondeos"
                             class="bg-white rounded-sm shadow-md hover:shadow-2xl transition-all duration-300 group overflow-hidden hover:-translate-y-1 block">
                             <div
                                 class="h-48 overflow-hidden relative border-b-4 border-transparent group-hover:border-bentamar-yellow transition-all duration-300">
@@ -323,7 +338,7 @@
                             </div>
                         </a>
                         <!-- Reflotamiento -->
-                        <a href="servicio-reflotamiento.html"
+                        <a href="/servicio-reflotamiento"
                             class="bg-white rounded-sm shadow-md hover:shadow-2xl transition-all duration-300 group overflow-hidden hover:-translate-y-1 block">
                             <div
                                 class="h-48 overflow-hidden relative border-b-4 border-transparent group-hover:border-bentamar-yellow transition-all duration-300">
@@ -346,7 +361,7 @@
                         Inspección & Tecnología</h3>
                     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
                         <!-- ROV -->
-                        <a href="servicio-rov.html"
+                        <a href="/servicio-rov"
                             class="bg-white rounded-sm shadow-md hover:shadow-2xl transition-all duration-300 group overflow-hidden hover:-translate-y-1 block">
                             <div
                                 class="h-48 overflow-hidden relative border-b-4 border-transparent group-hover:border-bentamar-yellow transition-all duration-300">
@@ -360,7 +375,7 @@
                             </div>
                         </a>
                         <!-- Cascos -->
-                        <a href="servicio-inspeccion-cascos.html"
+                        <a href="/servicio-inspeccion-cascos"
                             class="bg-white rounded-sm shadow-md hover:shadow-2xl transition-all duration-300 group overflow-hidden hover:-translate-y-1 block">
                             <div
                                 class="h-48 overflow-hidden relative border-b-4 border-transparent group-hover:border-bentamar-yellow transition-all duration-300">
@@ -374,7 +389,7 @@
                             </div>
                         </a>
                         <!-- Filmación -->
-                        <a href="servicio-filmacion.html"
+                        <a href="/servicio-filmacion"
                             class="bg-white rounded-sm shadow-md hover:shadow-2xl transition-all duration-300 group overflow-hidden hover:-translate-y-1 block">
                             <div
                                 class="h-48 overflow-hidden relative border-b-4 border-transparent group-hover:border-bentamar-yellow transition-all duration-300">
@@ -388,7 +403,7 @@
                             </div>
                         </a>
                         <!-- Correntómetros -->
-                        <a href="servicio-correntometros.html"
+                        <a href="/servicio-correntometros"
                             class="bg-white rounded-sm shadow-md hover:shadow-2xl transition-all duration-300 group overflow-hidden hover:-translate-y-1 block">
                             <div
                                 class="h-48 overflow-hidden relative border-b-4 border-transparent group-hover:border-bentamar-yellow transition-all duration-300">
@@ -411,7 +426,7 @@
                         Logística & Apoyo</h3>
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
                         <!-- Embarcaciones -->
-                        <a href="servicio-arriendo.html"
+                        <a href="/servicio-arriendo"
                             class="bg-white rounded-sm shadow-md hover:shadow-2xl transition-all duration-300 group overflow-hidden hover:-translate-y-1 block">
                             <div
                                 class="h-48 overflow-hidden relative border-b-4 border-transparent group-hover:border-bentamar-yellow transition-all duration-300">
@@ -428,7 +443,7 @@
                             </div>
                         </a>
                         <!-- Búsqueda -->
-                        <a href="servicio-busqueda.html"
+                        <a href="/servicio-busqueda"
                             class="bg-white rounded-sm shadow-md hover:shadow-2xl transition-all duration-300 group overflow-hidden hover:-translate-y-1 block">
                             <div
                                 class="h-48 overflow-hidden relative border-b-4 border-transparent group-hover:border-bentamar-yellow transition-all duration-300">
@@ -472,7 +487,7 @@
                 <!-- Fleet Card 1: Palomita -->
                 <div
                     class="flex-none w-80 lg:w-full snap-center h-full bg-gray-800 rounded-2xl overflow-hidden shadow-2xl hover:shadow-bentamar-yellow/20 hover:shadow-2xl transition duration-500 group flex flex-col relative">
-                    <a href="palomita.html" class="absolute inset-0 z-10" aria-label="Ver ficha de Palomita"></a>
+                    <a href="/palomita" class="absolute inset-0 z-10" aria-label="Ver ficha de Palomita"></a>
                     <div class="relative h-56 lg:h-48 xl:h-56 w-full overflow-hidden">
                         <img src="img/palomita/palomita-portada.webp" loading="lazy"
                             class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
@@ -523,7 +538,7 @@
                 <!-- Fleet Card 2: Palomita II -->
                 <div
                     class="flex-none w-80 lg:w-full snap-center h-full bg-gray-800 rounded-2xl overflow-hidden shadow-2xl hover:shadow-bentamar-yellow/20 hover:shadow-2xl transition duration-500 group flex flex-col relative">
-                    <a href="palomita-2.html" class="absolute inset-0 z-10" aria-label="Ver ficha de Palomita II"></a>
+                    <a href="/palomita-2" class="absolute inset-0 z-10" aria-label="Ver ficha de Palomita II"></a>
                     <div class="relative h-56 lg:h-48 xl:h-56 w-full overflow-hidden">
                         <img src="img/palomita2/palomita-portada.webp" loading="lazy"
                             class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
@@ -574,7 +589,7 @@
                 <!-- Fleet Card 3: Palomita I -->
                 <div
                     class="flex-none w-80 lg:w-full snap-center h-full bg-gray-800 rounded-2xl overflow-hidden shadow-2xl hover:shadow-bentamar-yellow/20 hover:shadow-2xl transition duration-500 group flex flex-col relative">
-                    <a href="palomita-1.html" class="absolute inset-0 z-10" aria-label="Ver ficha de Palomita I"></a>
+                    <a href="/palomita-1" class="absolute inset-0 z-10" aria-label="Ver ficha de Palomita I"></a>
                     <div class="relative h-56 lg:h-48 xl:h-56 w-full overflow-hidden">
                         <img src="img/palomita1/palomita1-portada.webp" loading="lazy"
                             class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
@@ -625,7 +640,7 @@
                 <!-- Fleet Card 4: Palomita III -->
                 <div
                     class="flex-none w-80 lg:w-full snap-center h-full bg-gray-800 rounded-2xl overflow-hidden shadow-2xl hover:shadow-bentamar-yellow/20 hover:shadow-2xl transition duration-500 group flex flex-col relative">
-                    <a href="palomita-3.html" class="absolute inset-0 z-10" aria-label="Ver ficha de Palomita III"></a>
+                    <a href="/palomita-3" class="absolute inset-0 z-10" aria-label="Ver ficha de Palomita III"></a>
                     <div class="relative h-56 lg:h-48 xl:h-56 w-full overflow-hidden">
                         <img src="img/palomita3/palomita3-portada.webp" loading="lazy"
                             class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
@@ -676,7 +691,7 @@
                 <!-- Fleet Card 5: Bento -->
                 <div
                     class="flex-none w-80 lg:w-full snap-center h-full bg-gray-800 rounded-2xl overflow-hidden shadow-2xl hover:shadow-bentamar-yellow/20 hover:shadow-2xl transition duration-500 group flex flex-col relative">
-                    <a href="bento.html" class="absolute inset-0 z-10" aria-label="Ver ficha de Bento"></a>
+                    <a href="/bento" class="absolute inset-0 z-10" aria-label="Ver ficha de Bento"></a>
                     <div class="relative h-56 lg:h-48 xl:h-56 w-full overflow-hidden">
                         <img src="img/bento/bento-portada.webp" loading="lazy"
                             class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
@@ -1364,6 +1379,16 @@
             </div>
         </div>
     </div>
+    <script>
+        const btn = document.getElementById('mobile-menu-btn');
+        const menu = document.getElementById('mobile-menu');
+
+        if (btn && menu) {
+            btn.addEventListener('click', () => {
+                menu.classList.toggle('hidden');
+            });
+        }
+    </script>
 </body>
 
 </html>
